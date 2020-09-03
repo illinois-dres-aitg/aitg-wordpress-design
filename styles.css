@@ -224,10 +224,16 @@ footer div ul li {
 footer a {
   color: #fff;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 footer a:focus,
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 414px) {
+  footer a {
+    white-space: nowrap;
+  }
 }
