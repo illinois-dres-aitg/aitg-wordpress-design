@@ -188,6 +188,10 @@ a.menu-button:first-child {
   padding-left: 16px;
 }
 
+a.menu-button:last-child {
+  padding-right: 16px;
+}
+
 a.menu-button:focus,
 a.menu-button:hover {
   background-color: #1754a3;
