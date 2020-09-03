@@ -60,7 +60,8 @@ main {
 }
 
 .banner-logo {
-  display: inline-block;
+  float: left;
+  width: 100%;
   padding: 20px 24px 16px;
 }
 
@@ -72,15 +73,28 @@ main {
 }
 
 .banner-search {
+  float: left;
+  padding: 0 24px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-logo {
+    width: 40%;
+  }
+  .banner-search {
+    float: right;
+    padding: 20px 24px 16px;
+  }
+}
+
+.search-widget {
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 1fr;
-  float: right;
-  margin: 20px 24px 0 0;
-  padding: 0;
+  width: 18em;
 }
 
-.banner-search input {
+.search-widget input {
   grid-column: 1;
   background-color: #d3d6e0;
   border: 2px solid #d3d6e0;
@@ -96,11 +110,11 @@ main {
   padding-left: 0.5em;
 }
 
-.banner-search input:focus {
+.search-widget input:focus {
   background-color: #fff;
 }
 
-.banner-search button {
+.search-widget button {
   grid-column: 2;
   background: #17385e url("images/search-icon.png") 9px 9px no-repeat;
   background-size: 18px 18px;
