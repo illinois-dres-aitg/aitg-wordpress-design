@@ -135,8 +135,9 @@ main {
 .banner-aitg {
   /* border: 1px solid white; */
   float: left;
-  white-space: nowrap;
+  width: 100%;
   font-size: 24px;
+  white-space: nowrap;
 
   margin-top: 17px;
   margin-right: 24px;
@@ -159,13 +160,19 @@ main {
 .banner-menu {
   /* border: 1px solid white; */
   float: left;
-  white-space: nowrap;
+  margin: 16px 12px 20px 8px;
   font-size: 16px;
+  white-space: nowrap;
+}
 
-  margin-top: 24px;
-  margin-right: 8px;
-  margin-bottom: 20px;
-  margin-left: 8px;
+@media screen and (min-width: 996px) {
+  .banner-aitg {
+    width: 30%;
+  }
+  .banner-menu {
+    float: right;
+    margin: 24px 12px 20px 8px;
+  }
 }
 
 .banner-menu ul {
