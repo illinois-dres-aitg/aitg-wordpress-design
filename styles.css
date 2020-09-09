@@ -5,7 +5,6 @@ body {
 }
 
 /* MAIN: THREE-COLUMN FLEX LAYOUT */
-
 main {
   color: #00132c;
   padding: 1em 1.5em;
@@ -44,7 +43,6 @@ main {
 }
 
 /* BANNER: TWO-ROW GRID LAYOUT */
-
 .banner {
   display: grid;
   grid-template-columns: 1fr;
@@ -52,7 +50,6 @@ main {
 }
 
 /* BANNER ROW 1 */
-
 .banner-row-1 {
   background-color: #fff;
   color: #00132c;
@@ -69,9 +66,6 @@ main {
   width: 200px;
 }
 
-.banner-logo a {
-}
-
 .banner-search {
   float: left;
   padding: 0 24px 16px;
@@ -81,12 +75,12 @@ main {
   .banner-logo {
     width: 40%;
   }
+
   .banner-search {
     float: right;
     padding: 20px 24px 16px;
   }
 }
-
 .search-widget {
   display: grid;
   grid-template-columns: 2fr;
@@ -96,14 +90,13 @@ main {
 
 .search-widget input {
   grid-column: 1;
-  background-color: #d3d6e0;
-  border: 2px solid #d3d6e0;
+  background-color: #dddede;
+  border: 2px solid #dddede;
   box-sizing: border-box;
   line-height: 24px;
   height: 36px;
   margin-top: 0;
   margin-right: 0;
-
   color: #555555;
   font-family: inherit;
   font-size: 16px;
@@ -116,7 +109,7 @@ main {
 
 .search-widget button {
   grid-column: 2;
-  background: #17385e url("images/search-icon.png") 9px 9px no-repeat;
+  background: #13294b url("images/search-icon.png") 9px 9px no-repeat;
   background-size: 18px 18px;
   border: none;
   color: #ffffff;
@@ -125,20 +118,17 @@ main {
 }
 
 /* BANNER ROW 2 */
-
 .banner-row-2 {
-  background: #17385e;
+  background: #13294b;
   color: #fff;
   width: 100%;
 }
 
 .banner-aitg {
-  /* border: 1px solid white; */
   float: left;
   width: 100%;
   font-size: 24px;
   white-space: nowrap;
-
   margin-top: 17px;
   margin-right: 24px;
   margin-left: 24px;
@@ -156,9 +146,7 @@ main {
 }
 
 /* BANNER MENU */
-
 .banner-menu {
-  /* border: 1px solid white; */
   float: left;
   margin: 16px 12px 20px 8px;
   font-size: 16px;
@@ -169,12 +157,12 @@ main {
   .banner-aitg {
     width: 30%;
   }
+
   .banner-menu {
     float: right;
     margin: 24px 12px 20px 8px;
   }
 }
-
 .banner-menu ul {
   margin: 0;
   padding: 0;
@@ -185,7 +173,7 @@ main {
 }
 
 a.menu-button {
-  border: 1px solid #17385E;
+  border: 1px solid #13294b;
   color: #fff;
   text-decoration: none;
   padding: 12px;
@@ -201,7 +189,7 @@ a.menu-button:last-child {
 
 a.menu-button:focus,
 a.menu-button:hover {
-  background-color: #1754a3;
+  background-color: #1d58a7;
   border: 1px solid #fff;
 }
 
@@ -222,9 +210,8 @@ a.menu-button:hover {
 }
 
 /* FOOTER: THREE-COLUMN FLEX LAYOUT; */
-
 footer {
-  background: #17385e;
+  background: #13294b;
   color: #fff;
   width: 100%;
   display: flex;
