@@ -1,0 +1,273 @@
+// VARIABLES
+
+$default-text-color: #00132c;
+$illini-blue: #13294b;              // #17385e
+$industrial-blue: #1d58a7;
+$search-background-color: #dddede;  // #d3d6e0
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+/* MAIN: THREE-COLUMN FLEX LAYOUT */
+
+main {
+  color: $default-text-color;
+  padding: 1em 1.5em;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+  padding: 0 24px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+
+.content h1 {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  padding: 0;
+  font-size: 240%;
+  font-weight: normal;
+}
+
+/* BANNER: TWO-ROW GRID LAYOUT */
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+}
+
+/* BANNER ROW 1 */
+
+.banner-row-1 {
+  background-color: #fff;
+  color: $default-text-color;
+  width: 100%;
+}
+
+.banner-logo {
+  float: left;
+  width: 100%;
+  padding: 20px 24px 16px;
+}
+
+.banner-logo img {
+  width: 200px;
+}
+
+.banner-logo a {
+}
+
+.banner-search {
+  float: left;
+  padding: 0 24px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-logo {
+    width: 40%;
+  }
+  .banner-search {
+    float: right;
+    padding: 20px 24px 16px;
+  }
+}
+
+.search-widget {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  width: 18em;
+}
+
+.search-widget input {
+  grid-column: 1;
+  background-color: $search-background-color;
+  border: 2px solid $search-background-color;
+  box-sizing: border-box;
+  line-height: 24px;
+  height: 36px;
+  margin-top: 0;
+  margin-right: 0;
+
+  color: #555555;
+  font-family: inherit;
+  font-size: 16px;
+  padding-left: 0.5em;
+}
+
+.search-widget input:focus {
+  background-color: #fff;
+}
+
+.search-widget button {
+  grid-column: 2;
+  background: $illini-blue url("images/search-icon.png") 9px 9px no-repeat;
+  background-size: 18px 18px;
+  border: none;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+}
+
+/* BANNER ROW 2 */
+
+.banner-row-2 {
+  background: $illini-blue;
+  color: #fff;
+  width: 100%;
+}
+
+.banner-aitg {
+  float: left;
+  width: 100%;
+  font-size: 24px;
+  white-space: nowrap;
+
+  margin-top: 17px;
+  margin-right: 24px;
+  margin-left: 24px;
+  padding: 0;
+}
+
+.banner-aitg a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner-aitg a:focus,
+.banner-aitg a:hover {
+  text-decoration: underline;
+}
+
+/* BANNER MENU */
+
+.banner-menu {
+  float: left;
+  margin: 16px 12px 20px 8px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 996px) {
+  .banner-aitg {
+    width: 30%;
+  }
+  .banner-menu {
+    float: right;
+    margin: 24px 12px 20px 8px;
+  }
+}
+
+.banner-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-menu li {
+  display: inline;
+}
+
+a.menu-button {
+  border: 1px solid $illini-blue;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px;
+}
+
+a.menu-button:first-child {
+  padding-left: 16px;
+}
+
+a.menu-button:last-child {
+  padding-right: 16px;
+}
+
+a.menu-button:focus,
+a.menu-button:hover {
+  background-color: $industrial-blue;
+  border: 1px solid #fff;
+}
+
+.chevron-down::after {
+  content: url("images/chevron-down.svg");
+  position: relative;
+  top: -2px;
+  left: 6px;
+  margin-right: 4px;
+}
+
+.chevron-right::after {
+  content: url("images/chevron-right.svg");
+  position: relative;
+  top: 0.5px;
+  left: 6px;
+  margin-right: 4px;
+}
+
+/* FOOTER: THREE-COLUMN FLEX LAYOUT; */
+
+footer {
+  background: $illini-blue;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+
+footer div {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 12px 24px;
+}
+
+footer div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer div ul li {
+  padding-top: 8px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  white-space: normal;
+}
+
+footer a:focus,
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 414px) {
+  footer a {
+    white-space: nowrap;
+  }
+}
