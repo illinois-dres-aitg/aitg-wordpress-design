@@ -11,45 +11,6 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
-/* MAIN: THREE-COLUMN FLEX LAYOUT */
-
-main {
-  color: $default-text-color;
-  padding: 1em 1.5em;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.left-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 20%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 60%;
-  padding: 0 24px;
-}
-
-.right-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 20%;
-}
-
-.content h1 {
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-  padding: 0;
-  font-size: 240%;
-  font-weight: normal;
-}
-
 /* BANNER: TWO-ROW GRID LAYOUT */
 
 .banner {
@@ -224,6 +185,45 @@ a.menu-button:hover {
   top: 0.5px;
   left: 6px;
   margin-right: 4px;
+}
+
+/* MAIN: THREE-COLUMN FLEX LAYOUT */
+
+main {
+  color: $default-text-color;
+  padding: 1em 1.5em;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+  padding: 0 24px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+
+.content h1 {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  padding: 0;
+  font-size: 240%;
+  font-weight: normal;
 }
 
 /* FOOTER: THREE-COLUMN FLEX LAYOUT; */
