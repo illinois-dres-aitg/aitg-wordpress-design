@@ -18,10 +18,25 @@ body {
   left: -3000em;
 }
 
-header .skipTo {
-  position: relative;
-  left: 20px;
-  top: 10px;
+header .skip-to a {
+  padding: 6px 8px 8px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  color: white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-bottom-right-radius: 8px;
+  background: $illini-blue;
+  z-index: 1000;
+}
+
+header .skip-to a:focus {
+  position: absolute;
+  top: 0px;
+  outline-color: transparent;
+  -webkit-transition: top .1s ease-in;
+  transition: top .1s ease-in;
 }
 
 /* BANNER: TWO-ROW GRID LAYOUT */
@@ -58,6 +73,7 @@ header .skipTo {
 .banner-logo a:focus,
 .banner-logo a:hover {
   background-color: $industrial-blue-lite;
+  -webkit-transition: .3s background;
   transition: .3s background;
 }
 
@@ -101,6 +117,7 @@ header .skipTo {
 
 .search-widget input:focus {
   background-color: #fff;
+  -webkit-transition: .3s background;
   transition: .3s background;
 }
 
@@ -224,6 +241,7 @@ main a:focus,
 main a:hover {
   background-color: $industrial-blue-lite;
   color: $default-text-color;
+  -webkit-transition: .3s background;
   transition: .3s background;
 }
 
