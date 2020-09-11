@@ -29,6 +29,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Montserrat, sans-serif;
+  font-size: 16px;
 }
 
 .screen-reader-text {
@@ -44,7 +45,7 @@ header .skip-to a {
 
   background: $illini-blue;
   color: white;
-
+  box-sizing: border-box;
   padding: 6px 8px 8px;
   border-right: 2px solid white;
   border-left: 2px solid white;
@@ -55,8 +56,10 @@ header .skip-to a {
 
 header .skip-to a:focus,
 header .skip-to a:hover {
-  outline-offset: 2px;
-  outline: 2px solid $illini-orange;
+  background-color: $industrial-blue;
+  border-right: 2px solid $illini-orange;
+  border-left: 2px solid $illini-orange;
+  border-bottom: 2px solid $illini-orange;
 }
 
 /* BANNER: TWO-ROW GRID LAYOUT */
@@ -124,7 +127,10 @@ header .skip-to a:hover {
 .search-widget input {
   grid-column: 1;
   background-color: $search-background-color;
-  border: 2px solid $search-background-color;
+  border-top: 2px solid $search-background-color;
+  border-right: none;
+  border-bottom: 2px solid $search-background-color;
+  border-left: 2px solid $search-background-color;
   box-sizing: border-box;
   line-height: 24px;
   height: 36px;
@@ -139,18 +145,30 @@ header .skip-to a:hover {
 
 .search-widget input:focus {
   background-color: #fff;
+  outline: none;
+  border-top: 2px solid $illini-blue;
+  border-bottom: 2px solid $illini-blue;
+  border-left: 2px solid $illini-blue;
   -webkit-transition: .3s background;
   transition: .3s background;
 }
 
 .search-widget button {
   grid-column: 2;
-  background: $illini-blue url("images/search-icon.png") 9px 9px no-repeat;
-  background-size: 18px 18px;
+  background: $illini-blue url("images/search-icon.png") no-repeat;
+  background-position: left 55% top 50%;
+  background-size: 20px 20px;
   border: none;
   color: #ffffff;
-  width: 36px;
+  width: 37px;
   height: 36px;
+}
+
+.search-widget button:focus {
+  outline: none;
+  box-sizing: border-box;
+  background-color: $industrial-blue;
+  border: 2px solid $illini-orange;
 }
 
 /* BANNER ROW 2 */
