@@ -216,6 +216,7 @@ a.menu-button:hover {
 main {
   color: #00132c;
   padding: 1em 1.5em;
+  font-family: Verdana, sans-serif;
 }
 
 main a {
