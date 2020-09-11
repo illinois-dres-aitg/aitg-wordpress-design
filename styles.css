@@ -48,7 +48,7 @@ header .skipTo {
 .banner-logo a:focus,
 .banner-logo a:hover {
   background-color: #cad9ef;
-  transition: 0.4s background;
+  transition: 0.3s background;
 }
 
 .banner-search {
@@ -90,7 +90,7 @@ header .skipTo {
 
 .search-widget input:focus {
   background-color: #fff;
-  transition: 0.4s background;
+  transition: 0.3s background;
 }
 
 .search-widget button {
@@ -105,7 +105,7 @@ header .skipTo {
 
 /* BANNER ROW 2 */
 .banner-row-2 {
-  background: #13294b;
+  background-color: #13294b;
   color: #fff;
   width: 100%;
 }
@@ -207,8 +207,9 @@ main a {
 
 main a:focus,
 main a:hover {
-  outline-offset: 2px;
-  outline: 2px solid #1d58a7;
+  background-color: #cad9ef;
+  color: #00132c;
+  transition: 0.3s background;
 }
 
 .flex-row {
@@ -245,7 +246,7 @@ main a:hover {
 
 /* FOOTER: THREE-COLUMN FLEX LAYOUT; */
 footer {
-  background: #13294b;
+  background-color: #13294b;
   color: #fff;
   width: 100%;
   display: flex;
