@@ -37,24 +37,25 @@ body {
 }
 
 header .skip-to a {
-  padding: 6px 8px 8px;
   position: absolute;
-  top: -40px;
-  left: 0px;
+  top: 0px;
+  left: 45%;
+
+  background: $illini-blue;
   color: white;
+
+  padding: 6px 8px 8px;
   border-right: 2px solid white;
+  border-left: 2px solid white;
   border-bottom: 2px solid white;
   border-bottom-right-radius: 8px;
-  background: $illini-blue;
-  z-index: 1000;
+  border-bottom-left-radius: 8px;
 }
 
 header .skip-to a:focus {
-  position: absolute;
-  top: 0px;
-  outline-color: transparent;
-  -webkit-transition: top .1s ease-in;
-  transition: top .1s ease-in;
+  outline-offset: 2px;
+  outline: 2px solid $industrial-blue;
+  background-color: $industrial-blue;
 }
 
 /* BANNER: TWO-ROW GRID LAYOUT */
