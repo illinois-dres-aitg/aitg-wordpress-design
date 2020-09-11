@@ -4,6 +4,18 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+.screen-reader-text {
+  position: absolute;
+  top: -30em;
+  left: -3000em;
+}
+
+header .skipTo {
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
 /* BANNER: TWO-ROW GRID LAYOUT */
 .banner {
   display: grid;
@@ -21,11 +33,22 @@ body {
 .banner-logo {
   float: left;
   width: 100%;
-  padding: 20px 24px 16px;
 }
 
 .banner-logo img {
   width: 200px;
+}
+
+.banner-logo a {
+  display: block;
+  width: 200px;
+  padding: 20px 24px 16px;
+}
+
+.banner-logo a:focus,
+.banner-logo a:hover {
+  background-color: #cad9ef;
+  transition: 0.4s background;
 }
 
 .banner-search {
@@ -67,6 +90,7 @@ body {
 
 .search-widget input:focus {
   background-color: #fff;
+  transition: 0.4s background;
 }
 
 .search-widget button {
@@ -135,7 +159,7 @@ body {
 }
 
 a.menu-button {
-  border: 1px solid #13294b;
+  border: 2px solid #13294b;
   color: #fff;
   text-decoration: none;
   padding: 12px;
@@ -152,7 +176,7 @@ a.menu-button:last-child {
 a.menu-button:focus,
 a.menu-button:hover {
   background-color: #1d58a7;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 
 .chevron-down::after {
@@ -175,6 +199,16 @@ a.menu-button:hover {
 main {
   color: #00132c;
   padding: 1em 1.5em;
+}
+
+main a {
+  color: #1d58a7;
+}
+
+main a:focus,
+main a:hover {
+  outline-offset: 2px;
+  outline: 2px solid #1d58a7;
 }
 
 .flex-row {

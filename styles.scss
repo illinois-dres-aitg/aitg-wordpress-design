@@ -3,12 +3,25 @@
 $default-text-color: #00132c;
 $illini-blue: #13294b;              // #17385e
 $industrial-blue: #1d58a7;
+$industrial-blue-lite: #cad9ef;
 $search-background-color: #dddede;  // #d3d6e0
 
 body {
   margin: 0;
   padding: 0;
   font-family: Montserrat, sans-serif;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -30em;
+  left: -3000em;
+}
+
+header .skipTo {
+  position: relative;
+  left: 20px;
+  top: 10px;
 }
 
 /* BANNER: TWO-ROW GRID LAYOUT */
@@ -30,7 +43,6 @@ body {
 .banner-logo {
   float: left;
   width: 100%;
-  padding: 20px 24px 16px;
 }
 
 .banner-logo img {
@@ -38,6 +50,15 @@ body {
 }
 
 .banner-logo a {
+  display: block;
+  width: 200px;
+  padding: 20px 24px 16px;
+}
+
+.banner-logo a:focus,
+.banner-logo a:hover {
+  background-color: $industrial-blue-lite;
+  transition: .4s background;
 }
 
 .banner-search {
@@ -80,6 +101,7 @@ body {
 
 .search-widget input:focus {
   background-color: #fff;
+  transition: .4s background;
 }
 
 .search-widget button {
@@ -151,7 +173,7 @@ body {
 }
 
 a.menu-button {
-  border: 1px solid $illini-blue;
+  border: 2px solid $illini-blue;
   color: #fff;
   text-decoration: none;
   padding: 12px;
@@ -168,7 +190,7 @@ a.menu-button:last-child {
 a.menu-button:focus,
 a.menu-button:hover {
   background-color: $industrial-blue;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 
 .chevron-down::after {
@@ -192,6 +214,16 @@ a.menu-button:hover {
 main {
   color: $default-text-color;
   padding: 1em 1.5em;
+}
+
+main a {
+  color: $industrial-blue;
+}
+
+main a:focus,
+main a:hover {
+  outline-offset: 2px;
+  outline: 2px solid $industrial-blue;
 }
 
 .flex-row {
