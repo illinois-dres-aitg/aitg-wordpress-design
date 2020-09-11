@@ -1,10 +1,28 @@
 // VARIABLES
 
+$cobalt: #1d4b90;
 $default-text-color: #00132c;
 $illini-blue: #13294b;              // #17385e
 $industrial-blue: #1d58a7;
 $industrial-blue-lite: #cad9ef;
 $search-background-color: #dddede;  // #d3d6e0
+
+@font-face {
+  font-family: SourceSerifPro;
+  src: url("fonts/SourceSerifPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SourceSerifPro;
+  font-style: italic;
+  src: url("fonts/SourceSerifPro-Italic.ttf");
+}
+
+@font-face {
+  font-family: SourceSerifPro;
+  font-weight: bold;
+  src: url("fonts/SourceSerifPro-Bold.ttf");
+}
 
 body {
   margin: 0;
@@ -231,12 +249,12 @@ a.menu-button:hover {
 main {
   color: $default-text-color;
   padding: 1em 1.5em;
-  font-family: Helvetica, Arial, sans-serif;
-
+  font-family: SourceSerifPro, sans-serif;
+  font-size: 18px;
 }
 
 main a {
-  color: $industrial-blue;
+  color: $cobalt;
 }
 
 main a:focus,
@@ -265,18 +283,19 @@ main a:hover {
   padding: 0 24px;
 }
 
+.content h1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 225%;
+  font-weight: normal;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  padding: 0;
+}
+
 .right-column {
   display: flex;
   flex-direction: column;
   flex-basis: 20%;
-}
-
-.content h1 {
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-  padding: 0;
-  font-size: 240%;
-  font-weight: normal;
 }
 
 /* FOOTER: THREE-COLUMN FLEX LAYOUT; */
