@@ -2,10 +2,11 @@
 
 $cobalt: #1d4b90;
 $default-text-color: #00132c;
-$illini-blue: #13294b;              // #17385e
+$illini-blue: #13294b;
+$illini-orange: #ff552e;
 $industrial-blue: #1d58a7;
-$industrial-blue-lite: #cad9ef;
-$search-background-color: #dddede;  // #d3d6e0
+$industrial-blue-3: #cad9ef;
+$search-background-color: #dddede;
 
 @font-face {
   font-family: SourceSerifPro;
@@ -52,10 +53,10 @@ header .skip-to a {
   border-bottom-left-radius: 8px;
 }
 
-header .skip-to a:focus {
-  outline-offset: 2px;
-  outline: 2px solid $industrial-blue;
-  background-color: $industrial-blue;
+header .skip-to a:focus,
+header .skip-to a:hover {
+  outline-offset: 1px;
+  outline: 3px solid $illini-orange;
 }
 
 /* BANNER: TWO-ROW GRID LAYOUT */
@@ -91,9 +92,11 @@ header .skip-to a:focus {
 
 .banner-logo a:focus,
 .banner-logo a:hover {
-  background-color: $industrial-blue-lite;
+  background-color: $industrial-blue-3;
   -webkit-transition: .3s background;
   transition: .3s background;
+  border: 2px solid $illini-orange;
+  padding: 18px 22px 14px;
 }
 
 .banner-search {
@@ -260,7 +263,7 @@ main a {
 
 main a:focus,
 main a:hover {
-  background-color: $industrial-blue-lite;
+  background-color: $industrial-blue-3;
   color: $default-text-color;
   -webkit-transition: .3s background;
   transition: .3s background;

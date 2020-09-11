@@ -38,10 +38,10 @@ header .skip-to a {
   border-bottom-left-radius: 8px;
 }
 
-header .skip-to a:focus {
-  outline-offset: 2px;
-  outline: 2px solid #1d58a7;
-  background-color: #1d58a7;
+header .skip-to a:focus,
+header .skip-to a:hover {
+  outline-offset: 1px;
+  outline: 3px solid #ff552e;
 }
 
 /* BANNER: TWO-ROW GRID LAYOUT */
@@ -78,6 +78,8 @@ header .skip-to a:focus {
   background-color: #cad9ef;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
+  border: 2px solid #ff552e;
+  padding: 18px 22px 14px;
 }
 
 .banner-search {
