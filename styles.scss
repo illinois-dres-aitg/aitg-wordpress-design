@@ -102,6 +102,7 @@ header .skip-to a:hover {
   background-color: $industrial-blue-3;
   -webkit-transition: .3s background;
   transition: .3s background;
+  outline: none;
   border: 2px solid $illini-orange;
   padding: 18px 22px 14px;
 }

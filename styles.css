@@ -85,6 +85,7 @@ header .skip-to a:hover {
   background-color: #cad9ef;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
+  outline: none;
   border: 2px solid #ff552e;
   padding: 18px 22px 14px;
 }
