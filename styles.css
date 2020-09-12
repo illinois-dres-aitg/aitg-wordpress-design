@@ -145,7 +145,8 @@ header .skip-to a:hover {
 }
 
 .search-widget button:focus {
-  background-color: #1d58a7;
+  background-color: #5783bc;
+  outline-offset: -2px;
   outline: 2px solid #ff552e;
 }
 
