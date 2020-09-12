@@ -163,26 +163,26 @@ header .skip-to a:hover {
   width: 100%;
   font-size: 24px;
   white-space: nowrap;
-  margin-top: 17px;
-  margin-right: 24px;
-  margin-left: 24px;
-  padding: 0;
 }
 
 .banner-aitg a {
+  display: block;
   color: #fff;
   text-decoration: none;
+  padding: 17px 24px;
 }
 
 .banner-aitg a:focus,
 .banner-aitg a:hover {
+  outline-offset: -2px;
+  outline: 2px solid #ff552e;
   text-decoration: underline;
 }
 
 /* BANNER MENU */
 .banner-menu {
   float: left;
-  margin: 16px 12px 20px 8px;
+  margin: 0px 12px 20px 8px;
   font-size: 16px;
   white-space: nowrap;
 }
