@@ -312,25 +312,27 @@ main a:hover {
 .content h6 {
   font-family: Montserrat, sans-serif;
   font-weight: normal;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
   padding: 0;
 }
 
 .content h1 {
   font-size: 225%;
+  margin: 0.25em 0;
 }
 
 .content h2 {
   font-size: 180%;
+  margin: 0.325em 0;
 }
 
 .content h3 {
   font-size: 155%;
+  margin: 0.45em 0;
 }
 
 .content h4 {
   font-size: 135%;
+  margin: 0.575em 0;
 }
 
 .right-column {
