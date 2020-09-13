@@ -19,6 +19,15 @@ body {
   font-size: 16px;
 }
 
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg");
+}
+
 .screen-reader-text {
   position: absolute;
   top: -30em;
@@ -31,9 +40,8 @@ header .skip-to a {
   left: 45%;
   color: white;
   background: #13294b;
-  font-size: 12px;
+  font-size: 13px;
   text-decoration: none;
-  text-transform: uppercase;
   box-sizing: border-box;
   padding: 6px 8px 8px;
   border-right: 2px solid white;
