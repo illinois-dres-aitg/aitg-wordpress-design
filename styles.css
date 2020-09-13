@@ -259,6 +259,7 @@ main {
   padding: 1em 1.5em;
   font-family: SourceSerifPro, sans-serif;
   font-size: 18px;
+  line-height: 1.4;
 }
 
 main a {
@@ -271,6 +272,7 @@ main a:hover {
   background-color: #cad9ef;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
+  outline: 2px solid #ff552e;
 }
 
 .flex-row {
@@ -291,14 +293,16 @@ main a:hover {
   box-shadow: -1px 0 #eee;
   padding: 0 24px;
 }
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+}
 
 .content h1 {
-  font-family: Montserrat, sans-serif;
   font-size: 225%;
   font-weight: normal;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-  padding: 0;
 }
 
 .right-column {
@@ -343,6 +347,8 @@ footer a {
 
 footer a:focus,
 footer a:hover {
+  outline-offset: 1px;
+  outline: 2px solid #ff552e;
   text-decoration: underline;
 }
 

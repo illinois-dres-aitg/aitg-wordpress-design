@@ -279,6 +279,7 @@ main {
   padding: 1em 1.5em;
   font-family: SourceSerifPro, sans-serif;
   font-size: 18px;
+  line-height: 1.4;
 }
 
 main a {
@@ -291,6 +292,7 @@ main a:hover {
   background-color: $industrial-blue-3;
   -webkit-transition: .3s background;
   transition: .3s background;
+  outline: 2px solid $illini-orange;
 }
 
 .flex-row {
@@ -310,15 +312,17 @@ main a:hover {
   flex-basis: 60%;
   box-shadow: -1px 0 #eee;
   padding: 0 24px;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, sans-serif;
+    padding: 0;
+  }
 }
 
 .content h1 {
-  font-family: Montserrat, sans-serif;
   font-size: 225%;
   font-weight: normal;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-  padding: 0;
 }
 
 .right-column {
@@ -364,6 +368,8 @@ footer a {
 
 footer a:focus,
 footer a:hover {
+  outline-offset: 1px;
+  outline: 2px solid $illini-orange;
   text-decoration: underline;
 }
 
