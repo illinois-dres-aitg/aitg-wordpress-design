@@ -1,288 +1,7 @@
-// VARIABLES
+@use "base" as *;
+@forward "header";
 
-$cobalt: #1d4b90;
-$default-text-color: #00132c;
-$illini-blue: #13294b;
-$illini-orange: #ff552e;
-$industrial-blue: #1d58a7;
-$industrial-blue-1: #5783bc ;
-$industrial-blue-3: #cad9ef;
-$search-background-color: #dddede;
-
-$desktop-width: 996px;
-$tablet-width: 768px;
-
-@font-face {
-  font-family: SourceSerifPro;
-  src: url("fonts/SourceSerifPro-Regular.ttf");
-}
-
-@font-face {
-  font-family: SourceSerifPro;
-  font-style: italic;
-  src: url("fonts/SourceSerifPro-Italic.ttf");
-}
-
-@font-face {
-  font-family: SourceSerifPro;
-  font-weight: bold;
-  src: url("fonts/SourceSerifPro-Bold.ttf");
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Montserrat, sans-serif;
-  font-size: 16px;
-}
-
-body::after {
-  position: absolute; width: 0; height: 0; overflow: hidden; z-index: -1; // hide images
-  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg"); // load images
-}
-
-.screen-reader-text {
-  position: absolute;
-  top: -30em;
-  left: -3000em;
-}
-
-header .skip-to a {
-  position: absolute;
-  top: 0px;
-  left: 45%;
-
-  color: white;
-  background: $illini-blue;
-  font-size: 13px;
-  text-decoration: none;
-  box-sizing: border-box;
-  padding: 6px 8px 8px;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-header .skip-to a:focus,
-header .skip-to a:hover {
-  color: $default-text-color;
-  background-color: $industrial-blue-3;
-  border-right: 2px solid $illini-orange;
-  border-left: 2px solid $illini-orange;
-  border-bottom: 2px solid $illini-orange;
-  outline: none;
-}
-
-/* BANNER: TWO-ROW GRID LAYOUT */
-
-.banner {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr;
-}
-
-/* BANNER ROW 1 */
-
-.banner-row-1 {
-  color: $default-text-color;
-  background-color: #fff;
-  width: 100%;
-}
-
-.banner-logo {
-  float: left;
-  width: 100%;
-}
-
-.banner-logo img {
-  width: 200px;
-}
-
-.banner-logo a {
-  display: block;
-  width: 200px;
-  padding: 20px 24px 16px;
-}
-
-.banner-logo a:focus,
-.banner-logo a:hover {
-  background-color: $industrial-blue-3;
-  -webkit-transition: .3s background;
-  transition: .3s background;
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
-}
-
-.banner-search {
-  float: left;
-  padding: 0 20px 16px;
-}
-
-@media screen and (min-width: $tablet-width) {
-  .banner-logo {
-    width: 40%;
-  }
-  .banner-search {
-    float: right;
-    padding: 20px 24px 16px;
-  }
-}
-
-.search-widget {
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 1fr;
-  width: 18em;
-}
-
-.search-widget input {
-  grid-column: 1;
-  color: #555555;
-  background-color: $search-background-color;
-  border: none;
-  font-family: inherit;
-  font-size: 16px;
-  padding-left: 10px;
-}
-
-.search-widget input:focus {
-  background-color: #fff;
-  -webkit-transition: .3s background;
-  transition: .3s background;
-  outline: none;
-  box-sizing: border-box;
-  border-top: 2px solid $illini-blue;
-  border-bottom: 2px solid $illini-blue;
-  border-left: 2px solid $illini-blue;
-  padding-left: 8px;
-}
-
-.search-widget button {
-  grid-column: 2;
-  color: #ffffff;
-  background: $illini-blue url("images/search-icon.svg") no-repeat;
-  background-position: left 10px top 50%;
-  background-size: 20.5px 20.5px;
-  border: none;
-  width: 38px;
-  height: 36px;
-}
-
-.search-widget button:focus {
-  background: $industrial-blue-3 url("images/search-icon-inv.svg") no-repeat;
-  background-position: left 10px top 50%;
-  background-size: 20.5px 20.5px;
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
-}
-
-/* BANNER ROW 2 */
-
-.banner-row-2 {
-  color: #fff;
-  background-color: $illini-blue;
-  width: 100%;
-}
-
-.banner-aitg {
-  float: left;
-  width: 100%;
-  font-size: 24px;
-  white-space: nowrap;
-}
-
-.banner-aitg a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 12px 24px;
-}
-
-.banner-aitg a:focus,
-.banner-aitg a:hover {
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
-  text-decoration: underline;
-}
-
-@media screen and (min-width: $desktop-width) {
-  .banner-aitg {
-    width: auto;
-  }
-  .banner-aitg a{
-    padding: 17px 24px;
-  }
-}
-
-/* BANNER MENU */
-
-.banner-menu {
-  float: left;
-  font-size: 16px;
-  white-space: nowrap;
-  padding-left: 12px;
-}
-
-.banner-menu ul {
-  margin: 0;
-  padding: 0;
-}
-
-.banner-menu li {
-  display: inline;
-}
-
-.chevron-down::after {
-  content: url("images/chevron-down.svg");
-  position: relative;
-  top: -2px;
-  left: 6px;
-  margin-right: 7px;
-}
-
-.chevron-right::after {
-  content: url("images/chevron-right.svg");
-  position: relative;
-  top: 0.5px;
-  left: 6px;
-  margin-right: 7px;
-}
-
-a.menu-button {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 12px 14px;
-}
-
-a.menu-button:focus,
-a.menu-button:hover {
-  color: $default-text-color;
-  background-color: $industrial-blue-3;
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
-  .chevron-down::after {
-    content: url("images/chevron-down-inv.svg");
-  }
-  .chevron-right::after {
-    content: url("images/chevron-right-inv.svg");
-  }
-}
-
-@media screen and (min-width: $desktop-width) {
-  .banner-menu {
-    float: right;
-    padding-right: 18px;
-  }
-  a.menu-button {
-    padding: 22px 12px 22px;
-  }
-}
-
-/* MAIN: THREE-COLUMN FLEX LAYOUT */
+/* -------- MAIN: FLEX LAYOUT -------- */
 
 main {
   color: $default-text-color;
@@ -322,17 +41,35 @@ main a:hover {
   flex-basis: 60%;
   box-shadow: -1px 0 #eee;
   padding: 0 24px;
-  h1, h2, h3, h4, h5, h6 {
-    font-family: Montserrat, sans-serif;
-    padding: 0;
-  }
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  padding: 0;
 }
 
 .content h1 {
   font-size: 225%;
-  font-weight: normal;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
+}
+
+.content h2 {
+  font-size: 180%;
+}
+
+.content h3 {
+  font-size: 155%;
+}
+
+.content h4 {
+  font-size: 135%;
 }
 
 .right-column {
@@ -341,7 +78,7 @@ main a:hover {
   flex-basis: 20%;
 }
 
-/* FOOTER: THREE-COLUMN FLEX LAYOUT; */
+/* -------- FOOTER: FLEX LAYOUT -------- */
 
 footer {
   color: #fff;

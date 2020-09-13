@@ -34,6 +34,7 @@ body::after {
   left: -3000em;
 }
 
+/* -------- HEADER -------- */
 header .skip-to a {
   position: absolute;
   top: 0px;
@@ -61,14 +62,12 @@ header .skip-to a:hover {
   outline: none;
 }
 
-/* BANNER: TWO-ROW GRID LAYOUT */
 .banner {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
 }
 
-/* BANNER ROW 1 */
 .banner-row-1 {
   color: #00132c;
   background-color: #fff;
@@ -162,7 +161,6 @@ header .skip-to a:hover {
   outline: 2px solid #ff552e;
 }
 
-/* BANNER ROW 2 */
 .banner-row-2 {
   color: #fff;
   background-color: #13294b;
@@ -200,7 +198,6 @@ header .skip-to a:hover {
     padding: 17px 24px;
   }
 }
-/* BANNER MENU */
 .banner-menu {
   float: left;
   font-size: 16px;
@@ -266,7 +263,7 @@ a.menu-button:hover .chevron-right::after {
     padding: 22px 12px 22px;
   }
 }
-/* MAIN: THREE-COLUMN FLEX LAYOUT */
+/* -------- MAIN: FLEX LAYOUT -------- */
 main {
   color: #00132c;
   padding: 1em 1.5em;
@@ -306,16 +303,34 @@ main a:hover {
   box-shadow: -1px 0 #eee;
   padding: 0 24px;
 }
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
   font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   padding: 0;
 }
 
 .content h1 {
   font-size: 225%;
-  font-weight: normal;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
+}
+
+.content h2 {
+  font-size: 180%;
+}
+
+.content h3 {
+  font-size: 155%;
+}
+
+.content h4 {
+  font-size: 135%;
 }
 
 .right-column {
@@ -324,7 +339,7 @@ main a:hover {
   flex-basis: 20%;
 }
 
-/* FOOTER: THREE-COLUMN FLEX LAYOUT; */
+/* -------- FOOTER: FLEX LAYOUT -------- */
 footer {
   color: #fff;
   background-color: #13294b;
