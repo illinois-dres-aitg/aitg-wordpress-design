@@ -1,0 +1,50 @@
+// VARIABLES
+
+// COLORS
+$cobalt: #1d4b90;
+$default-text-color: #00132c;
+$illini-blue: #13294b;
+$illini-orange: #ff552e;
+$industrial-blue: #1d58a7;
+$industrial-blue-1: #5783bc ;
+$industrial-blue-3: #cad9ef;
+$search-background-color: #dddede;
+
+// DIMENSIONS
+$desktop-width: 996px;
+$tablet-width: 768px;
+
+@font-face {
+  font-family: SourceSerifPro;
+  src: url("fonts/SourceSerifPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SourceSerifPro;
+  font-style: italic;
+  src: url("fonts/SourceSerifPro-Italic.ttf");
+}
+
+@font-face {
+  font-family: SourceSerifPro;
+  font-weight: bold;
+  src: url("fonts/SourceSerifPro-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+}
+
+body::after {
+  position: absolute; width: 0; height: 0; overflow: hidden; z-index: -1; // hide images
+  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg"); // load images
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -30em;
+  left: -3000em;
+}
