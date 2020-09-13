@@ -85,11 +85,6 @@ header .skip-to a:hover {
   background-color: #cad9ef;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
-  /*
-  outline: none;
-  border: 2px solid $illini-orange;
-  padding: 18px 22px 14px;
-  */
   outline-offset: -2px;
   outline: 2px solid #ff552e;
 }
@@ -185,6 +180,14 @@ header .skip-to a:hover {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 996px) {
+  .banner-aitg {
+    width: auto;
+  }
+  .banner-aitg a {
+    padding: 17px 24px;
+  }
+}
 /* BANNER MENU */
 .banner-menu {
   float: left;
@@ -193,20 +196,6 @@ header .skip-to a:hover {
   padding-left: 12px;
 }
 
-@media screen and (min-width: 996px) {
-  .banner-aitg {
-    width: auto;
-  }
-
-  .banner-aitg a {
-    padding: 17px 24px;
-  }
-
-  .banner-menu {
-    float: right;
-    padding-right: 18px;
-  }
-}
 .banner-menu ul {
   margin: 0;
   padding: 0;
@@ -214,6 +203,22 @@ header .skip-to a:hover {
 
 .banner-menu li {
   display: inline;
+}
+
+.chevron-down::after {
+  content: url("images/chevron-down.svg");
+  position: relative;
+  top: -2px;
+  left: 6px;
+  margin-right: 4px;
+}
+
+.chevron-right::after {
+  content: url("images/chevron-right.svg");
+  position: relative;
+  top: 0.5px;
+  left: 6px;
+  margin-right: 4px;
 }
 
 a.menu-button {
@@ -240,26 +245,15 @@ a.menu-button:hover .chevron-right::after {
 }
 
 @media screen and (min-width: 996px) {
+  .banner-menu {
+    float: right;
+    padding-right: 18px;
+  }
+
   a.menu-button {
     padding: 24px 12px 20px;
   }
 }
-.chevron-down::after {
-  content: url("images/chevron-down.svg");
-  position: relative;
-  top: -2px;
-  left: 6px;
-  margin-right: 4px;
-}
-
-.chevron-right::after {
-  content: url("images/chevron-right.svg");
-  position: relative;
-  top: 0.5px;
-  left: 6px;
-  margin-right: 4px;
-}
-
 /* MAIN: THREE-COLUMN FLEX LAYOUT */
 main {
   color: #00132c;
