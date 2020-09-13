@@ -288,6 +288,7 @@ main a:hover {
   display: flex;
   flex-direction: column;
   flex-basis: 60%;
+  box-shadow: -1px 0 #eee;
   padding: 0 24px;
 }
 
