@@ -105,9 +105,8 @@ header .skip-to a:hover {
   background-color: $industrial-blue-3;
   -webkit-transition: .3s background;
   transition: .3s background;
-  outline: none;
-  border: 2px solid $illini-orange;
-  padding: 18px 22px 14px;
+  outline-offset: -2px;
+  outline: 2px solid $illini-orange;
 }
 
 .banner-search {
@@ -239,16 +238,6 @@ a.menu-button {
   text-decoration: none;
   padding: 14px 12px 14px;
 }
-
-/*
-a.menu-button:first-child {
-  padding-left: 16px;
-}
-
-a.menu-button:last-child {
-  padding-right: 16px;
-}
-*/
 
 a.menu-button:focus,
 a.menu-button:hover {
