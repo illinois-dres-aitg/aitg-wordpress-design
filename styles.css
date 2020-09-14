@@ -39,6 +39,7 @@ header .skip-to a {
   position: absolute;
   top: 0px;
   left: 70%;
+  transition: left 0.3s linear;
   color: white;
   background: #13294b;
   font-size: 13px;
@@ -298,13 +299,13 @@ main a:hover {
 .left-column {
   display: flex;
   flex-direction: column;
-  flex-basis: 20%;
+  flex-basis: 4%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  flex-basis: 60%;
+  flex-basis: 92%;
   box-shadow: -1px 0 #eee;
   padding: 0 24px;
 }
@@ -343,9 +344,35 @@ main a:hover {
 .right-column {
   display: flex;
   flex-direction: column;
-  flex-basis: 20%;
+  flex-basis: 4%;
 }
 
+@media screen and (min-width: 768px) {
+  .left-column {
+    flex-basis: 14%;
+  }
+
+  .content {
+    flex-basis: 72%;
+  }
+
+  .right-column {
+    flex-basis: 14%;
+  }
+}
+@media screen and (min-width: 996px) {
+  .left-column {
+    flex-basis: 18%;
+  }
+
+  .content {
+    flex-basis: 64%;
+  }
+
+  .right-column {
+    flex-basis: 18%;
+  }
+}
 /* -------- FOOTER: FLEX LAYOUT -------- */
 footer {
   color: #fff;

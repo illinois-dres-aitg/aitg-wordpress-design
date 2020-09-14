@@ -6,6 +6,7 @@ header .skip-to a {
   position: absolute;
   top: 0px;
   left: 70%;
+  transition: left .3s linear;
 
   color: white;
   background: $illini-blue;
