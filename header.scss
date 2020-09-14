@@ -5,13 +5,15 @@
 header .skip-to a {
   position: absolute;
   top: 0px;
-  left: 70%;
+  left: 60%;
   transition: left .3s linear;
 
   color: $dark-gray;
   background-color: $light-gray;
   font-size: 14px;
   text-decoration: none;
+  white-space: nowrap;
+
   box-sizing: border-box;
   padding: 6px 8px 8px;
   border-right: 2px solid white;
@@ -33,7 +35,7 @@ header .skip-to a:hover {
 
 @media screen and (min-width: $tablet-width) {
   header .skip-to a {
-    left: 32%;
+    left: 40%;
   }
 }
 
@@ -65,7 +67,8 @@ header .skip-to a:hover {
 .banner-logo a {
   display: block;
   width: 200px;
-  padding: 20px 24px 16px;
+//padding: 20px 24px 16px;
+  padding: 14px 24px 8px;
 }
 
 .banner-logo a:focus,
@@ -81,7 +84,8 @@ header .skip-to a:hover {
 
 .banner-search {
   float: left;
-  padding: 0 20px 16px;
+//padding: 0 20px 16px;
+  padding: 0 20px 12px;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -90,7 +94,8 @@ header .skip-to a:hover {
   }
   .banner-search {
     float: right;
-    padding: 20px 24px 16px;
+//  padding: 20px 24px 16px;
+    padding: 14px 24px 8px;
   }
 }
 
