@@ -191,6 +191,8 @@ header .skip-to a:hover {
 
 .banner-aitg a:focus,
 .banner-aitg a:hover {
+  color: #1d4b90;
+  background-color: #fff;
   outline-offset: -2px;
   outline: 2px solid #ff552e;
   text-decoration: underline;
@@ -247,7 +249,7 @@ a.menu-button {
 a.menu-button:focus,
 a.menu-button:hover {
   color: #00132c;
-  background-color: #cad9ef;
+  background-color: #90aed5;
   outline-offset: -2px;
   outline: 2px solid #ff552e;
 }

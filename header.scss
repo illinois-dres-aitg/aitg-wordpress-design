@@ -172,6 +172,8 @@ header .skip-to a:hover {
 
 .banner-aitg a:focus,
 .banner-aitg a:hover {
+  color: $cobalt;
+  background-color: #fff;
   outline-offset: -2px;
   outline: 2px solid $illini-orange;
   text-decoration: underline;
@@ -230,7 +232,7 @@ a.menu-button {
 a.menu-button:focus,
 a.menu-button:hover {
   color: $default-text-color;
-  background-color: $industrial-blue-3;
+  background-color: $industrial-blue-2;
   outline-offset: -2px;
   outline: 2px solid $illini-orange;
   .chevron-down::after {
