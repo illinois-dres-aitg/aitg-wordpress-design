@@ -40,9 +40,9 @@ header .skip-to a {
   top: 0px;
   left: 70%;
   transition: left 0.3s linear;
-  color: white;
-  background: #13294b;
-  font-size: 13px;
+  color: #555555;
+  background-color: #dddede;
+  font-size: 14px;
   text-decoration: none;
   box-sizing: border-box;
   padding: 6px 8px 8px;
@@ -63,9 +63,17 @@ header .skip-to a:hover {
   outline: none;
 }
 
+.skip-to-chevron::after {
+  content: url("images/chevron-down-inv.svg");
+  position: relative;
+  top: -1px;
+  left: 6px;
+  margin-right: 7px;
+}
+
 @media screen and (min-width: 768px) {
   header .skip-to a {
-    left: 45%;
+    left: 43%;
   }
 }
 .banner {
@@ -138,8 +146,8 @@ header .skip-to a:hover {
 
 .search-widget input:focus {
   background-color: #fff;
-  -webkit-transition: 0.3s background;
-  transition: 0.3s background;
+  -webkit-transition: 0.1s background;
+  transition: 0.1s background;
   outline: none;
   box-sizing: border-box;
   border-top: 2px solid #13294b;
