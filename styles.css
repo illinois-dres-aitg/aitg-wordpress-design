@@ -212,7 +212,7 @@ header .skip-to a:focus {
   outline: 2px solid #ff552e;
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 992px) {
   .banner-aitg {
     width: auto;
   }
@@ -278,7 +278,7 @@ a.menu-button:hover .chevron-right::after {
   content: url("images/chevron-right-inv.svg");
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 992px) {
   .banner-menu {
     float: right;
     padding-right: 18px;
@@ -382,7 +382,7 @@ main a:focus {
     flex-basis: 14%;
   }
 }
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 992px) {
   .left-column {
     flex-basis: 18%;
   }
