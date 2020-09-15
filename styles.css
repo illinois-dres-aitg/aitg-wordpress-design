@@ -25,7 +25,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg") url("images/search-icon-inv.svg");
+  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg") url("images/search-icon-inv.svg") url("images/search-icon.svg");
 }
 
 .screen-reader-text {
