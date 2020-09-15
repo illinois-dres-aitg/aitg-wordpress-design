@@ -25,7 +25,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg");
+  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg") url("images/search-icon-inv.svg");
 }
 
 .screen-reader-text {
@@ -39,6 +39,7 @@ header .skip-to a {
   position: absolute;
   top: 0px;
   left: 60%;
+  -webkit-transition: left 0.3s linear;
   transition: left 0.3s linear;
   color: #555555;
   background-color: #dddede;
@@ -145,8 +146,8 @@ header .skip-to a:focus {
 
 .search-widget input:focus {
   background-color: #fff;
-  -webkit-transition: 0.1s background;
-  transition: 0.1s background;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
   outline: none;
   box-sizing: border-box;
   border-top: 2px solid #13294b;
@@ -161,6 +162,8 @@ header .skip-to a:focus {
   background: #13294b url("images/search-icon.svg") no-repeat;
   background-position: left 10px top 50%;
   background-size: 20.5px 20.5px;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
   border: none;
   width: 38px;
   height: 36px;
@@ -199,16 +202,14 @@ header .skip-to a:focus {
 .banner-aitg a:hover {
   color: #1d4b90;
   background-color: #fff;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
   text-decoration: underline;
   outline-offset: -2px;
 }
 
 .banner-aitg a:focus {
   outline: 2px solid #ff552e;
-}
-
-.banner-aitg a:hover {
-  outline: 2px solid #13294b;
 }
 
 @media screen and (min-width: 996px) {
@@ -263,7 +264,10 @@ a.menu-button:focus,
 a.menu-button:hover {
   color: #00132c;
   background-color: #90aed5;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
   outline-offset: -2px;
+  outline: 2px solid #ff552e;
 }
 a.menu-button:focus .chevron-down::after,
 a.menu-button:hover .chevron-down::after {
@@ -272,14 +276,6 @@ a.menu-button:hover .chevron-down::after {
 a.menu-button:focus .chevron-right::after,
 a.menu-button:hover .chevron-right::after {
   content: url("images/chevron-right-inv.svg");
-}
-
-a.menu-button:focus {
-  outline: 2px solid #ff552e;
-}
-
-a.menu-button:hover {
-  outline: 2px solid #fff;
 }
 
 @media screen and (min-width: 996px) {
@@ -311,6 +307,9 @@ main a:hover {
   background-color: #cad9ef;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
+}
+
+main a:focus {
   outline: 2px solid #ff552e;
 }
 
@@ -404,8 +403,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
-  padding-top: 4px;
-  padding-bottom: 12px;
+  padding: 4px 0px 12px;
 }
 
 footer div {
@@ -428,13 +426,21 @@ footer a {
   color: #fff;
   text-decoration: none;
   white-space: normal;
+  padding: 4px;
 }
 
 footer a:focus,
 footer a:hover {
-  outline-offset: 1px;
-  outline: 2px solid #ff552e;
+  color: #00132c;
+  background-color: #cad9ef;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
   text-decoration: underline;
+}
+
+footer a:focus {
+  outline-offset: -2px;
+  outline: 2px solid #ff552e;
 }
 
 @media screen and (min-width: 414px) {

@@ -19,8 +19,10 @@ main a:focus,
 main a:hover {
   color: $default-text-color;
   background-color: $industrial-blue-3;
-  -webkit-transition: .3s background;
-  transition: .3s background;
+  @include background-transition;
+}
+
+main a:focus {
   outline: 2px solid $illini-orange;
 }
 
@@ -113,8 +115,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   font-size: 14px;
-  padding-top: 4px;
-  padding-bottom: 12px;
+  padding: 4px 0px 12px;
 }
 
 footer div {
@@ -137,13 +138,20 @@ footer a {
   color: #fff;
   text-decoration: none;
   white-space: normal;
+  padding: 4px;
 }
 
 footer a:focus,
 footer a:hover {
-  outline-offset: 1px;
-  outline: 2px solid $illini-orange;
+  color: $default-text-color;
+  background-color: $industrial-blue-3;
+  @include background-transition;
   text-decoration: underline;
+}
+
+footer a:focus {
+  outline-offset: -2px;
+  outline: 2px solid $illini-orange;
 }
 
 @media screen and (min-width: 414px) {

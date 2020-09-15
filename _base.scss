@@ -15,6 +15,16 @@ $light-gray: #dddede;
 $desktop-width: 996px;
 $tablet-width: 768px;
 
+// TIMING
+$std-trans-time: 0.3s;
+
+// MIXINS
+@mixin background-transition {
+  -webkit-transition: $std-trans-time background;
+  transition: $std-trans-time background;
+}
+
+// RULES
 @font-face {
   font-family: SourceSerifPro;
   src: url("fonts/SourceSerifPro-Regular.ttf");
@@ -39,9 +49,17 @@ body {
   font-size: 16px;
 }
 
+// preload svg images
 body::after {
-  position: absolute; width: 0; height: 0; overflow: hidden; z-index: -1; // hide images
-  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg"); // load images
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content:
+    url("images/chevron-down-inv.svg")
+    url("images/chevron-right-inv.svg")
+    url("images/search-icon-inv.svg");
 }
 
 .screen-reader-text {

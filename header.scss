@@ -6,7 +6,8 @@ header .skip-to a {
   position: absolute;
   top: 0px;
   left: 60%;
-  transition: left .3s linear;
+  -webkit-transition: left $std-trans-time linear;
+  transition: left $std-trans-time linear;
 
   color: $dark-gray;
   background-color: $light-gray;
@@ -70,15 +71,13 @@ header .skip-to a:focus {
 .banner-logo a {
   display: block;
   width: 200px;
-//padding: 20px 24px 16px;
   padding: 14px 24px 8px;
 }
 
 .banner-logo a:focus,
 .banner-logo a:hover {
   background-color: $industrial-blue-3;
-  -webkit-transition: .3s background;
-  transition: .3s background;
+  @include background-transition;
 }
 
 .banner-logo a:focus {
@@ -124,8 +123,7 @@ header .skip-to a:focus {
 
 .search-widget input:focus {
   background-color: #fff;
-  -webkit-transition: .1s background;
-  transition: .1s background;
+  @include background-transition;
   outline: none;
   box-sizing: border-box;
   border-top: 2px solid $illini-blue;
@@ -140,6 +138,7 @@ header .skip-to a:focus {
   background: $illini-blue url("images/search-icon.svg") no-repeat;
   background-position: left 10px top 50%;
   background-size: 20.5px 20.5px;
+  @include background-transition;
   border: none;
   width: 38px;
   height: 36px;
@@ -180,16 +179,13 @@ header .skip-to a:focus {
 .banner-aitg a:hover {
   color: $cobalt;
   background-color: #fff;
+  @include background-transition;
   text-decoration: underline;
   outline-offset: -2px;
 }
 
 .banner-aitg a:focus {
   outline: 2px solid $illini-orange;
-}
-
-.banner-aitg a:hover {
-  outline: 2px solid $illini-blue;
 }
 
 @media screen and (min-width: $desktop-width) {
@@ -246,21 +242,15 @@ a.menu-button:focus,
 a.menu-button:hover {
   color: $default-text-color;
   background-color: $industrial-blue-2;
+  @include background-transition;
   outline-offset: -2px;
+  outline: 2px solid $illini-orange;
   .chevron-down::after {
     content: url("images/chevron-down-inv.svg");
   }
   .chevron-right::after {
     content: url("images/chevron-right-inv.svg");
   }
-}
-
-a.menu-button:focus {
-  outline: 2px solid $illini-orange;
-}
-
-a.menu-button:hover {
-  outline: 2px solid #fff;
 }
 
 @media screen and (min-width: $desktop-width) {
