@@ -27,10 +27,13 @@ header .skip-to a:focus,
 header .skip-to a:hover {
   color: $default-text-color;
   background-color: $industrial-blue-3;
+  outline: none;
+}
+
+header .skip-to a:focus {
   border-right: 2px solid $illini-orange;
   border-left: 2px solid $illini-orange;
   border-bottom: 2px solid $illini-orange;
-  outline: none;
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -76,6 +79,9 @@ header .skip-to a:hover {
   background-color: $industrial-blue-3;
   -webkit-transition: .3s background;
   transition: .3s background;
+}
+
+.banner-logo a:focus {
   outline-offset: -2px;
   outline: 2px solid $illini-orange;
 }
@@ -174,9 +180,16 @@ header .skip-to a:hover {
 .banner-aitg a:hover {
   color: $cobalt;
   background-color: #fff;
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
   text-decoration: underline;
+  outline-offset: -2px;
+}
+
+.banner-aitg a:focus {
+  outline: 2px solid $illini-orange;
+}
+
+.banner-aitg a:hover {
+  outline: 2px solid $illini-blue;
 }
 
 @media screen and (min-width: $desktop-width) {
@@ -234,13 +247,20 @@ a.menu-button:hover {
   color: $default-text-color;
   background-color: $industrial-blue-2;
   outline-offset: -2px;
-  outline: 2px solid $illini-orange;
   .chevron-down::after {
     content: url("images/chevron-down-inv.svg");
   }
   .chevron-right::after {
     content: url("images/chevron-right-inv.svg");
   }
+}
+
+a.menu-button:focus {
+  outline: 2px solid $illini-orange;
+}
+
+a.menu-button:hover {
+  outline: 2px solid #fff;
 }
 
 @media screen and (min-width: $desktop-width) {
