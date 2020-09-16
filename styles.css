@@ -205,11 +205,16 @@ header .skip-to a:focus {
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
   text-decoration: underline;
-  outline-offset: -2px;
 }
 
 .banner-aitg a:focus {
+  outline-offset: -2px;
   outline: 2px solid #ff552e;
+}
+
+.banner-aitg a:hover {
+  outline-offset: -2px;
+  outline: 2px solid #f5821e;
 }
 
 @media screen and (min-width: 992px) {
@@ -220,6 +225,14 @@ header .skip-to a:focus {
   .banner-aitg a {
     padding: 17px 24px;
   }
+
+  /*
+  .banner-aitg a:hover {
+    padding: 15px 24px;
+    border-top: 2px solid $illini-blue;
+    border-bottom: 2px solid $illini-blue;
+  }
+  */
 }
 .banner-menu {
   float: left;
@@ -276,6 +289,11 @@ a.menu-button:hover .chevron-down::after {
 a.menu-button:focus .chevron-right::after,
 a.menu-button:hover .chevron-right::after {
   content: url("images/chevron-right-inv.svg");
+}
+
+a.menu-button:hover {
+  outline-offset: -2px;
+  outline: 2px solid #f5821e;
 }
 
 @media screen and (min-width: 992px) {

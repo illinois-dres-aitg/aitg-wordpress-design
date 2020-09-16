@@ -89,7 +89,6 @@ header .skip-to a:focus {
 
 .banner-search {
   float: left;
-//padding: 0 20px 16px;
   padding: 0 20px 12px;
 }
 
@@ -99,7 +98,6 @@ header .skip-to a:focus {
   }
   .banner-search {
     float: right;
-//  padding: 20px 24px 16px;
     padding: 14px 24px 8px;
   }
 }
@@ -180,19 +178,23 @@ header .skip-to a:focus {
   color: $cobalt;
   background-color: #fff;
   @include background-transition;
-  text-decoration: underline;
   outline-offset: -2px;
+  text-decoration: underline;
 }
 
 .banner-aitg a:focus {
   outline: 2px solid $illini-orange;
 }
 
+.banner-aitg a:hover {
+  outline: 2px solid $heritage-orange;
+}
+
 @media screen and (min-width: $desktop-width) {
   .banner-aitg {
     width: auto;
   }
-  .banner-aitg a{
+  .banner-aitg a {
     padding: 17px 24px;
   }
 }
@@ -244,13 +246,20 @@ a.menu-button:hover {
   background-color: $industrial-blue-2;
   @include background-transition;
   outline-offset: -2px;
-  outline: 2px solid $illini-orange;
   .chevron-down::after {
     content: url("images/chevron-down-inv.svg");
   }
   .chevron-right::after {
     content: url("images/chevron-right-inv.svg");
   }
+}
+
+a.menu-button:focus {
+  outline: 2px solid $illini-orange;
+}
+
+a.menu-button:hover {
+  outline: 2px solid $heritage-orange;
 }
 
 @media screen and (min-width: $desktop-width) {
