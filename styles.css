@@ -204,16 +204,15 @@ header .skip-to a:focus {
   background-color: #fff;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
+  outline-offset: -2px;
   text-decoration: underline;
 }
 
 .banner-aitg a:focus {
-  outline-offset: -2px;
   outline: 2px solid #ff552e;
 }
 
 .banner-aitg a:hover {
-  outline-offset: -2px;
   outline: 2px solid #f5821e;
 }
 
@@ -225,14 +224,6 @@ header .skip-to a:focus {
   .banner-aitg a {
     padding: 17px 24px;
   }
-
-  /*
-  .banner-aitg a:hover {
-    padding: 15px 24px;
-    border-top: 2px solid $illini-blue;
-    border-bottom: 2px solid $illini-blue;
-  }
-  */
 }
 .banner-menu {
   float: left;
@@ -280,7 +271,6 @@ a.menu-button:hover {
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
   outline-offset: -2px;
-  outline: 2px solid #ff552e;
 }
 a.menu-button:focus .chevron-down::after,
 a.menu-button:hover .chevron-down::after {
@@ -291,8 +281,11 @@ a.menu-button:hover .chevron-right::after {
   content: url("images/chevron-right-inv.svg");
 }
 
+a.menu-button:focus {
+  outline: 2px solid #ff552e;
+}
+
 a.menu-button:hover {
-  outline-offset: -2px;
   outline: 2px solid #f5821e;
 }
 
