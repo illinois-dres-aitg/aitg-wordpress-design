@@ -10,7 +10,6 @@
 
 <body>
   <header>
-    <div class="skip-to"><a href="#">Skip to content...</a></div>
     <div class="banner">
       <div class="banner-row-1">
         <div class="banner-logo">
@@ -90,5 +89,17 @@
       </ul>
     </div>
   </footer>
+  <script src="js\skipto.js"></script>
+  <script>
+    var SkipToConfig =  {
+        'settings': {
+            'skipTo': {
+                landmarks: 'main, [role="main"], [role="search"], nav, [role="navigation"]',
+                colorTheme: 'illinois',
+                customClass: 'aitg'
+            }
+        }
+    };
+  </script>
 </body>
 </html>
