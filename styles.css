@@ -204,16 +204,12 @@ header .skip-to a:focus {
   background-color: #fff;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
-  outline-offset: -2px;
   text-decoration: underline;
 }
 
 .banner-aitg a:focus {
+  outline-offset: -2px;
   outline: 2px solid #ff552e;
-}
-
-.banner-aitg a:hover {
-  outline: 2px solid #f5821e;
 }
 
 @media screen and (min-width: 992px) {
@@ -261,32 +257,35 @@ a.menu-button {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 14px 12px 14px;
+  padding: 14px 12px;
 }
 
 a.menu-button:focus,
 a.menu-button:hover {
-  color: #00132c;
-  background-color: #90aed5;
+  /* color: $default-text-color; */
+  /* background-color: $industrial-blue-2; */
+  background-color: #1d58a7;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
-  outline-offset: -2px;
-}
-a.menu-button:focus .chevron-down::after,
-a.menu-button:hover .chevron-down::after {
-  content: url("images/chevron-down-inv.svg");
-}
-a.menu-button:focus .chevron-right::after,
-a.menu-button:hover .chevron-right::after {
-  content: url("images/chevron-right-inv.svg");
+  /*
+  .chevron-down::after {
+    content: url("images/chevron-down-inv.svg");
+  }
+  .chevron-right::after {
+    content: url("images/chevron-right-inv.svg");
+  }
+  */
 }
 
 a.menu-button:focus {
+  outline-offset: -2px;
   outline: 2px solid #ff552e;
 }
 
 a.menu-button:hover {
-  outline: 2px solid #f5821e;
+  /* @include outline-inset($heritage-orange); */
+  outline-offset: -2px;
+  outline: 2px solid #fff;
 }
 
 @media screen and (min-width: 992px) {
@@ -296,7 +295,14 @@ a.menu-button:hover {
   }
 
   a.menu-button {
-    padding: 22px 12px 22px;
+    padding: 22px 12px;
+  }
+
+  a.menu-button:hover {
+    outline: none;
+    padding: 22px 10px;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
   }
 }
 /* -------- MAIN: FLEX LAYOUT -------- */

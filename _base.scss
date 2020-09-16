@@ -26,6 +26,11 @@ $std-trans-time: 0.3s;
   transition: $std-trans-time background;
 }
 
+@mixin outline-inset ($color) {
+  outline-offset: -2px;
+  outline: 2px solid $color;
+}
+
 // RULES
 @font-face {
   font-family: SourceSerifPro;
