@@ -25,7 +25,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url("images/chevron-down-inv.svg") url("images/chevron-right-inv.svg") url("images/search-icon-inv.svg") url("images/search-icon.svg");
+  content: url("images/search-icon-inv.svg") url("images/search-icon.svg");
 }
 
 .screen-reader-text {
@@ -262,19 +262,9 @@ a.menu-button {
 
 a.menu-button:focus,
 a.menu-button:hover {
-  /* color: $default-text-color; */
-  /* background-color: $industrial-blue-2; */
   background-color: #1d58a7;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
-  /*
-  .chevron-down::after {
-    content: url("images/chevron-down-inv.svg");
-  }
-  .chevron-right::after {
-    content: url("images/chevron-right-inv.svg");
-  }
-  */
 }
 
 a.menu-button:focus {
@@ -283,9 +273,10 @@ a.menu-button:focus {
 }
 
 a.menu-button:hover {
-  /* @include outline-inset($heritage-orange); */
-  outline-offset: -2px;
-  outline: 2px solid #fff;
+  padding: 12px 10px 14px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
 }
 
 @media screen and (min-width: 992px) {
@@ -301,8 +292,9 @@ a.menu-button:hover {
   a.menu-button:hover {
     outline: none;
     padding: 22px 10px;
-    border-left: 2px solid #fff;
+    border-top: none;
     border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
   }
 }
 /* -------- MAIN: FLEX LAYOUT -------- */

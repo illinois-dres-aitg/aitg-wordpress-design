@@ -4,11 +4,9 @@
 $cobalt: #1d4b90;
 $dark-gray: #555555;
 $default-text-color: #00132c;
-$heritage-orange: #f5821e;
 $illini-blue: #13294b;
 $illini-orange: #ff552e;
 $industrial-blue: #1d58a7;
-$industrial-blue-2: #90aed5;
 $industrial-blue-3: #cad9ef;
 $light-gray: #dddede;
 
@@ -63,11 +61,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content:
-    url("images/chevron-down-inv.svg")
-    url("images/chevron-right-inv.svg")
-    url("images/search-icon-inv.svg")
-    url("images/search-icon.svg");
+  content: url("images/search-icon-inv.svg") url("images/search-icon.svg");
 }
 
 .screen-reader-text {
