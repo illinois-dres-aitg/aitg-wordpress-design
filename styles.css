@@ -35,12 +35,15 @@ body::after {
 }
 
 /* -------- HEADER -------- */
-header .skip-to a {
+header .skip-to.aitg {
   position: absolute;
   top: 0px;
   left: 60%;
   -webkit-transition: left 0.3s linear;
   transition: left 0.3s linear;
+}
+
+header .skip-to.aitg button {
   color: #555555;
   background-color: #dddede;
   font-size: 14px;
@@ -55,21 +58,21 @@ header .skip-to a {
   border-bottom-left-radius: 8px;
 }
 
-header .skip-to a:focus,
-header .skip-to a:hover {
+header .skip-to.aitg button:focus,
+header .skip-to.aitg button:hover {
   color: #00132c;
   background-color: #cad9ef;
   outline: none;
 }
 
-header .skip-to a:focus {
+header .skip-to.aitg button:focus {
   border-right: 2px solid #ff552e;
   border-left: 2px solid #ff552e;
   border-bottom: 2px solid #ff552e;
 }
 
 @media screen and (min-width: 768px) {
-  header .skip-to a {
+  header .skip-to.aitg {
     left: 40%;
   }
 }
@@ -221,58 +224,97 @@ header .skip-to a:focus {
     padding: 17px 24px;
   }
 }
+/* -------- BANNER MENU -------- */
 .banner-menu {
+  margin: 0;
+  padding: 0;
   float: left;
   font-size: 16px;
   white-space: nowrap;
   padding-left: 12px;
 }
 
-.banner-menu ul {
+.banner-menu ul,
+.banner-menu li {
   margin: 0;
   padding: 0;
 }
 
-.banner-menu li {
-  display: inline;
-}
-
-.chevron-down::after {
-  content: url("images/chevron-down.svg");
+.banner-menu ul.menu > li {
+  display: inline-block;
   position: relative;
-  top: -2px;
-  left: 6px;
-  margin-right: 7px;
 }
 
-.chevron-right::after {
+.banner-menu ul.menu a,
+.banner-menu ul.menu a:visited,
+.banner-menu ul.menu span {
+  display: inline-block;
+  color: #fff;
+  padding: 14px 12px;
+  text-decoration: none;
+}
+
+.banner-menu ul.sub-menu,
+.banner-menu ul.sub-menu a {
+  display: block;
+  background: #13294b;
+}
+
+.banner-menu ul.menu > li > a::after,
+.banner-menu ul.menu > li > span::after {
   content: url("images/chevron-right.svg");
   position: relative;
   top: 0.5px;
   left: 6px;
-  margin-right: 7px;
+  margin-right: 4px;
 }
 
-a.menu-button {
+.banner-menu ul.menu > li.menu-item-has-children > a::after {
+  content: url("images/chevron-down.svg");
+  position: relative;
+  top: -2px;
+  left: 6px;
+  margin-right: 4px;
+}
+
+.banner-menu ul.menu > li:first-child {
+  padding-left: 16px;
+}
+
+.banner-menu ul.menu > li:last-child {
+  padding-right: 16px;
+}
+
+.banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 63px;
+}
+
+.banner-menu ul.sub-menu ul.sub-menu li {
+  padding-left: 2em;
+}
+
+.banner-menu ul.menu a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
   padding: 14px 12px;
 }
 
-a.menu-button:focus,
-a.menu-button:hover {
+.banner-menu ul.menu a:focus,
+.banner-menu ul.menu a:hover {
   background-color: #1d58a7;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
 }
 
-a.menu-button:focus {
+.banner-menu ul.menu a:focus {
   outline-offset: -2px;
   outline: 2px solid #ff552e;
 }
 
-a.menu-button:hover {
+.banner-menu ul.menu a:hover {
   padding: 12px 10px 14px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
@@ -285,11 +327,11 @@ a.menu-button:hover {
     padding-right: 18px;
   }
 
-  a.menu-button {
+  .banner-menu ul.menu a {
     padding: 22px 12px;
   }
 
-  a.menu-button:hover {
+  .banner-menu ul.menu a:hover {
     outline: none;
     padding: 22px 10px;
     border-top: none;
@@ -457,3 +499,5 @@ footer a:focus {
     white-space: nowrap;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
