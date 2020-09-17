@@ -150,8 +150,7 @@ footer a:hover {
 }
 
 footer a:focus {
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
+  @include outline-inset($illini-orange);
 }
 
 @media screen and (min-width: 414px) {

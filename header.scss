@@ -81,8 +81,7 @@ header .skip-to a:focus {
 }
 
 .banner-logo a:focus {
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
+  @include outline-inset($illini-orange);
 }
 
 // SEARCH WIDGET
@@ -146,8 +145,7 @@ header .skip-to a:focus {
   background: $industrial-blue-3 url("images/search-icon-inv.svg") no-repeat;
   background-position: left 10px top 50%;
   background-size: 20.5px 20.5px;
-  outline-offset: -2px;
-  outline: 2px solid $illini-orange;
+  @include outline-inset($illini-orange);
 }
 
 // BANNER ROW 2
@@ -178,16 +176,11 @@ header .skip-to a:focus {
   color: $cobalt;
   background-color: #fff;
   @include background-transition;
-  outline-offset: -2px;
   text-decoration: underline;
 }
 
 .banner-aitg a:focus {
-  outline: 2px solid $illini-orange;
-}
-
-.banner-aitg a:hover {
-  outline: 2px solid $heritage-orange;
+  @include outline-inset($illini-orange);
 }
 
 @media screen and (min-width: $desktop-width) {
@@ -237,29 +230,24 @@ a.menu-button {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 14px 12px 14px;
+  padding: 14px 12px;
 }
 
 a.menu-button:focus,
 a.menu-button:hover {
-  color: $default-text-color;
-  background-color: $industrial-blue-2;
+  background-color: $industrial-blue;
   @include background-transition;
-  outline-offset: -2px;
-  .chevron-down::after {
-    content: url("images/chevron-down-inv.svg");
-  }
-  .chevron-right::after {
-    content: url("images/chevron-right-inv.svg");
-  }
 }
 
 a.menu-button:focus {
-  outline: 2px solid $illini-orange;
+  @include outline-inset($illini-orange);
 }
 
 a.menu-button:hover {
-  outline: 2px solid $heritage-orange;
+  padding: 12px 10px 14px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
 }
 
 @media screen and (min-width: $desktop-width) {
@@ -268,6 +256,13 @@ a.menu-button:hover {
     padding-right: 18px;
   }
   a.menu-button {
-    padding: 22px 12px 22px;
+    padding: 22px 12px;
+  }
+  a.menu-button:hover {
+    outline: none;
+    padding: 22px 10px;
+    border-top: none;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
   }
 }
