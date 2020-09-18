@@ -130,7 +130,7 @@ header .skip-to.aitg button:focus {
     padding: 14px 24px 8px;
   }
 }
-.search-widget {
+.search-widget form {
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 1fr;
@@ -295,13 +295,6 @@ header .skip-to.aitg button:focus {
   padding-left: 2em;
 }
 
-.banner-menu ul.menu a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 12px;
-}
-
 .banner-menu ul.menu a:focus,
 .banner-menu ul.menu a:hover {
   background-color: #1d58a7;
@@ -329,6 +322,10 @@ header .skip-to.aitg button:focus {
 
   .banner-menu ul.menu a {
     padding: 22px 12px;
+  }
+
+  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+    top: 47px;
   }
 
   .banner-menu ul.menu a:hover {

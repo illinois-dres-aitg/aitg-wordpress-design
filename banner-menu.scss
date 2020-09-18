@@ -74,13 +74,6 @@
     padding-left: 2em;
 }
 
-.banner-menu ul.menu a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 12px;
-}
-
 .banner-menu ul.menu a:focus,
 .banner-menu ul.menu a:hover {
   background-color: $industrial-blue;
@@ -105,6 +98,9 @@
   }
   .banner-menu ul.menu a {
     padding: 22px 12px;
+  }
+  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+    top: 47px;
   }
   .banner-menu ul.menu a:hover {
     outline: none;
