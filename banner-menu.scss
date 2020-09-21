@@ -33,6 +33,11 @@
   text-decoration: none;
 }
 
+.banner-menu ul.sub-menu ul.sub-menu li {
+    padding-left: 2em;
+}
+
+
 .banner-menu ul.sub-menu,
 .banner-menu ul.sub-menu a {
   display: block;
@@ -67,11 +72,7 @@
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu  {
     display: none;
     position: absolute;
-    top: 63px;
-}
-
-.banner-menu ul.sub-menu ul.sub-menu li {
-    padding-left: 2em;
+    top: 47px;
 }
 
 .banner-menu ul.menu a:focus,
@@ -100,7 +101,7 @@
     padding: 22px 12px;
   }
   .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
-    top: 47px;
+    top: 63px;
   }
   .banner-menu ul.menu a:hover {
     outline: none;

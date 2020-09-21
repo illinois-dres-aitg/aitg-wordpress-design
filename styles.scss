@@ -1,3 +1,19 @@
+
+/*
+ * Theme Name: DRES Accessible IT Group WordPress Theme
+ * Description: Is fully responsive, clean and minimal WordPress theme. It has various options in WordPress Customizer to change look of the theme - primary design color, background and header, page layout (left or right sidebar, full or centered content). Clean valid code, semantic markup, markup by Schema.org, full adaptation to mobile devices. Basic is ready to use with child themes and gives for developers simple design change with custom hooks and action. Translation Ready (English, Russian, Ukrainian, French, German, Polish, Turkish). Fully compatible with WPML, WooCommerce, bbPress.
+ * Theme URI:
+ * Tested up to: 5.5
+ * Requires PHP: 7.0
+ * Author: Nicholas Hoyt, Christy Blew, Lori Lane and Jon Gunderson
+ * Author https://github.com/illinois-dres-aitg/aitg-wordpress-theme
+ * Version: 0.9.0 beta
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: one-column, right-sidebar
+ * Text Domain: basic
+ */
+
 @use "base" as *;
 @forward "header";
 @forward "banner-menu";
