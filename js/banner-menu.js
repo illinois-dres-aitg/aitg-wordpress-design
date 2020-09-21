@@ -52,22 +52,17 @@ var DisclosureMenu = function(domNode) {
       this.menuContainers[i].menuitemNodes = menuitemNodes;
       this.menuContainers[i].firstMenuitemNode = menuitemNodes[0];
       this.menuContainers[i].lastMenuitemNode = menuitemNodes[menuitemNodes.length - 1];
-
     }
-
   }
-
 };
 
 DisclosureMenu.prototype.getMenuContainer = function(node) {
   for (var i = 0; i < this.menuContainers.length; i++) {
     var c = this.menuContainers[i];
-
     if (c.containerNode.contains(node)) {
       return c;
     }
   }
-
   return false;
 };
 
