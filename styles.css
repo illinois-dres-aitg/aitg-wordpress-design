@@ -187,14 +187,14 @@ header .skip-to.aitg button:focus {
   width: 100%;
 }
 
-.banner-aitg {
+.banner-name {
   float: left;
   width: 100%;
   font-size: 24px;
   white-space: nowrap;
 }
 
-.banner-aitg a {
+.banner-name a {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -202,8 +202,8 @@ header .skip-to.aitg button:focus {
   padding: 12px 24px;
 }
 
-.banner-aitg a:focus,
-.banner-aitg a:hover {
+.banner-name a:focus,
+.banner-name a:hover {
   color: #1d4b90;
   background-color: #fff;
   -webkit-transition: 0.3s background;
@@ -211,17 +211,17 @@ header .skip-to.aitg button:focus {
   text-decoration: underline;
 }
 
-.banner-aitg a:focus {
+.banner-name a:focus {
   outline-offset: -2px;
   outline: 2px solid #ff552e;
 }
 
 @media screen and (min-width: 992px) {
-  .banner-aitg {
+  .banner-name {
     width: auto;
   }
 
-  .banner-aitg a {
+  .banner-name a {
     padding: 17px 24px;
   }
 }

@@ -1,8 +1,6 @@
-@use "base" as *;
-
 /* -------- BANNER MENU -------- */
 
-// BANNER MENU
+@use "base" as *;
 
 .banner-menu {
   margin: 0;
@@ -36,7 +34,6 @@
 .banner-menu ul.sub-menu ul.sub-menu li {
     padding-left: 2em;
 }
-
 
 .banner-menu ul.sub-menu,
 .banner-menu ul.sub-menu a {
@@ -111,4 +108,3 @@
     border-left: 2px solid #fff;
   }
 }
-
