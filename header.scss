@@ -2,13 +2,15 @@
 
 /* -------- HEADER -------- */
 
-header .skip-to a {
+header .skip-to.aitg {
   position: absolute;
   top: 0px;
   left: 60%;
   -webkit-transition: left $std-trans-time linear;
   transition: left $std-trans-time linear;
+}
 
+header .skip-to.aitg button {
   color: $dark-gray;
   background-color: $light-gray;
   font-size: 14px;
@@ -16,29 +18,30 @@ header .skip-to a {
   white-space: nowrap;
 
   box-sizing: border-box;
-  padding: 6px 8px 8px;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom: 2px solid white;
+  padding: 6px 8px 6px 8px;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-header .skip-to a:focus,
-header .skip-to a:hover {
+header .skip-to.aitg button:focus,
+header .skip-to.aitg button:hover {
   color: $default-text-color;
   background-color: $industrial-blue-3;
   outline: none;
 }
 
-header .skip-to a:focus {
-  border-right: 2px solid $illini-orange;
-  border-left: 2px solid $illini-orange;
-  border-bottom: 2px solid $illini-orange;
+header .skip-to.aitg button:focus {
+  padding: 6px 5px 4px 6px;
+  border-right: 3px solid $illini-orange;
+  border-left: 3px solid $illini-orange;
+  border-bottom: 3px solid $illini-orange;
 }
 
 @media screen and (min-width: $tablet-width) {
-  header .skip-to a {
+  header .skip-to.aitg {
     left: 40%;
   }
 }
@@ -101,7 +104,7 @@ header .skip-to a:focus {
   }
 }
 
-.search-widget {
+.search-widget form {
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 1fr;
@@ -192,77 +195,4 @@ header .skip-to a:focus {
   }
 }
 
-// BANNER MENU
 
-.banner-menu {
-  float: left;
-  font-size: 16px;
-  white-space: nowrap;
-  padding-left: 12px;
-}
-
-.banner-menu ul {
-  margin: 0;
-  padding: 0;
-}
-
-.banner-menu li {
-  display: inline;
-}
-
-.chevron-down::after {
-  content: url("images/chevron-down.svg");
-  position: relative;
-  top: -2px;
-  left: 6px;
-  margin-right: 7px;
-}
-
-.chevron-right::after {
-  content: url("images/chevron-right.svg");
-  position: relative;
-  top: 0.5px;
-  left: 6px;
-  margin-right: 7px;
-}
-
-a.menu-button {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 12px;
-}
-
-a.menu-button:focus,
-a.menu-button:hover {
-  background-color: $industrial-blue;
-  @include background-transition;
-}
-
-a.menu-button:focus {
-  @include outline-inset($illini-orange);
-}
-
-a.menu-button:hover {
-  padding: 12px 10px 14px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  border-left: 2px solid #fff;
-}
-
-@media screen and (min-width: $desktop-width) {
-  .banner-menu {
-    float: right;
-    padding-right: 18px;
-  }
-  a.menu-button {
-    padding: 22px 12px;
-  }
-  a.menu-button:hover {
-    outline: none;
-    padding: 22px 10px;
-    border-top: none;
-    border-right: 2px solid #fff;
-    border-left: 2px solid #fff;
-  }
-}

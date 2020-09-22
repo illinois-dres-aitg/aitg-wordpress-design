@@ -1,0 +1,114 @@
+@use "base" as *;
+
+/* -------- BANNER MENU -------- */
+
+// BANNER MENU
+
+.banner-menu {
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-size: 16px;
+  white-space: nowrap;
+  padding-left: 12px;
+}
+
+.banner-menu ul,
+.banner-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-menu ul.menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.banner-menu ul.menu a,
+.banner-menu ul.menu a:visited,
+.banner-menu ul.menu span {
+  display: inline-block;
+  color: #fff;
+  padding: 14px 12px;
+  text-decoration: none;
+}
+
+.banner-menu ul.sub-menu ul.sub-menu li {
+    padding-left: 2em;
+}
+
+
+.banner-menu ul.sub-menu,
+.banner-menu ul.sub-menu a {
+  display: block;
+  background: $illini-blue;
+}
+
+.banner-menu ul.menu > li > a::after,
+.banner-menu ul.menu > li > span::after {
+  content: url("images/chevron-right.svg");
+  position: relative;
+  top: 0.5px;
+  left: 6px;
+  margin-right: 4px;
+}
+
+.banner-menu ul.menu > li.menu-item-has-children > a::after {
+  content: url("images/chevron-down.svg");
+  position: relative;
+  top: -2px;
+  left: 6px;
+  margin-right: 4px;
+}
+
+.banner-menu ul.menu > li:first-child {
+  padding-left: 16px;
+}
+
+.banner-menu ul.menu > li:last-child {
+  padding-right: 16px;
+}
+
+.banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu  {
+    display: none;
+    position: absolute;
+    top: 47px;
+}
+
+.banner-menu ul.menu a:focus,
+.banner-menu ul.menu a:hover {
+  background-color: $industrial-blue;
+  @include background-transition;
+}
+
+.banner-menu ul.menu a:focus {
+  @include outline-inset($illini-orange);
+}
+
+.banner-menu ul.menu a:hover {
+  padding: 12px 10px 14px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .banner-menu {
+    float: right;
+    padding-right: 18px;
+  }
+  .banner-menu ul.menu a {
+    padding: 22px 12px;
+  }
+  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+    top: 63px;
+  }
+  .banner-menu ul.menu a:hover {
+    outline: none;
+    padding: 22px 10px;
+    border-top: none;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+  }
+}
+
