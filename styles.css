@@ -50,7 +50,7 @@ header .skip-to.aitg button {
   text-decoration: none;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 6px 8px 6px 8px;
+  padding: 6px 8px 8px;
   border-right: 1px solid white;
   border-left: 1px solid white;
   border-bottom: 1px solid white;
@@ -66,10 +66,10 @@ header .skip-to.aitg button:hover {
 }
 
 header .skip-to.aitg button:focus {
-  padding: 6px 5px 4px 6px;
-  border-right: 3px solid #ff552e;
-  border-left: 3px solid #ff552e;
-  border-bottom: 3px solid #ff552e;
+  padding: 6px 7px 7px;
+  border-right: 2px solid #ff552e;
+  border-left: 2px solid #ff552e;
+  border-bottom: 2px solid #ff552e;
 }
 
 @media screen and (min-width: 768px) {
