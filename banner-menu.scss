@@ -83,10 +83,13 @@
 }
 
 .banner-menu ul.menu a:hover {
+  /*
   padding: 12px 10px 14px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   border-left: 2px solid #fff;
+  */
+  outline: 2px solid white;
 }
 
 @media screen and (min-width: $desktop-width) {
@@ -101,10 +104,14 @@
     top: 63px;
   }
   .banner-menu ul.menu a:hover {
+    /*
     outline: none;
     padding: 22px 10px;
     border-top: none;
     border-right: 2px solid #fff;
     border-left: 2px solid #fff;
+    */
+    outline-offset: 0px;
+    outline: 2px solid white;
   }
 }
