@@ -41,29 +41,20 @@
   background: $illini-blue;
 }
 
-.banner-menu ul.menu > li > a::after,
-.banner-menu ul.menu > li > span::after {
-  content: url("images/chevron-right.svg");
-  position: relative;
-  top: 0.5px;
-  left: 6px;
-  margin-right: 4px;
-}
-
 .banner-menu ul.menu > li.menu-item-has-children > a::after {
   content: url("images/chevron-down.svg");
   position: relative;
   top: -2px;
   left: 6px;
-  margin-right: 4px;
+  margin-right: 7px;
 }
 
-.banner-menu ul.menu > li:first-child {
-  padding-left: 16px;
-}
-
-.banner-menu ul.menu > li:last-child {
-  padding-right: 16px;
+.banner-menu ul.menu > li > a::after {
+  content: url("images/chevron-right.svg");
+  position: relative;
+  top: 0.5px;
+  left: 6px;
+  margin-right: 7px;
 }
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu  {
