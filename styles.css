@@ -235,56 +235,20 @@ header .skip-to.aitg button:focus {
   padding-left: 12px;
 }
 
+@media screen and (min-width: 992px) {
+  .banner-menu {
+    float: right;
+    padding-right: 18px;
+  }
+}
 .banner-menu ul,
 .banner-menu li {
   margin: 0;
   padding: 0;
 }
 
-.banner-menu ul.menu > li {
-  display: inline-block;
-  position: relative;
-}
-
-.banner-menu ul.menu a,
-.banner-menu ul.menu a:visited,
-.banner-menu ul.menu span {
-  display: inline-block;
+.banner-menu ul.menu a {
   color: #fff;
-  padding: 14px 12px;
-  text-decoration: none;
-}
-
-.banner-menu ul.sub-menu ul.sub-menu li {
-  padding-left: 2em;
-}
-
-.banner-menu ul.sub-menu,
-.banner-menu ul.sub-menu a {
-  display: block;
-  background: #13294b;
-}
-
-.banner-menu ul.menu > li.menu-item-has-children > a::after {
-  content: url("images/chevron-down.svg");
-  position: relative;
-  top: -2px;
-  left: 6px;
-  margin-right: 7px;
-}
-
-.banner-menu ul.menu > li > a::after {
-  content: url("images/chevron-right.svg");
-  position: relative;
-  top: 0.5px;
-  left: 6px;
-  margin-right: 7px;
-}
-
-.banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
-  display: none;
-  position: absolute;
-  top: 47px;
 }
 
 .banner-menu ul.menu a:focus,
@@ -297,42 +261,98 @@ header .skip-to.aitg button:focus {
 .banner-menu ul.menu a:focus {
   outline-offset: -2px;
   outline: 2px solid #ff552e;
+  /* outline: 2px solid $illini-orange; */
 }
 
 .banner-menu ul.menu a:hover {
-  /*
-  padding: 12px 10px 14px;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  border-left: 2px solid #fff;
-  */
-  outline: 2px solid white;
+  /* outline: 2px solid white; */
+}
+
+/*
+@media screen and (min-width: $desktop-width) {
+  .banner-menu ul.menu a:hover {
+    outline-offset: 0px;
+    outline: 2px solid white;
+  }
+}
+*/
+.banner-menu ul.menu > li.menu-item {
+  display: inline-block;
+  position: relative;
+}
+
+.banner-menu ul.menu > li.menu-item > a,
+.banner-menu ul.menu > li.menu-item > a:visited {
+  display: inline-block;
+  color: #fff;
+  padding: 14px 12px;
+  text-decoration: none;
+  border-sizing: border-box;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
 }
 
 @media screen and (min-width: 992px) {
-  .banner-menu {
-    float: right;
-    padding-right: 18px;
-  }
-
-  .banner-menu ul.menu a {
+  .banner-menu ul.menu > li.menu-item > a,
+.banner-menu ul.menu > li.menu-item > a:visited {
     padding: 22px 12px;
   }
+}
+.banner-menu ul.menu > li.menu-item > a:hover {
+  padding: 12px 12px 14px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+}
 
-  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
-    top: 63px;
-  }
-
-  .banner-menu ul.menu a:hover {
-    /*
-    outline: none;
-    padding: 22px 10px;
+@media screen and (min-width: 992px) {
+  .banner-menu ul.menu > li.menu-item > a:hover {
+    padding: 22px 12px;
     border-top: none;
-    border-right: 2px solid #fff;
-    border-left: 2px solid #fff;
-    */
-    outline-offset: 0px;
-    outline: 2px solid white;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+  }
+}
+.banner-menu ul.menu > li.menu-item.menu-item-has-children > a::after {
+  content: url("images/chevron-down.svg");
+  position: relative;
+  top: -2px;
+  left: 6px;
+  margin-right: 7px;
+}
+
+.banner-menu ul.menu > li.menu-item > a::after {
+  content: url("images/chevron-right.svg");
+  position: relative;
+  top: 0.5px;
+  left: 6px;
+  margin-right: 7px;
+}
+
+.banner-menu ul.sub-menu {
+  list-style: none;
+}
+
+.banner-menu ul.sub-menu ul.sub-menu li {
+  padding-left: 1em;
+}
+
+.banner-menu ul.sub-menu,
+.banner-menu ul.sub-menu a {
+  display: block;
+  background: #13294b;
+  padding: 8px 12px;
+}
+
+.banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 48px;
+}
+
+@media screen and (min-width: 992px) {
+  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+    top: 64px;
   }
 }
 /* -------- MAIN: FLEX LAYOUT -------- */
