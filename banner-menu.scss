@@ -42,19 +42,6 @@
   @include outline-inset($illini-orange);
 }
 
-.banner-menu ul.menu a:hover {
-  /* outline: 2px solid white; */
-}
-
-/*
-@media screen and (min-width: $desktop-width) {
-  .banner-menu ul.menu a:hover {
-    outline-offset: 0px;
-    outline: 2px solid white;
-  }
-}
-*/
-
 // MENU BAR
 
 .banner-menu ul.menu > li.menu-item {

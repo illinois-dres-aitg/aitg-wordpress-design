@@ -261,21 +261,8 @@ header .skip-to.aitg button:focus {
 .banner-menu ul.menu a:focus {
   outline-offset: -2px;
   outline: 2px solid #ff552e;
-  /* outline: 2px solid $illini-orange; */
 }
 
-.banner-menu ul.menu a:hover {
-  /* outline: 2px solid white; */
-}
-
-/*
-@media screen and (min-width: $desktop-width) {
-  .banner-menu ul.menu a:hover {
-    outline-offset: 0px;
-    outline: 2px solid white;
-  }
-}
-*/
 .banner-menu ul.menu > li.menu-item {
   display: inline-block;
   position: relative;
