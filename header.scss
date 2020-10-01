@@ -60,13 +60,17 @@ header .skip-to.aitg button:focus {
 
 .banner-row-1 {
   color: $default-text-color;
-  background-color: #fff;
+  background-color: white;
   width: 100%;
 }
 
 .banner-logo {
   float: left;
   width: 100%;
+
+  @media screen and (min-width: $tablet-width) {
+    width: 40%;
+  }
 }
 
 .banner-logo img {
@@ -94,13 +98,8 @@ header .skip-to.aitg button:focus {
 .banner-search {
   float: left;
   padding: 0 20px 12px;
-}
 
-@media screen and (min-width: $tablet-width) {
-  .banner-logo {
-    width: 40%;
-  }
-  .banner-search {
+  @media screen and (min-width: $tablet-width) {
     float: right;
     padding: 14px 24px 8px;
   }
@@ -118,45 +117,43 @@ header .skip-to.aitg button:focus {
   color: $dark-gray;
   background-color: $light-gray;
   border: none;
+  outline: 1px solid transparent;
   font-family: inherit;
   font-size: 16px;
   padding-left: 10px;
 }
 
 .search-widget input:focus {
-  background-color: #fff;
+  background-color: white;
   @include background-transition;
   outline: none;
   box-sizing: border-box;
-  border-top: 2px solid $illini-blue;
-  border-bottom: 2px solid $illini-blue;
-  border-left: 2px solid $illini-blue;
+  border: 2px solid $illini-blue;
+  border-right: 0.5px;
   padding-left: 8px;
 }
 
 .search-widget button {
   grid-column: 2;
-  color: #ffffff;
-  background: $illini-blue url("images/search-icon.svg") no-repeat;
-  background-position: left 10px top 50%;
-  background-size: 20.5px 20.5px;
-  @include background-transition;
+  position: relative;
+  color: white;
+  background-color: $illini-blue;
   border: none;
-  width: 38px;
+  @include outline-inset(transparent, 1);
+  width: 37px;
   height: 36px;
 }
 
 .search-widget button:focus {
-  background: $industrial-blue-3 url("images/search-icon-inv.svg") no-repeat;
-  background-position: left 10px top 50%;
-  background-size: 20.5px 20.5px;
-  @include outline-inset($illini-orange);
+  background-color: $industrial-blue;
+  @include background-transition;
+  outline: 3px solid $illini-orange;
 }
 
 // BANNER ROW 2
 
 .banner-row-2 {
-  color: #fff;
+  color: white;
   background-color: $illini-blue;
   width: 100%;
 }
@@ -166,33 +163,32 @@ header .skip-to.aitg button:focus {
   width: 100%;
   font-size: 24px;
   white-space: nowrap;
+
+  @media screen and (min-width: $desktop-width) {
+    width: auto;
+  }
 }
 
 .banner-name a {
   display: block;
-  color: #fff;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   padding: 12px 24px;
+
+  @media screen and (min-width: $desktop-width) {
+    padding: 17px 24px;
+  }
 }
 
 .banner-name a:focus,
 .banner-name a:hover {
   color: $cobalt;
-  background-color: #fff;
+  background-color: white;
   @include background-transition;
   text-decoration: underline;
 }
 
 .banner-name a:focus {
   @include outline-inset($illini-orange);
-}
-
-@media screen and (min-width: $desktop-width) {
-  .banner-name {
-    width: auto;
-  }
-  .banner-name a {
-    padding: 17px 24px;
-  }
 }

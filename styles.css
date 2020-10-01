@@ -85,13 +85,18 @@ header .skip-to.aitg button:focus {
 
 .banner-row-1 {
   color: #00132c;
-  background-color: #fff;
+  background-color: white;
   width: 100%;
 }
 
 .banner-logo {
   float: left;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .banner-logo {
+    width: 40%;
+  }
 }
 
 .banner-logo img {
@@ -120,17 +125,13 @@ header .skip-to.aitg button:focus {
   float: left;
   padding: 0 20px 12px;
 }
-
 @media screen and (min-width: 768px) {
-  .banner-logo {
-    width: 40%;
-  }
-
   .banner-search {
     float: right;
     padding: 14px 24px 8px;
   }
 }
+
 .search-widget form {
   display: grid;
   grid-template-columns: 2fr;
@@ -143,46 +144,44 @@ header .skip-to.aitg button:focus {
   color: #555555;
   background-color: #dddede;
   border: none;
+  outline: 1px solid transparent;
   font-family: inherit;
   font-size: 16px;
   padding-left: 10px;
 }
 
 .search-widget input:focus {
-  background-color: #fff;
+  background-color: white;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
   outline: none;
   box-sizing: border-box;
-  border-top: 2px solid #13294b;
-  border-bottom: 2px solid #13294b;
-  border-left: 2px solid #13294b;
+  border: 2px solid #13294b;
+  border-right: 0.5px;
   padding-left: 8px;
 }
 
 .search-widget button {
   grid-column: 2;
-  color: #ffffff;
-  background: #13294b url("images/search-icon.svg") no-repeat;
-  background-position: left 10px top 50%;
-  background-size: 20.5px 20.5px;
-  -webkit-transition: 0.3s background;
-  transition: 0.3s background;
+  position: relative;
+  color: white;
+  background-color: #13294b;
   border: none;
-  width: 38px;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  width: 37px;
   height: 36px;
 }
 
 .search-widget button:focus {
-  background: #cad9ef url("images/search-icon-inv.svg") no-repeat;
-  background-position: left 10px top 50%;
-  background-size: 20.5px 20.5px;
-  outline-offset: -3px;
+  background-color: #1d58a7;
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
   outline: 3px solid #ff552e;
 }
 
 .banner-row-2 {
-  color: #fff;
+  color: white;
   background-color: #13294b;
   width: 100%;
 }
@@ -193,19 +192,29 @@ header .skip-to.aitg button:focus {
   font-size: 24px;
   white-space: nowrap;
 }
+@media screen and (min-width: 992px) {
+  .banner-name {
+    width: auto;
+  }
+}
 
 .banner-name a {
   display: block;
-  color: #fff;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   padding: 12px 24px;
+}
+@media screen and (min-width: 992px) {
+  .banner-name a {
+    padding: 17px 24px;
+  }
 }
 
 .banner-name a:focus,
 .banner-name a:hover {
   color: #1d4b90;
-  background-color: #fff;
+  background-color: white;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
   text-decoration: underline;
@@ -216,15 +225,6 @@ header .skip-to.aitg button:focus {
   outline: 3px solid #ff552e;
 }
 
-@media screen and (min-width: 992px) {
-  .banner-name {
-    width: auto;
-  }
-
-  .banner-name a {
-    padding: 17px 24px;
-  }
-}
 /* -------- BANNER MENU -------- */
 .banner-menu {
   font-size: 16px;
