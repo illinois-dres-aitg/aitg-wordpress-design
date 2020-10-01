@@ -276,7 +276,8 @@ header .skip-to.aitg button:focus {
   border-sizing: border-box;
   border-right: 2px solid transparent;
   border-left: 2px solid transparent;
-  outline: 2px solid transparent;
+  outline-offset: -3px;
+  outline: 3px solid transparent;
 }
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item > a {
