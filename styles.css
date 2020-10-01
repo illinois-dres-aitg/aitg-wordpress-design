@@ -227,20 +227,20 @@ header .skip-to.aitg button:focus {
 }
 /* -------- BANNER MENU -------- */
 .banner-menu {
+  font-size: 16px;
+  white-space: nowrap;
   margin: 0;
   padding: 0;
   float: left;
-  font-size: 16px;
-  white-space: nowrap;
   padding-left: 12px;
 }
-
 @media screen and (min-width: 992px) {
   .banner-menu {
     float: right;
     padding-right: 18px;
   }
 }
+
 .banner-menu ul,
 .banner-menu li {
   margin: 0;
@@ -277,27 +277,25 @@ header .skip-to.aitg button:focus {
   border-right: 2px solid transparent;
   border-left: 2px solid transparent;
 }
-
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item > a {
     padding: 22px 12px;
   }
 }
+
 .banner-menu ul.menu > li.menu-item > a:hover {
   padding: 12px 12px 14px;
   border-top: 2px solid white;
   border-right: 2px solid white;
   border-left: 2px solid white;
 }
-
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item > a:hover {
     padding: 22px 12px;
     border-top: none;
-    border-right: 2px solid white;
-    border-left: 2px solid white;
   }
 }
+
 .banner-menu ul.menu > li.menu-item.menu-item-has-children > a::after {
   content: url("images/chevron-down.svg");
   position: relative;
@@ -334,12 +332,12 @@ header .skip-to.aitg button:focus {
   position: absolute;
   top: 48px;
 }
-
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
     top: 64px;
   }
 }
+
 /* -------- MAIN: FLEX LAYOUT -------- */
 main {
   color: #00132c;

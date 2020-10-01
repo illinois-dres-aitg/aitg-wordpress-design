@@ -3,16 +3,14 @@
 @use "base" as *;
 
 .banner-menu {
+  font-size: 16px;
+  white-space: nowrap;
   margin: 0;
   padding: 0;
   float: left;
-  font-size: 16px;
-  white-space: nowrap;
   padding-left: 12px;
-}
 
-@media screen and (min-width: $desktop-width) {
-  .banner-menu {
+  @media screen and (min-width: $desktop-width) {
     float: right;
     padding-right: 18px;
   }
@@ -57,10 +55,8 @@
   border-sizing: border-box;
   border-right: 2px solid transparent;
   border-left: 2px solid transparent;
-}
 
-@media screen and (min-width: $desktop-width) {
-  .banner-menu ul.menu > li.menu-item > a {
+  @media screen and (min-width: $desktop-width) {
     padding: 22px 12px;
   }
 }
@@ -70,14 +66,10 @@
   border-top: 2px solid white;
   border-right: 2px solid white;
   border-left: 2px solid white;
-}
 
-@media screen and (min-width: $desktop-width) {
-  .banner-menu ul.menu > li.menu-item > a:hover {
+  @media screen and (min-width: $desktop-width) {
     padding: 22px 12px;
     border-top: none;
-    border-right: 2px solid white;
-    border-left: 2px solid white;
   }
 }
 
@@ -118,10 +110,8 @@
   display: none;
   position: absolute;
   top: 48px;
-}
 
-@media screen and (min-width: $desktop-width) {
-  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+  @media screen and (min-width: $desktop-width) {
     top: 64px;
   }
 }
