@@ -124,10 +124,9 @@ header .skip-to.aitg button:focus {
 .search-widget input:focus {
   background-color: white;
   @include background-transition;
-  outline: none;
   box-sizing: border-box;
   border: 2px solid $illini-blue;
-  border-right: 0.5px;
+  border-right: none;
   padding-left: 8px;
 }
 
