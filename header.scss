@@ -10,6 +10,10 @@ header .skip-to.aitg {
   left: 60%;
   -webkit-transition: left $std-trans-time linear;
   transition: left $std-trans-time linear;
+
+  @media screen and (min-width: $tablet-width) {
+    left: 40%;
+  }
 }
 
 header .skip-to.aitg button {
@@ -40,12 +44,6 @@ header .skip-to.aitg button:focus {
   border-right: 3px solid $illini-orange;
   border-left: 3px solid $illini-orange;
   border-bottom: 3px solid $illini-orange;
-}
-
-@media screen and (min-width: $tablet-width) {
-  header .skip-to.aitg {
-    left: 40%;
-  }
 }
 
 // BANNER: TWO-ROW GRID LAYOUT
@@ -117,7 +115,7 @@ header .skip-to.aitg button:focus {
   color: $dark-gray;
   background-color: $light-gray;
   border: none;
-  outline: 1px solid transparent;
+  @include outline-inset(transparent, 2);
   font-family: inherit;
   font-size: 16px;
   padding-left: 10px;
@@ -139,7 +137,7 @@ header .skip-to.aitg button:focus {
   color: white;
   background-color: $illini-blue;
   border: none;
-  @include outline-inset(transparent, 1);
+  @include outline-inset(transparent, 2);
   width: 37px;
   height: 36px;
 }
