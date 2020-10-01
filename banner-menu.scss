@@ -106,6 +106,7 @@
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu  {
   display: none;
+  @include outline-inset(transparent, 1);
   position: absolute;
   top: 48px;
 

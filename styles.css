@@ -328,6 +328,8 @@ header .skip-to.aitg button:focus {
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
   display: none;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
   position: absolute;
   top: 48px;
 }
