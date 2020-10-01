@@ -55,6 +55,7 @@
   border-sizing: border-box;
   border-right: 2px solid transparent;
   border-left: 2px solid transparent;
+  outline: 2px solid transparent;
 
   @media screen and (min-width: $desktop-width) {
     padding: 22px 12px;
