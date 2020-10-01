@@ -273,11 +273,7 @@ header .skip-to.aitg button:focus {
   display: inline-block;
   padding: 14px 12px;
   text-decoration: none;
-  border-sizing: border-box;
-  border-right: 2px solid transparent;
-  border-left: 2px solid transparent;
-  outline-offset: -3px;
-  outline: 3px solid transparent;
+  outline: 2px solid transparent;
 }
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item > a {
@@ -286,14 +282,14 @@ header .skip-to.aitg button:focus {
 }
 
 .banner-menu ul.menu > li.menu-item > a:hover {
-  padding: 12px 12px 14px;
+  padding: 12px 10px 14px;
   border-top: 2px solid white;
   border-right: 2px solid white;
   border-left: 2px solid white;
 }
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item > a:hover {
-    padding: 22px 12px;
+    padding: 22px 10px;
     border-top: none;
   }
 }
