@@ -84,27 +84,15 @@ main a:focus {
 }
 
 @media screen and (min-width: $tablet-width) {
-  .left-column {
-    flex-basis: 14%;
-  }
-  .content {
-    flex-basis: 72%;
-  }
-  .right-column {
-    flex-basis: 14%;
-  }
+  .left-column  { flex-basis: 14%; }
+  .content      { flex-basis: 72%; }
+  .right-column { flex-basis: 14%; }
 }
 
 @media screen and (min-width: $desktop-width) {
-  .left-column {
-    flex-basis: 18%;
-  }
-  .content {
-    flex-basis: 64%;
-  }
-  .right-column {
-    flex-basis: 18%;
-  }
+  .left-column  { flex-basis: 18%; }
+  .content      { flex-basis: 64%; }
+  .right-column { flex-basis: 18%; }
 }
 
 /* -------- FOOTER: FLEX LAYOUT -------- */
@@ -140,6 +128,10 @@ footer a {
   text-decoration: none;
   white-space: normal;
   padding: 4px;
+
+  @media screen and (min-width: $phone-width-portrait) {
+    white-space: nowrap;
+  }
 }
 
 footer a:focus,
@@ -151,11 +143,5 @@ footer a:hover {
 }
 
 footer a:focus {
-  @include outline-inset($illini-orange);
-}
-
-@media screen and (min-width: 414px) {
-  footer a {
-    white-space: nowrap;
-  }
+  outline: 2px solid $illini-orange;
 }

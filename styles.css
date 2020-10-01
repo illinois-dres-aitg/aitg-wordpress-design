@@ -51,9 +51,9 @@ header .skip-to.aitg button {
   white-space: nowrap;
   box-sizing: border-box;
   padding: 6px 8px 8px;
-  border-right: 1px solid white;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
 }
@@ -67,9 +67,9 @@ header .skip-to.aitg button:hover {
 
 header .skip-to.aitg button:focus {
   padding: 6px 7px 7px;
-  border-right: 2px solid #ff552e;
-  border-left: 2px solid #ff552e;
-  border-bottom: 2px solid #ff552e;
+  border-right: 3px solid #ff552e;
+  border-left: 3px solid #ff552e;
+  border-bottom: 3px solid #ff552e;
 }
 
 @media screen and (min-width: 768px) {
@@ -112,8 +112,8 @@ header .skip-to.aitg button:focus {
 }
 
 .banner-logo a:focus {
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
 }
 
 .banner-search {
@@ -177,8 +177,8 @@ header .skip-to.aitg button:focus {
   background: #cad9ef url("images/search-icon-inv.svg") no-repeat;
   background-position: left 10px top 50%;
   background-size: 20.5px 20.5px;
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
 }
 
 .banner-row-2 {
@@ -212,8 +212,8 @@ header .skip-to.aitg button:focus {
 }
 
 .banner-name a:focus {
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
 }
 
 @media screen and (min-width: 992px) {
@@ -260,8 +260,8 @@ header .skip-to.aitg button:focus {
 }
 
 .banner-menu ul.menu li.menu-item a:focus {
-  outline-offset: -2px;
-  outline: 2px solid #ff552e;
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
 }
 
 .banner-menu ul.menu > li.menu-item {
@@ -478,6 +478,11 @@ footer a {
   white-space: normal;
   padding: 4px;
 }
+@media screen and (min-width: 414px) {
+  footer a {
+    white-space: nowrap;
+  }
+}
 
 footer a:focus,
 footer a:hover {
@@ -489,12 +494,5 @@ footer a:hover {
 }
 
 footer a:focus {
-  outline-offset: -2px;
   outline: 2px solid #ff552e;
-}
-
-@media screen and (min-width: 414px) {
-  footer a {
-    white-space: nowrap;
-  }
 }

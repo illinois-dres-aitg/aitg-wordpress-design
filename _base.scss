@@ -13,7 +13,8 @@ $light-gray: #dddede;
 // DIMENSIONS
 $desktop-width: 992px;
 $tablet-width: 768px;
-$landscape-phone-width: 576px;
+$phone-width-landscape: 576px;
+$phone-width-portrait: 414px;
 
 // TIMING
 $std-trans-time: 0.3s;
@@ -24,9 +25,9 @@ $std-trans-time: 0.3s;
   transition: $std-trans-time background;
 }
 
-@mixin outline-inset ($color) {
-  outline-offset: -2px;
-  outline: 2px solid $color;
+@mixin outline-inset ($color, $width: 3) {
+  outline-offset: -#{$width}px;
+  outline: #{$width}px solid $color;
 }
 
 // RULES
