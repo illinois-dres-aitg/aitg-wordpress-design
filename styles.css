@@ -247,18 +247,19 @@ header .skip-to.aitg button:focus {
   padding: 0;
 }
 
-.banner-menu ul.menu a {
+.banner-menu ul.menu li.menu-item a,
+.banner-menu ul.menu li-menu-item a:visited {
   color: #fff;
 }
 
-.banner-menu ul.menu a:focus,
-.banner-menu ul.menu a:hover {
+.banner-menu ul.menu li.menu-item a:focus,
+.banner-menu ul.menu li.menu-item a:hover {
   background-color: #1d58a7;
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
 }
 
-.banner-menu ul.menu a:focus {
+.banner-menu ul.menu li.menu-item a:focus {
   outline-offset: -2px;
   outline: 2px solid #ff552e;
 }
@@ -268,10 +269,8 @@ header .skip-to.aitg button:focus {
   position: relative;
 }
 
-.banner-menu ul.menu > li.menu-item > a,
-.banner-menu ul.menu > li.menu-item > a:visited {
+.banner-menu ul.menu > li.menu-item > a {
   display: inline-block;
-  color: #fff;
   padding: 14px 12px;
   text-decoration: none;
   border-sizing: border-box;
@@ -280,8 +279,7 @@ header .skip-to.aitg button:focus {
 }
 
 @media screen and (min-width: 992px) {
-  .banner-menu ul.menu > li.menu-item > a,
-.banner-menu ul.menu > li.menu-item > a:visited {
+  .banner-menu ul.menu > li.menu-item > a {
     padding: 22px 12px;
   }
 }

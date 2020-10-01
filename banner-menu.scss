@@ -28,17 +28,18 @@
 
 // ALL MENU A ELEMENTS
 
-.banner-menu ul.menu a {
+.banner-menu ul.menu li.menu-item a,
+.banner-menu ul.menu li-menu-item a:visited {
   color: #fff;
 }
 
-.banner-menu ul.menu a:focus,
-.banner-menu ul.menu a:hover {
+.banner-menu ul.menu li.menu-item a:focus,
+.banner-menu ul.menu li.menu-item a:hover {
   background-color: $industrial-blue;
   @include background-transition;
 }
 
-.banner-menu ul.menu a:focus {
+.banner-menu ul.menu li.menu-item a:focus {
   @include outline-inset($illini-orange);
 }
 
@@ -49,10 +50,8 @@
   position: relative;
 }
 
-.banner-menu ul.menu > li.menu-item > a,
-.banner-menu ul.menu > li.menu-item > a:visited {
+.banner-menu ul.menu > li.menu-item > a {
   display: inline-block;
-  color: #fff;
   padding: 14px 12px;
   text-decoration: none;
   border-sizing: border-box;
@@ -61,8 +60,7 @@
 }
 
 @media screen and (min-width: $desktop-width) {
-  .banner-menu ul.menu > li.menu-item > a,
-  .banner-menu ul.menu > li.menu-item > a:visited {
+  .banner-menu ul.menu > li.menu-item > a {
     padding: 22px 12px;
   }
 }
