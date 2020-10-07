@@ -2,10 +2,10 @@
 
 /*
 *   MenuContainer: A DisclosureMenu object instantiates MenuContainer objects
-*   for use in managing menu buttons link behavior and submenu links.
+*   for use in managing a menu button's link behavior and submenu links.
 */
 function MenuContainer (containerNode, index, disclosureMenuObj) {
-  var subMenuNode, subMenuLinkNodes, i;
+  var subMenuLinkNodes, i;
 
   this.hasSubMenu = false;
   this.containerNode = containerNode;
@@ -27,23 +27,23 @@ function MenuContainer (containerNode, index, disclosureMenuObj) {
     //   Set href to '#' so it does not behave like a link
     //   Add aria-expanded and aria-controls for ARIA menu button pattern
     this.buttonNode.setAttribute('role', 'button');
-    this.buttonNode.setAttribute('aria-expanded', 'false');
     this.buttonNode.setAttribute('href', '#');
-    this.buttonNode.setAttribute('aria-controls', 'banner-menu-' + i);
+    this.buttonNode.setAttribute('aria-expanded', 'false');
+    this.buttonNode.setAttribute('aria-controls', 'banner-menu-' + index);
 
-    // Initialize the submenu fields
-    subMenuNode = containerNode.querySelector('.sub-menu');
+    // Initialize submenu-related values
+    this.subMenuNode = containerNode.querySelector('.sub-menu');
+    this.subMenuNode.id = 'banner-sub-menu-' + index;
+
     subMenuLinkNodes = containerNode.querySelectorAll('.sub-menu a');
 
     // Add event handler to submenu links
     for (i = 0; i < subMenuLinkNodes.length; i++) {
-      subMenuLinkNodes[i].addEventListener('keydown', disclosureMenuObj.handleSubMenuLinkKeydown.bind(disclosureMenuObj));
+      subMenuLinkNodes[i].addEventListener('keydown',
+        disclosureMenuObj.handleSubMenuLinkKeydown.bind(disclosureMenuObj));
     }
 
-    subMenuNode.id = 'banner-sub-menu-' + index;
-
     // Add submenu information to menu container object
-    this.subMenuNode = subMenuNode;
     this.subMenuLinkNodes = subMenuLinkNodes;
     this.firstSubMenuLinkNode = subMenuLinkNodes[0];
     this.lastSubMenuLinkNode = subMenuLinkNodes[subMenuLinkNodes.length - 1];
