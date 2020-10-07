@@ -5,7 +5,7 @@
 *   for use in managing a menu button's link behavior and submenu links.
 */
 function MenuContainer (containerNode, index, disclosureMenuObj) {
-  var subMenuLinkNodes, i;
+  var subMenuNodeId, subMenuLinkNodes, i;
 
   this.hasSubMenu = false;
   this.containerNode = containerNode;
@@ -21,6 +21,7 @@ function MenuContainer (containerNode, index, disclosureMenuObj) {
   // Check to see if buttonNode link has a submenu, presumably with links
   if (containerNode.classList.contains('menu-item-has-children')) {
     this.hasSubMenu = true;
+    subMenuNodeId = 'banner-sub-menu-' + index;
 
     // When menubar link has submenu links:
     //   Change link to use the button role
@@ -29,11 +30,11 @@ function MenuContainer (containerNode, index, disclosureMenuObj) {
     this.buttonNode.setAttribute('role', 'button');
     this.buttonNode.setAttribute('href', '#');
     this.buttonNode.setAttribute('aria-expanded', 'false');
-    this.buttonNode.setAttribute('aria-controls', 'banner-menu-' + index);
+    this.buttonNode.setAttribute('aria-controls', subMenuNodeId);
 
     // Initialize submenu-related values
     this.subMenuNode = containerNode.querySelector('.sub-menu');
-    this.subMenuNode.id = 'banner-sub-menu-' + index;
+    this.subMenuNode.id = subMenuNodeId;
 
     subMenuLinkNodes = containerNode.querySelectorAll('.sub-menu a');
 
