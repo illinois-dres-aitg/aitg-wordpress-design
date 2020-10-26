@@ -27,6 +27,20 @@ main a:focus {
   outline: 2px solid $illini-orange;
 }
 
+main dt {
+  margin-top: 1em;
+}
+
+main dl.events dt + dd:before {
+  content: "Event: ";
+  font-style: italic;
+}
+
+main dl.events dd + dd:before {
+  content: "Date: ";
+  font-style: italic;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
