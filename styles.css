@@ -4,11 +4,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap");
-body {
+html, body, div, p, span, a,
+h1, h2, h3, h4, h5, h6,
+dl, dt, dd, ol, ul, li {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+body {
   font-family: Montserrat, sans-serif;
-  font-size: 16px;
 }
 
 .screen-reader-text {
@@ -183,7 +190,7 @@ header .skip-to.aitg [role=menuitem] {
 .banner-name {
   float: left;
   width: 100%;
-  font-size: 24px;
+  font-size: 1.5rem;
   white-space: nowrap;
 }
 @media screen and (min-width: 992px) {
@@ -337,9 +344,9 @@ header .skip-to.aitg [role=menuitem] {
 /* -------- MAIN: FLEX LAYOUT -------- */
 main {
   color: #00132c;
-  padding: 1em 1.5em;
-  font-family: "Source Serif Pro", sans-serif;
-  font-size: 18px;
+  padding: 1rem 1.5rem;
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.125rem;
   line-height: 1.4;
 }
 
@@ -359,8 +366,48 @@ main a:focus {
   outline: 2px solid #ff552e;
 }
 
-main dt {
-  margin-top: 1em;
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+}
+
+main h1 {
+  font-size: 220%;
+  margin: 0.5rem 0;
+}
+
+main h2 {
+  font-size: 175%;
+  margin: 1rem 0;
+}
+
+main h3 {
+  font-size: 140%;
+  margin: 1rem 0 0.5rem;
+}
+
+main h4 {
+  font-size: 120%;
+  margin: 1rem 0 0.5rem;
+}
+
+main p {
+  margin: 1rem 0 0;
+}
+
+main h1 + p,
+main h2 + p,
+main h3 + p,
+main h4 + p {
+  margin: 0;
+}
+
+main ol, main ul {
+  margin: 0.5rem 0 0.5rem 2.4rem;
+}
+
+main dl.events dt {
+  margin-top: 1rem;
 }
 
 main dl.events dt + dd:before {
@@ -389,38 +436,7 @@ main dl.events dd + dd:before {
   flex-direction: column;
   flex-basis: 92%;
   box-shadow: -1px 0 #eee;
-  padding: 0 24px;
-}
-
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  font-family: Montserrat, sans-serif;
-  font-weight: normal;
-  padding: 0;
-}
-
-.content h1 {
-  font-size: 225%;
-  margin: 0.25em 0;
-}
-
-.content h2 {
-  font-size: 180%;
-  margin: 0.325em 0;
-}
-
-.content h3 {
-  font-size: 155%;
-  margin: 0.45em 0;
-}
-
-.content h4 {
-  font-size: 135%;
-  margin: 0.575em 0;
+  padding: 0 1.5rem;
 }
 
 .right-column {
