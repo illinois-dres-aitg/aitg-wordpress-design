@@ -29,27 +29,27 @@ main a:focus {
 
 main h1, main h2, main h3, main h4, main h5, main h6 {
   font-family: Montserrat, sans-serif;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 main h1 {
-  font-size: 220%;
+  font-size: 200%;
   margin: 0.5rem 0;
 }
 
 main h2 {
-  font-size: 175%;
+  font-size: 150%;
   margin: 1rem 0;
 }
 
 main h3 {
-  font-size: 140%;
-  margin: 1rem 0 0.5rem;
+  font-size: 125%;
+  margin: 0.75rem 0 0.75rem;
 }
 
 main h4 {
-  font-size: 120%;
-  margin: 1rem 0 0.5rem;
+  font-size: 110%;
+  margin: 0.75rem 0 0.75rem;
 }
 
 main p {
