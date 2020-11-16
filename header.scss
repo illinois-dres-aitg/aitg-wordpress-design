@@ -10,9 +10,6 @@ header {
 // SKIP-TO
 
 header .skip-to.aitg {
-  /*position: absolute;*/
-  /*top: 0px;*/
-
   left: 60%;
   -webkit-transition: left $std-trans-time linear;
   transition: left $std-trans-time linear;
@@ -122,7 +119,7 @@ header .skip-to.aitg [role=menuitem] {
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 1fr;
-  width: 18em;
+  width: 18rem;
 }
 
 .search-widget input {
@@ -151,8 +148,8 @@ header .skip-to.aitg [role=menuitem] {
   background-color: $illini-blue;
   border: none;
   @include outline-inset(transparent, 2);
-  width: 37px;
-  height: 36px;
+  width: 34px;
+  height: 33px;
 }
 
 .search-widget button:focus {

@@ -32,8 +32,6 @@ header {
 }
 
 header .skip-to.aitg {
-  /*position: absolute;*/
-  /*top: 0px;*/
   left: 60%;
   -webkit-transition: left 0.3s linear;
   transition: left 0.3s linear;
@@ -139,7 +137,7 @@ header .skip-to.aitg [role=menuitem] {
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 1fr;
-  width: 18em;
+  width: 18rem;
 }
 
 .search-widget input {
@@ -171,8 +169,8 @@ header .skip-to.aitg [role=menuitem] {
   border: none;
   outline-offset: -2px;
   outline: 2px solid transparent;
-  width: 37px;
-  height: 36px;
+  width: 34px;
+  height: 33px;
 }
 
 .search-widget button:focus {
