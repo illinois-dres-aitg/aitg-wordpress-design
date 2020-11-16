@@ -345,7 +345,7 @@ header .skip-to.aitg [role=menuitem] {
 /* -------- MAIN: FLEX LAYOUT -------- */
 main {
   color: #00132c;
-  padding: 1rem 1.5rem;
+  padding: 1.25rem;
   font-family: "Source Serif Pro", serif;
   font-size: 1.125rem;
   line-height: 1.4;
@@ -374,7 +374,11 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 
 main h1 {
   font-size: 200%;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
+}
+
+main h1:first-child {
+  margin-top: 0;
 }
 
 main h2 {
@@ -400,7 +404,7 @@ main h1 + p,
 main h2 + p,
 main h3 + p,
 main h4 + p {
-  margin: 0;
+  margin-top: 0;
 }
 
 main ol, main ul {
@@ -437,7 +441,7 @@ main dl.events dd + dd:before {
   flex-direction: column;
   flex-basis: 92%;
   box-shadow: -1px 0 #eee;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 }
 
 .right-column {
