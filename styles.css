@@ -359,13 +359,12 @@ ul.upcoming-events > li:not(:first-child) {
   margin-top: 1.125rem;
 }
 
-ul.upcoming-events > li dt,
-ul.upcoming-events > li dd {
+ul.upcoming-events > li > div {
   background-color: #eee;
   padding: 0.25rem 0.5rem;
 }
 
-ul.upcoming-events > li dt {
+ul.upcoming-events > li > div:first-child {
   grid-column: 1/4;
 }
 
