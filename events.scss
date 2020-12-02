@@ -1,29 +1,43 @@
-// events.scss
+/* -------- events.scss -------- */
 
-ul.upcoming-events {
+ul.upcoming-events,
+ul.presentations {
   font-family: Montserrat;
   font-size: 0.925rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-ul.upcoming-events > li {
+ul.upcoming-events > li:not(:first-child),
+ul.presentations > li:not(:first-child) {
+  margin-top: 1.125rem;
+}
+
+ul.upcoming-events > li,
+ul.presentations > li {
   display: grid;
-  grid-template-columns: 40% 20% 1fr;
   grid-column-gap: 4px;
   grid-row-gap: 4px;
 }
 
-ul.upcoming-events > li:not(:first-child) {
-  margin-top: 1.125rem;
-}
-
-ul.upcoming-events > li > div {
+ul.upcoming-events > li > div,
+ul.presentations > li > div {
   background-color: #eee;
   padding: 0.25rem 0.5rem;
 }
 
-ul.upcoming-events > li > div:first-child {
+ul.upcoming-events > li > div:first-child,
+ul.presentations > li > div:first-child {
   grid-column: 1 / 4;
+}
+
+// upcoming-events
+
+ul.upcoming-events > li {
+  grid-template-columns: 40% 20% 1fr;
+}
+
+// presentations
+
+ul.presentations > li {
+  grid-template-columns: 60% 20% 1fr;
 }

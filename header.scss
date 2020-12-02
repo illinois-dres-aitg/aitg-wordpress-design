@@ -111,9 +111,14 @@ header {
 // banner row 2
 
 .banner-row-2 {
+  position: relative;
   color: white;
   background-color: $illini-blue;
   width: 100%;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    position: static;
+  }
 }
 
 .banner-name {

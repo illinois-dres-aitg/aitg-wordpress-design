@@ -135,9 +135,15 @@ header {
 }
 
 .banner-row-2 {
+  position: relative;
   color: white;
   background-color: #13294b;
   width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .banner-row-2 {
+    position: static;
+  }
 }
 
 .banner-name {
@@ -275,7 +281,7 @@ header .skip-to.aitg [role=menuitem] {
 }
 
 .banner-menu ul.menu > li.menu-item > a {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 14px 12px;
@@ -285,6 +291,7 @@ header .skip-to.aitg [role=menuitem] {
 }
 @media screen and (min-width: 576px) {
   .banner-menu ul.menu > li.menu-item > a {
+    display: inline-block;
     width: auto;
   }
 }
@@ -327,6 +334,27 @@ header .skip-to.aitg [role=menuitem] {
   margin-right: 7px;
 }
 
+.banner-hamburger {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  display: block;
+}
+@media screen and (min-width: 576px) {
+  .banner-hamburger {
+    display: none;
+  }
+}
+
+.banner-menu .menu.hide {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu .menu.hide {
+    display: block;
+  }
+}
+
 .banner-menu ul.sub-menu {
   list-style: none;
   z-index: 1;
@@ -344,11 +372,16 @@ header .skip-to.aitg [role=menuitem] {
 }
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+  position: static;
   display: none;
   outline-offset: -1px;
   outline: 1px solid transparent;
-  position: absolute;
-  top: 48px;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+    position: absolute;
+    top: 48px;
+  }
 }
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
@@ -356,32 +389,43 @@ header .skip-to.aitg [role=menuitem] {
   }
 }
 
-ul.upcoming-events {
+/* -------- events.scss -------- */
+ul.upcoming-events,
+ul.presentations {
   font-family: Montserrat;
   font-size: 0.925rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-ul.upcoming-events > li {
+ul.upcoming-events > li:not(:first-child),
+ul.presentations > li:not(:first-child) {
+  margin-top: 1.125rem;
+}
+
+ul.upcoming-events > li,
+ul.presentations > li {
   display: grid;
-  grid-template-columns: 40% 20% 1fr;
   grid-column-gap: 4px;
   grid-row-gap: 4px;
 }
 
-ul.upcoming-events > li:not(:first-child) {
-  margin-top: 1.125rem;
-}
-
-ul.upcoming-events > li > div {
+ul.upcoming-events > li > div,
+ul.presentations > li > div {
   background-color: #eee;
   padding: 0.25rem 0.5rem;
 }
 
-ul.upcoming-events > li > div:first-child {
+ul.upcoming-events > li > div:first-child,
+ul.presentations > li > div:first-child {
   grid-column: 1/4;
+}
+
+ul.upcoming-events > li {
+  grid-template-columns: 40% 20% 1fr;
+}
+
+ul.presentations > li {
+  grid-template-columns: 60% 20% 1fr;
 }
 
 /* -------- styles.scss -------- */
