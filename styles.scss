@@ -1,9 +1,12 @@
+/* -------- styles.scss -------- */
+
 @use "base" as *;
 @forward "header";
+@forward "skip-to";
 @forward "banner-menu";
 @forward "events";
 
-/* -------- MAIN: FLEX LAYOUT -------- */
+// main: flex layout
 
 main {
   color: $default-text-color;
@@ -123,7 +126,7 @@ main dl.events dd + dd:before {
   .right-column { flex-basis: 18%; }
 }
 
-/* -------- FOOTER: FLEX LAYOUT -------- */
+// footer: flex layout
 
 footer {
   color: #fff;

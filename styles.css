@@ -25,58 +25,11 @@ body {
   left: -3000em;
 }
 
-/* -------- HEADER -------- */
+/* -------- header.scss -------- */
 header {
   position: sticky;
   top: 0;
   z-index: 1;
-}
-
-header .skip-to.aitg {
-  left: 60%;
-  -webkit-transition: left 0.3s linear;
-  transition: left 0.3s linear;
-}
-@media screen and (min-width: 768px) {
-  header .skip-to.aitg {
-    left: 40%;
-  }
-}
-
-header .skip-to.aitg button {
-  color: #555555;
-  background-color: #dddede;
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 6px 8px 8px;
-  border-top: none !important;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-header .skip-to.aitg button:focus,
-header .skip-to.aitg button:hover {
-  color: #00132c;
-  background-color: #cad9ef;
-  outline: none;
-}
-
-header .skip-to.aitg button:focus {
-  padding: 6px 7px 7px;
-  border-top: none !important;
-  border-right: 3px solid #ff552e;
-  border-bottom: 3px solid #ff552e;
-  border-left: 3px solid #ff552e;
-}
-
-header .skip-to.aitg [role=menuitem] {
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
 }
 
 .banner {
@@ -226,7 +179,55 @@ header .skip-to.aitg [role=menuitem] {
   outline: 3px solid #ff552e;
 }
 
-/* -------- BANNER MENU -------- */
+/* -------- skip-to.scss -------- */
+header .skip-to.aitg {
+  left: 60%;
+  -webkit-transition: left 0.3s linear;
+  transition: left 0.3s linear;
+}
+@media screen and (min-width: 768px) {
+  header .skip-to.aitg {
+    left: 40%;
+  }
+}
+
+header .skip-to.aitg button {
+  color: #555555;
+  background-color: #dddede;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 8px 8px;
+  border-top: none !important;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+header .skip-to.aitg button:focus,
+header .skip-to.aitg button:hover {
+  color: #00132c;
+  background-color: #cad9ef;
+  outline: none;
+}
+
+header .skip-to.aitg button:focus {
+  padding: 6px 7px 7px;
+  border-top: none !important;
+  border-right: 3px solid #ff552e;
+  border-bottom: 3px solid #ff552e;
+  border-left: 3px solid #ff552e;
+}
+
+header .skip-to.aitg [role=menuitem] {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+/* -------- banner-menu.scss -------- */
 .banner-menu {
   font-size: 16px;
   white-space: nowrap;
@@ -240,12 +241,6 @@ header .skip-to.aitg [role=menuitem] {
     float: right;
     padding-right: 18px;
   }
-}
-
-.banner-menu ul,
-.banner-menu li {
-  margin: 0;
-  padding: 0;
 }
 
 .banner-menu ul.menu li.menu-item a,
@@ -368,7 +363,7 @@ ul.upcoming-events > li > div:first-child {
   grid-column: 1/4;
 }
 
-/* -------- MAIN: FLEX LAYOUT -------- */
+/* -------- styles.scss -------- */
 main {
   color: #00132c;
   padding: 1.25rem;
@@ -502,7 +497,6 @@ main dl.events dd + dd:before {
     flex-basis: 18%;
   }
 }
-/* -------- FOOTER: FLEX LAYOUT -------- */
 footer {
   color: #fff;
   background-color: #13294b;

@@ -1,4 +1,4 @@
-/* -------- BANNER MENU -------- */
+/* -------- banner-menu.scss -------- */
 
 @use "base" as *;
 
@@ -16,15 +16,7 @@
   }
 }
 
-// RESET
-
-.banner-menu ul,
-.banner-menu li {
-  margin: 0;
-  padding: 0;
-}
-
-// ALL MENU A ELEMENTS
+// all menu a elements
 
 .banner-menu ul.menu li.menu-item a,
 .banner-menu ul.menu li-menu-item a:visited {
@@ -41,7 +33,7 @@
   @include outline-inset($illini-orange);
 }
 
-// MENU BAR
+// menu bar
 
 .banner-menu ul.menu > li.menu-item {
   display: inline-block;
@@ -87,7 +79,7 @@
   margin-right: 7px;
 }
 
-// SUB-MENU
+// sub-menu
 
 .banner-menu ul.sub-menu {
   list-style: none;
