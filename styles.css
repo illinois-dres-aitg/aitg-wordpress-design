@@ -27,9 +27,14 @@ body {
 
 /* -------- header.scss -------- */
 header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1;
+}
+@media screen and (min-width: 992px) {
+  header {
+    position: sticky;
+    top: 0;
+  }
 }
 
 .banner {
