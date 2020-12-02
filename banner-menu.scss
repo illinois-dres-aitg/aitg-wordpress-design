@@ -7,9 +7,9 @@
   margin-left: 12px;
   width: 95%;
   font-size: 16px;
-  white-space: nowrap;
 
   @media screen and (min-width: $phone-width-landscape) {
+    white-space: nowrap;
     width: auto;
   }
   @media screen and (min-width: $desktop-width) {
