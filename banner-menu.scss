@@ -3,16 +3,18 @@
 @use "base" as *;
 
 .banner-menu {
+  float: left;
+  margin-left: 12px;
+  width: 95%;
   font-size: 16px;
   white-space: nowrap;
-  margin: 0;
-  padding: 0;
-  float: left;
-  padding-left: 12px;
 
+  @media screen and (min-width: $phone-width-landscape) {
+    width: auto;
+  }
   @media screen and (min-width: $desktop-width) {
     float: right;
-    padding-right: 18px;
+    margin-right: 16px;
   }
 }
 
@@ -36,30 +38,41 @@
 // menu bar
 
 .banner-menu ul.menu > li.menu-item {
-  display: inline-block;
   position: relative;
+  display: block;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    display: inline-block;
+  }
 }
 
 .banner-menu ul.menu > li.menu-item > a {
   display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
   padding: 14px 12px;
   text-decoration: none;
   @include outline-inset(transparent, 1);
 
+  @media screen and (min-width: $phone-width-landscape) {
+    width: auto;
+  }
   @media screen and (min-width: $desktop-width) {
     padding: 22px 12px;
   }
 }
 
 .banner-menu ul.menu > li.menu-item > a:hover {
-  padding: 12px 10px 14px;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
+  padding: 12px 10px;
+  border: 2px solid white;
 
+  @media screen and (min-width: $phone-width-landscape) {
+    border-bottom: none;
+  }
   @media screen and (min-width: $desktop-width) {
     padding: 22px 10px;
     border-top: none;
+    border-bottom: none;
   }
 }
 
@@ -83,6 +96,7 @@
 
 .banner-menu ul.sub-menu {
   list-style: none;
+  z-index: 1;
 }
 
 .banner-menu ul.sub-menu ul.sub-menu li {

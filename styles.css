@@ -229,17 +229,21 @@ header .skip-to.aitg [role=menuitem] {
 
 /* -------- banner-menu.scss -------- */
 .banner-menu {
+  float: left;
+  margin-left: 12px;
+  width: 95%;
   font-size: 16px;
   white-space: nowrap;
-  margin: 0;
-  padding: 0;
-  float: left;
-  padding-left: 12px;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu {
+    width: auto;
+  }
 }
 @media screen and (min-width: 992px) {
   .banner-menu {
     float: right;
-    padding-right: 18px;
+    margin-right: 16px;
   }
 }
 
@@ -261,16 +265,28 @@ header .skip-to.aitg [role=menuitem] {
 }
 
 .banner-menu ul.menu > li.menu-item {
-  display: inline-block;
   position: relative;
+  display: block;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu ul.menu > li.menu-item {
+    display: inline-block;
+  }
 }
 
 .banner-menu ul.menu > li.menu-item > a {
   display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
   padding: 14px 12px;
   text-decoration: none;
   outline-offset: -1px;
   outline: 1px solid transparent;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu ul.menu > li.menu-item > a {
+    width: auto;
+  }
 }
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item > a {
@@ -279,15 +295,19 @@ header .skip-to.aitg [role=menuitem] {
 }
 
 .banner-menu ul.menu > li.menu-item > a:hover {
-  padding: 12px 10px 14px;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
+  padding: 12px 10px;
+  border: 2px solid white;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu ul.menu > li.menu-item > a:hover {
+    border-bottom: none;
+  }
 }
 @media screen and (min-width: 992px) {
   .banner-menu ul.menu > li.menu-item > a:hover {
     padding: 22px 10px;
     border-top: none;
+    border-bottom: none;
   }
 }
 
@@ -309,6 +329,7 @@ header .skip-to.aitg [role=menuitem] {
 
 .banner-menu ul.sub-menu {
   list-style: none;
+  z-index: 1;
 }
 
 .banner-menu ul.sub-menu ul.sub-menu li {
