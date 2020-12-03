@@ -386,8 +386,10 @@ DisclosureMenu.prototype.handleBodyCloseMenus = function (event) {
   if (!this.rootNode.contains(event.target)) {
     this.closeMenus();
   }
-  event.stopPropagation();
-  event.preventDefault();
+  else {
+    event.stopPropagation();
+    event.preventDefault();
+  }
 };
 
 DisclosureMenu.prototype.handleHamburgerClick = function (event) {
