@@ -55,10 +55,11 @@ with the CSS, JavaScript and image files.
 * Moved skip-to code in `header.scss` to its own file: `skip-to.scss`; added
   `@forward skip-to;` in `styles.scss`.
 * Integrated all CSS properties in Jon's `presentations.scss` into
-  `events.scss`: there are now three classes: `events`, `upcoming` and
-  `presentation`.
+  `events.scss`: there are now two classes: `upcoming-events`, and
+  `presentations`.
 * To use the classes in `events.scss`, in the HTML you would specify on the
-  `ul` element: `class="events upcoming"` or `class="events presentation"`.
+  `ul` element: `class="upcoming-events"` or
+  `class="upcoming-events presentations"`.
 
 ### Issues
 

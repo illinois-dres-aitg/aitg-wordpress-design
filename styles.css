@@ -395,7 +395,7 @@ header .skip-to.aitg [role=menuitem] {
 }
 
 /* -------- events.scss -------- */
-ul.events {
+ul.upcoming-events {
   list-style: none;
   font-family: Montserrat;
   font-size: 0.925rem;
@@ -403,30 +403,27 @@ ul.events {
   padding: 0;
 }
 
-ul.events > li:not(:first-child) {
+ul.upcoming-events > li:not(:first-child) {
   margin-top: 1.125rem;
 }
 
-ul.events > li {
+ul.upcoming-events > li {
   display: grid;
+  grid-template-columns: 40% 20% 1fr;
   grid-column-gap: 4px;
   grid-row-gap: 4px;
 }
 
-ul.events > li > div {
+ul.upcoming-events > li > div {
   background-color: #eee;
   padding: 0.25rem 0.5rem;
 }
 
-ul.events > li > div:first-child {
+ul.upcoming-events > li > div:first-child {
   grid-column: 1/4;
 }
 
-ul.events.upcoming > li {
-  grid-template-columns: 40% 20% 1fr;
-}
-
-ul.events.presentation > li {
+ul.upcoming-events.presentations > li {
   grid-template-columns: 60% 20% 1fr;
 }
 
