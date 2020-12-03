@@ -33,7 +33,7 @@ with the CSS, JavaScript and image files.
 
 ## Nov. 16, 2020 (Nick)
 
-* Deleted font files and the fonts folder: now accessing those fonts via CDN.
+* Deleted font files and the `fonts` folder: now accessing fonts via CDN.
 * Deleted image file no longer used: `images/search-icon-inv.svg`.
 * Deleted `js/banner-menu.js`, now superceded by `js/DisclosureMenu.js`.
 
