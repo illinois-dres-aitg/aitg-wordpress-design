@@ -63,11 +63,29 @@
   }
 }
 
+.banner-menu ul.menu > li.menu-item:focus-within > a {
+/*  background-color: $illini-blue;*/
+  padding: 12px 10px;
+  border: 2px solid $medium-gray;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    /* background-color: $industrial-blue; */
+    padding: 12px 10px 14px;
+    border-bottom: none;
+  }
+  @media screen and (min-width: $desktop-width) {
+    padding: 22px 10px;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
 .banner-menu ul.menu > li.menu-item > a:hover {
   padding: 12px 10px;
   border: 2px solid white;
 
   @media screen and (min-width: $phone-width-landscape) {
+    padding: 12px 10px 14px;
     border-bottom: none;
   }
   @media screen and (min-width: $desktop-width) {
@@ -118,28 +136,37 @@
 
 .banner-menu ul.sub-menu {
   list-style: none;
+  background: $illini-blue;
   z-index: 1;
 }
 
 .banner-menu ul.sub-menu ul.sub-menu li {
-  padding-left: 1em;
+  padding-left: 1.125rem;
 }
 
-.banner-menu ul.sub-menu,
 .banner-menu ul.sub-menu a {
   display: block;
-  background: $illini-blue;
+  text-decoration: none;
   padding: 8px 12px;
+}
+
+.banner-menu ul.sub-menu a:hover {
+  text-decoration: underline;
 }
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
   position: static;
   display: none;
+  padding: 8px 8px 12px;
   @include outline-inset(transparent, 1);
+  border-right: 2px solid $medium-gray;
+  border-bottom: 2px solid $medium-gray;
+  border-left: 2px solid $medium-gray;
 
   @media screen and (min-width: $phone-width-landscape) {
     position: absolute;
     top: 48px;
+    border: none;
   }
   @media screen and (min-width: $desktop-width) {
     top: 64px;

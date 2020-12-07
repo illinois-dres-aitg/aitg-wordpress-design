@@ -101,7 +101,7 @@ header {
 
 .search-widget input {
   grid-column: 1;
-  color: #555555;
+  color: #555;
   background-color: #dddede;
   border: none;
   outline-offset: -2px;
@@ -203,7 +203,7 @@ header .skip-to.aitg {
 }
 
 header .skip-to.aitg button {
-  color: #555555;
+  color: #555;
   background-color: #dddede;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
@@ -306,12 +306,33 @@ header .skip-to.aitg [role=menuitem] {
   }
 }
 
+.banner-menu ul.menu > li.menu-item:focus-within > a {
+  /*  background-color: $illini-blue;*/
+  padding: 12px 10px;
+  border: 2px solid #aaa;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu ul.menu > li.menu-item:focus-within > a {
+    /* background-color: $industrial-blue; */
+    padding: 12px 10px 14px;
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner-menu ul.menu > li.menu-item:focus-within > a {
+    padding: 22px 10px;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
 .banner-menu ul.menu > li.menu-item > a:hover {
   padding: 12px 10px;
   border: 2px solid white;
 }
 @media screen and (min-width: 576px) {
   .banner-menu ul.menu > li.menu-item > a:hover {
+    padding: 12px 10px 14px;
     border-bottom: none;
   }
 }
@@ -362,30 +383,39 @@ header .skip-to.aitg [role=menuitem] {
 
 .banner-menu ul.sub-menu {
   list-style: none;
+  background: #13294b;
   z-index: 1;
 }
 
 .banner-menu ul.sub-menu ul.sub-menu li {
-  padding-left: 1em;
+  padding-left: 1.125rem;
 }
 
-.banner-menu ul.sub-menu,
 .banner-menu ul.sub-menu a {
   display: block;
-  background: #13294b;
+  text-decoration: none;
   padding: 8px 12px;
+}
+
+.banner-menu ul.sub-menu a:hover {
+  text-decoration: underline;
 }
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
   position: static;
   display: none;
+  padding: 8px 8px 12px;
   outline-offset: -1px;
   outline: 1px solid transparent;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  border-left: 2px solid #aaa;
 }
 @media screen and (min-width: 576px) {
   .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
     position: absolute;
     top: 48px;
+    border: none;
   }
 }
 @media screen and (min-width: 992px) {
