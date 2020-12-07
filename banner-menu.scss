@@ -68,13 +68,11 @@
   border: 2px solid $medium-gray;
 
   @media screen and (min-width: $phone-width-landscape) {
-    padding: 12px 10px 14px;
-    border-bottom: none;
+    padding: 12px 10px;
   }
   @media screen and (min-width: $desktop-width) {
-    padding: 22px 10px;
+    padding: 22px 10px 20px;
     border-top: none;
-    border-bottom: none;
   }
 }
 
