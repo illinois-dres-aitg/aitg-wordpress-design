@@ -173,7 +173,11 @@
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
   white-space: normal;
-  min-width: 20rem;
+  min-width: auto;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    min-width: 20rem;
+  }
 }
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu.left-adjust {

@@ -424,7 +424,12 @@ header .skip-to.aitg [role=menuitem] {
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
   white-space: normal;
-  min-width: 20rem;
+  min-width: fit-content;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+    min-width: 20rem;
+  }
 }
 
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu.left-adjust {
