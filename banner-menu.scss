@@ -64,12 +64,10 @@
 }
 
 .banner-menu ul.menu > li.menu-item:focus-within > a {
-/*  background-color: $illini-blue;*/
   padding: 12px 10px;
   border: 2px solid $medium-gray;
 
   @media screen and (min-width: $phone-width-landscape) {
-    /* background-color: $industrial-blue; */
     padding: 12px 10px 14px;
     border-bottom: none;
   }
@@ -157,7 +155,7 @@
 .banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
   position: static;
   display: none;
-  padding: 8px 8px 12px;
+  padding: 8px 12px 12px;
   @include outline-inset(transparent, 1);
   border-right: 2px solid $medium-gray;
   border-bottom: 2px solid $medium-gray;
@@ -170,5 +168,19 @@
   }
   @media screen and (min-width: $desktop-width) {
     top: 64px;
+  }
+}
+
+.banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu {
+  white-space: normal;
+  min-width: 20rem;
+}
+
+.banner-menu ul.menu > li.menu-item-has-children > ul.sub-menu.left-adjust {
+  margin-left: 0;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    margin-left: -3rem;
+    min-width: 15rem;
   }
 }
