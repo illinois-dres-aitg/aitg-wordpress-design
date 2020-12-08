@@ -36,6 +36,12 @@ function MenuContainer (containerNode, index, disclosureMenuObj) {
     this.subMenuNode = containerNode.querySelector('.sub-menu');
     this.subMenuNode.id = subMenuNodeId;
 
+    // Adjust submenu position if the button is too close right margin
+    let space = window.innerWidth - this.buttonNode.getBoundingClientRect().left;
+    if (space < 260) {
+      this.subMenuNode.classList.add('left-adjust');
+    }
+
     subMenuLinkNodes = containerNode.querySelectorAll('.sub-menu a');
 
     // Add event handler to submenu links
