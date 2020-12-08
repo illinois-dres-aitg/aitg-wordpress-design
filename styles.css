@@ -122,14 +122,13 @@ header {
 
 .search-widget button {
   grid-column: 2;
-  position: relative;
   color: white;
   background-color: #13294b;
   border: none;
   outline-offset: -2px;
   outline: 2px solid transparent;
-  width: 34px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
 }
 
 .search-widget button:focus {
@@ -137,6 +136,12 @@ header {
   -webkit-transition: 0.3s background;
   transition: 0.3s background;
   outline: 3px solid #ff552e;
+}
+
+.search-widget button svg {
+  position: relative;
+  top: 1.5px;
+  left: -2px;
 }
 
 .banner-row-2 {

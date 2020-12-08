@@ -97,19 +97,24 @@ header {
 
 .search-widget button {
   grid-column: 2;
-  position: relative;
   color: white;
   background-color: $illini-blue;
   border: none;
   @include outline-inset(transparent, 2);
-  width: 34px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
 }
 
 .search-widget button:focus {
   background-color: $industrial-blue;
   @include background-transition;
   outline: 3px solid $illini-orange;
+}
+
+.search-widget button svg {
+  position: relative;
+  top: 1.5px;
+  left: -2px;
 }
 
 // banner row 2
