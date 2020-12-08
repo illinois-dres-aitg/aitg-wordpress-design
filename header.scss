@@ -71,9 +71,10 @@ header {
 
 .search-widget form {
   display: grid;
-  grid-template-columns: 2fr;
+  grid-template-columns: 1fr 32px;
   grid-template-rows: 1fr;
   width: 18rem;
+  height: 32px;
 }
 
 .search-widget input {
@@ -101,8 +102,7 @@ header {
   background-color: $illini-blue;
   border: none;
   @include outline-inset(transparent, 2);
-  width: 32px;
-  height: 32px;
+  padding: 0;
 }
 
 .search-widget button:focus {
@@ -113,8 +113,8 @@ header {
 
 .search-widget button svg {
   position: relative;
-  top: 1.5px;
-  left: -2px;
+  top: 1px;
+  left: 1px;
 }
 
 // banner row 2
