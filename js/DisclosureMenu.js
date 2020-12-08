@@ -61,14 +61,13 @@ function DisclosureMenu (domNode) {
   this.rootNode = domNode;
 
   // Add hamburger button
-  var buttonNode = document.createElement('button');
-  buttonNode.setAttribute('aria-label', 'Main Menu');
-  buttonNode.classList.add('banner-hamburger');
-  buttonNode.setAttribute('aria-expanded', 'false');
-  buttonNode.addEventListener('click', this.handleHamburgerClick.bind(this));
-  var svgNode = this.getHambugerSVGNode();
-  buttonNode.appendChild(svgNode);
-  domNode.parentNode.insertBefore(buttonNode, domNode);
+  this.hamburgerButtonNode = document.createElement('button');
+  this.hamburgerButtonNode.setAttribute('aria-label', 'Main Menu');
+  this.hamburgerButtonNode.classList.add('banner-hamburger');
+  this.hamburgerButtonNode.setAttribute('aria-expanded', 'false');
+  this.hamburgerButtonNode.addEventListener('click', this.handleHamburgerClick.bind(this));
+  this.hamburgerButtonNode.appendChild(this.getHambugerSVGNode());
+  domNode.parentNode.insertBefore(this.hamburgerButtonNode, domNode);
 
   this.menuNode = domNode.querySelector('.menu');
 
@@ -393,13 +392,12 @@ DisclosureMenu.prototype.handleBodyCloseMenus = function (event) {
 };
 
 DisclosureMenu.prototype.handleHamburgerClick = function (event) {
-  var tgt = event.currentTarget;
 
-  if (tgt.getAttribute('aria-expanded') === 'true') {
-    tgt.setAttribute('aria-expanded', 'false');
+  if (this.hamburgerButtonNode.getAttribute('aria-expanded') === 'true') {
+    this.hamburgerButtonNode.setAttribute('aria-expanded', 'false');
     this.menuNode.classList.add('hide');
   } else {
-    tgt.setAttribute('aria-expanded', 'true');
+    this.hamburgerButtonNode.setAttribute('aria-expanded', 'true');
     this.menuNode.classList.remove('hide');
   }
   event.stopPropagation();
