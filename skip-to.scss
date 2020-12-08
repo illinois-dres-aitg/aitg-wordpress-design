@@ -46,6 +46,17 @@ header .skip-to.aitg button:focus {
   border-left: 3px solid $illini-orange;
 }
 
+header .skip-to.aitg [role="menu"] {
+  margin-left: -9rem;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    margin-left: -4.5rem;
+  }
+  @media screen and (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
 header .skip-to.aitg [role=menuitem] {
   font-family: Montserrat, sans-serif;
   font-size: 14px;

@@ -233,6 +233,20 @@ header .skip-to.aitg button:focus {
   border-left: 3px solid #ff552e;
 }
 
+header .skip-to.aitg [role=menu] {
+  margin-left: -9rem;
+}
+@media screen and (min-width: 576px) {
+  header .skip-to.aitg [role=menu] {
+    margin-left: -4.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .skip-to.aitg [role=menu] {
+    margin-left: 0;
+  }
+}
+
 header .skip-to.aitg [role=menuitem] {
   font-family: Montserrat, sans-serif;
   font-size: 14px;
