@@ -72,4 +72,37 @@ with the CSS, JavaScript and image files.
   `position: relative` for all other widths.
 * There seems to be a focus problem in `DisclosureMenu.js`: once a menu
   element has focus, it will not release focus, even when you click the mouse
-  elsewhere in the page.
+  elsewhere in the page. (Fixed)
+
+## Dec. 8, 2020 (Nick)
+
+### `banner-menu` and `header`
+
+* Fixed text layout inconsistencies of menu items (left and right padding) and
+  submenus within submenus (top and bottom padding).
+* Added `min-width` property to `sub-menu` box and `white-space: normal` for
+  more consistent layout and to avoid clipping of lengthy menu item text.
+* Added toggle of `chevron-down.svg` image to `chevron-up.svg` when
+  `aria-expanded=true`, to indicate button can be used to close `sub-menu`.
+* Added `$medium-gray` borders to top-level menu buttons to indicate state of
+  `focus-within` to better indicate menu context.
+* Added `$medium-gray` border around entire `sub-menu` when menu buttons are
+  vertically aligned (phone screen width) to better indicate menu context.
+* Added class `left-adjust` for right-most `sub-menu` to prevent clipping in
+  `$desktop-width` and `$tablet-width` layouts.
+
+### `search-widget`
+
+* Created new search widget icon (magnifying glass) with better proportioning.
+* Fixed layout problems with search icon: reset button `padding: 0`; specified
+  `grid column` dimensions, in particular the `button` column width; used
+  `position: relative` offsets that work in Chrome, Firefox and Safari.
+
+### `skip-to`
+
+* Added media queries to incrementally left-adjust the menu box to avoid
+  clipping.
+
+### AITG description text
+
+* Updated home page introductory text to make it less abstract.
