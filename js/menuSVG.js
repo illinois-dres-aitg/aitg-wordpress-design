@@ -77,3 +77,23 @@ function createMenuLinkSVG () {
 
   return svg;
 }
+
+/*
+*   IIFE that adds the appropriate SVG image to all top-level menu buttons
+*/
+(function () {
+  let menuButtonElements;
+
+  const buttonHasChildrenSelector = '.banner-menu ul.menu > li.menu-item.menu-item-has-children > a';
+  const buttonNoChildrenSelector = '.banner-menu ul.menu > li.menu-item:not(.menu-item-has-children) > a';
+
+  menuButtonElements = document.querySelectorAll(buttonHasChildrenSelector);
+  for (let i = 0; i < menuButtonElements.length; i++) {
+    menuButtonElements[i].appendChild(createMenuToggleSVG());
+  }
+
+  menuButtonElements = document.querySelectorAll(buttonNoChildrenSelector);
+  for (let i = 0; i < menuButtonElements.length; i++) {
+    menuButtonElements[i].appendChild(createMenuLinkSVG());
+  }
+})();
