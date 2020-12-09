@@ -375,8 +375,7 @@ header .skip-to.aitg [role=menuitem] {
   transform: rotate(180deg);
 }
 
-.banner-menu ul.menu > li.menu-item:not(.menu-item-has-children) > a::after {
-  content: url("images/chevron-right.svg");
+.banner-menu ul.menu > li.menu-item:not(.menu-item-has-children) > a > svg {
   position: relative;
   top: 0.5px;
   left: 6px;

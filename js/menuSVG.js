@@ -1,7 +1,8 @@
 /*
 *   createMenuToggleSVG: Return SVG image of chevron pointing downward that
 *   can be rotated 180 degrees to chevron pointing upward. The image serves
-*   as an affordance indicating that menu button will open or close submenu.
+*   as an affordance that indicates the state of the button, i.e. what will
+*   happen when it is activated: it will either open or close its submenu.
 */
 function createMenuToggleSVG () {
   const xmlns = "http://www.w3.org/2000/svg";
@@ -40,8 +41,8 @@ function createMenuToggleSVG () {
 
 /*
 *   createMenuLink: Return SVG image of chevron pointing rightward. The image
-*   serves as an affordance indicating the menu button is a direct link to
-*   another page within the website.
+*   serves as an affordance indicating that the menu button is a direct link
+*   to another page within the website.
 */
 function createMenuLinkSVG () {
   const xmlns = "http://www.w3.org/2000/svg";
