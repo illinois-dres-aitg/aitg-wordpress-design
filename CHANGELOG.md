@@ -106,3 +106,14 @@ with the CSS, JavaScript and image files.
 ### AITG description text
 
 * Updated home page introductory text to make it less abstract.
+
+## Dec. 8, 2020 (Jon)
+
+### Changes to DisclosureMenu.js
+
+* Changed the initialization of the hamburger menu button.
+* Include a property `hamburgerButtonNode` to reference the hamburger menu.
+* Updated the `click` event handler to use `hamburgerButtonNode` instead of
+  event target.
+* Dynamically add `left-adjust` class to submenu node if the menu button is a
+  certain distance from the right edge of the window.

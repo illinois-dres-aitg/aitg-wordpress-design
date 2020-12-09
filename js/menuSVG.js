@@ -13,8 +13,12 @@ function createMenuToggleSVG () {
   svg.setAttributeNS(null, 'height', '11px');
   svg.setAttributeNS(null, 'viewBox', '0 0 133 79');
   svg.setAttributeNS(null, 'aria-hidden', 'true');
-  svg.setAttributeNS(null, 'title', 'menu open/close icon');
   svg.setAttributeNS(null, 'version', '1.1');
+
+  let title = document.createElementNS(xmlns, 'title');
+  let text = document.createTextNode('menu open/close icon');
+  title.appendChild(text);
+  svg.appendChild(title);
 
   let g1 = document.createElementNS(xmlns, 'g');
   g1.setAttributeNS(null, 'stroke', 'none');
@@ -54,8 +58,12 @@ function createMenuLinkSVG () {
   svg.setAttributeNS(null, 'height', '11px');
   svg.setAttributeNS(null, 'viewBox', '0 0 79 133');
   svg.setAttributeNS(null, 'aria-hidden', 'true');
-  svg.setAttributeNS(null, 'title', 'menu link icon');
   svg.setAttributeNS(null, 'version', '1.1');
+
+  let title = document.createElementNS(xmlns, 'title');
+  let text = document.createTextNode('menu link icon');
+  title.appendChild(text);
+  svg.appendChild(title);
 
   let g1 = document.createElementNS(xmlns, 'g');
   g1.setAttributeNS(null, 'stroke', 'none');
