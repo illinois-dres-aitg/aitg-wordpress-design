@@ -9,7 +9,6 @@ function createMenuToggleSVG () {
   const xmlns = "http://www.w3.org/2000/svg";
 
   let svg = document.createElementNS(xmlns, "svg");
-  svg.setAttributeNS(null, 'class', 'chevron');
   svg.setAttributeNS(null, 'version', '1.1');
   svg.setAttributeNS(null, 'title', 'menu open/close icon')
   svg.setAttributeNS(null, 'width', '11px');
