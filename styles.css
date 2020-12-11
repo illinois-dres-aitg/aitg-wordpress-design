@@ -363,9 +363,9 @@ header .skip-to.aitg [role=menuitem] {
   top: 1px;
   left: 6px;
   margin-right: 7px;
-  -moz-transition: 0.6s ease;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
+  -moz-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .banner-menu ul.menu > li.menu-item.menu-item-has-children > a[aria-expanded=true] > svg {
@@ -449,15 +449,22 @@ header .skip-to.aitg [role=menuitem] {
 }
 
 .banner-menu ul.menu > li.menu-item.menu-item-has-children > a[aria-expanded=true] + ul.sub-menu {
-  -moz-animation: fade-in 0.6s ease;
-  -webkit-animation: fade-in 0.6s ease;
-  animation: fade-in 0.6s ease;
+  -moz-animation: fade-in 0.5s ease;
+  -webkit-animation: fade-in 0.5s ease;
+  animation: fade-in 0.5s ease;
 }
 
 .banner-menu ul.menu > li.menu-item.menu-item-has-children > a[aria-expanded=false] + ul.sub-menu {
-  -moz-animation: fade-out 0.3s ease;
-  -webkit-animation: fade-out 0.3s ease;
-  animation: fade-out 0.3s ease;
+  -moz-animation: fade-out 10ms ease;
+  -webkit-animation: fade-out 10ms ease;
+  animation: fade-out 10ms ease ease;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu ul.menu > li.menu-item.menu-item-has-children > a[aria-expanded=false] + ul.sub-menu {
+    -moz-animation: fade-out 0.3s ease;
+    -webkit-animation: fade-out 0.3s ease;
+    animation: fade-out 0.3s ease;
+  }
 }
 
 .banner-menu ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu.left-adjust {

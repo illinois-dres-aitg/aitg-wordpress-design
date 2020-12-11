@@ -187,9 +187,15 @@
 }
 
 .banner-menu ul.menu > li.menu-item.menu-item-has-children > a[aria-expanded="false"] + ul.sub-menu {
-  -moz-animation: fade-out $fade-out-time ease;
-  -webkit-animation: fade-out $fade-out-time ease;
-  animation: fade-out $fade-out-time ease;
+  -moz-animation: fade-out $minimal-time ease;
+  -webkit-animation: fade-out $minimal-time ease;
+  animation: fade-out $minimal-time ease ease;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    -moz-animation: fade-out $fade-out-time ease;
+    -webkit-animation: fade-out $fade-out-time ease;
+    animation: fade-out $fade-out-time ease;
+  }
 }
 
 .banner-menu ul.menu > li.menu-item.menu-item-has-children > ul.sub-menu.left-adjust {
