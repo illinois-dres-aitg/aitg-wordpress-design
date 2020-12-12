@@ -2,6 +2,15 @@
 
 @use "base" as *;
 
+@include keyframes (fade-in) {
+  from { opacity: 0.25; }
+    to { opacity: 1; }
+}
+@include keyframes (fade-out) {
+  from { opacity: 0.5; }
+    to { opacity: 0; }
+}
+
 .banner-menu {
   float: left;
   margin-left: 12px;
@@ -195,30 +204,4 @@
     margin-left: -3rem;
     min-width: 15rem;
   }
-}
-
-@-moz-keyframes fade-in {
-    from { opacity: 0.25; }
-      to { opacity: 1; }
-}
-@-webkit-keyframes fade-in {
-    from { opacity: 0.25; }
-      to { opacity: 1; }
-}
-@keyframes fade-in {
-    from { opacity: 0.25; }
-      to { opacity: 1; }
-}
-
-@-moz-keyframes fade-out {
-    from { opacity: 0.5; }
-      to { opacity: 0; }
-}
-@-webkit-keyframes fade-out {
-    from { opacity: 0.5; }
-      to { opacity: 0; }
-}
-@keyframes fade-out {
-    from { opacity: 0.5; }
-      to { opacity: 0; }
 }

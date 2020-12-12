@@ -27,6 +27,7 @@ $std-trans-time:  0.3s;
 // MIXINS
 @mixin background-transition {
   -webkit-transition: $std-trans-time background;
+  -moz-transition: $std-trans-time background;
   transition: $std-trans-time background;
 }
 
@@ -36,33 +37,45 @@ $std-trans-time:  0.3s;
 }
 
 @mixin icon-rotation {
-  -moz-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 @mixin icon-transition {
-  -moz-transition: $icon-transition;
   -webkit-transition: $icon-transition;
+  -moz-transition: $icon-transition;
   transition: $icon-transition;
 }
 
 @mixin fade-in-animation {
-  -moz-animation: fade-in $fade-in;
   -webkit-animation: fade-in $fade-in;
+  -moz-animation: fade-in $fade-in;
   animation: fade-in $fade-in;
 }
 
 @mixin fade-out-standard {
-  -moz-animation: fade-out $fade-out;
   -webkit-animation: fade-out $fade-out;
+  -moz-animation: fade-out $fade-out;
   animation: fade-out $fade-out;
 }
 
 @mixin fade-out-minimal {
-  -moz-animation: fade-out $fade-out-min;
   -webkit-animation: fade-out $fade-out-min;
+  -moz-animation: fade-out $fade-out-min;
   animation: fade-out $fade-out-min;
+}
+
+@mixin keyframes ($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
 }
 
 // RULES
