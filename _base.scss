@@ -12,17 +12,17 @@ $light-gray: #dddede;
 $medium-gray: #aaa;
 
 // DIMENSIONS
-$desktop-width: 992px;
-$tablet-width: 768px;
+$desktop-width:         992px;
+$tablet-width:          768px;
 $phone-width-landscape: 576px;
-$phone-width-portrait: 414px;
+$phone-width-portrait:  414px;
 
-// TIMING
-$fade-in-time: 0.5s;
-$fade-out-time: 0.3s;
-$icon-rotate-time: 0.5s;
-$std-trans-time: 0.3s;
-$minimal-time: 10ms;
+// TRANSITION / ANIMATION
+$fade-in:         0.5s ease;
+$fade-out:        0.3s ease;
+$fade-out-min:    10ms ease;
+$icon-transition: 0.5s ease;
+$std-trans-time:  0.3s;
 
 // MIXINS
 @mixin background-transition {
@@ -33,6 +33,36 @@ $minimal-time: 10ms;
 @mixin outline-inset ($color, $width: 3) {
   outline-offset: -#{$width}px;
   outline: #{$width}px solid $color;
+}
+
+@mixin icon-rotation {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+@mixin icon-transition {
+  -moz-transition: $icon-transition;
+  -webkit-transition: $icon-transition;
+  transition: $icon-transition;
+}
+
+@mixin fade-in-animation {
+  -moz-animation: fade-in $fade-in;
+  -webkit-animation: fade-in $fade-in;
+  animation: fade-in $fade-in;
+}
+
+@mixin fade-out-standard {
+  -moz-animation: fade-out $fade-out;
+  -webkit-animation: fade-out $fade-out;
+  animation: fade-out $fade-out;
+}
+
+@mixin fade-out-minimal {
+  -moz-animation: fade-out $fade-out-min;
+  -webkit-animation: fade-out $fade-out-min;
+  animation: fade-out $fade-out-min;
 }
 
 // RULES
