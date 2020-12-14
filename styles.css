@@ -199,6 +199,21 @@ header {
   outline: 3px solid #ff552e;
 }
 
+.banner-hamburger {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 576px) {
+  .banner-hamburger {
+    display: none;
+  }
+}
+
 /* -------- skip-to.scss -------- */
 header .skip-to.aitg {
   left: 60%;
@@ -328,6 +343,15 @@ header .skip-to.aitg [role=menuitem] {
   }
 }
 
+.banner-menu .menu.hide {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .banner-menu .menu.hide {
+    display: block;
+  }
+}
+
 .banner-menu ul.menu li.menu-item a,
 .banner-menu ul.menu li-menu-item a:visited {
   color: #fff;
@@ -432,27 +456,6 @@ header .skip-to.aitg [role=menuitem] {
   top: 0.5px;
   left: 6px;
   margin-right: 7px;
-}
-
-.banner-hamburger {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  display: block;
-}
-@media screen and (min-width: 576px) {
-  .banner-hamburger {
-    display: none;
-  }
-}
-
-.banner-menu .menu.hide {
-  display: none;
-}
-@media screen and (min-width: 576px) {
-  .banner-menu .menu.hide {
-    display: block;
-  }
 }
 
 .banner-menu ul.sub-menu {

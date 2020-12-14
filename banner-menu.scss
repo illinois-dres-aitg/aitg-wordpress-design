@@ -26,6 +26,14 @@
   }
 }
 
+.banner-menu .menu.hide {
+  display: none;
+
+  @media screen and (min-width: $phone-width-landscape) {
+    display: block;
+  }
+}
+
 // all menu a elements
 
 .banner-menu ul.menu li.menu-item a,
@@ -118,27 +126,6 @@
   top: 0.5px;
   left: 6px;
   margin-right: 7px;
-}
-
-// hamburger icon
-
-.banner-hamburger {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  display: block;
-
-  @media screen and (min-width: $phone-width-landscape) {
-    display: none;
-  }
-}
-
-.banner-menu .menu.hide {
-  display: none;
-
-  @media screen and (min-width: $phone-width-landscape) {
-    display: block;
-  }
 }
 
 // sub-menu
