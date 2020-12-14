@@ -214,6 +214,15 @@ header {
   }
 }
 
+.banner-hamburger:focus {
+  outline-offset: -3px;
+  outline: 3px solid #ff552e;
+}
+
+.banner-hamburger:hover {
+  cursor: pointer;
+}
+
 /* -------- skip-to.scss -------- */
 header .skip-to.aitg {
   left: 60%;

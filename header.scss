@@ -180,3 +180,11 @@ header {
     display: none;
   }
 }
+
+.banner-hamburger:focus {
+  @include outline-inset($illini-orange);
+}
+
+.banner-hamburger:hover {
+  cursor: pointer;
+}
