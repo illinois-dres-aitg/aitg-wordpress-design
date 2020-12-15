@@ -34,7 +34,7 @@
 
   <xsl:template match="svg:*">
     <xsl:call-template name="default">
-      <xsl:with-param name="name" select="concat(name(), count(preceding::*[local-name()=name()]))"/>
+      <xsl:with-param name="name" select="concat(name(), count(ancestor::*) + count(preceding::*) + 1)"/>
     </xsl:call-template>
     <xsl:call-template name="appendChild"/>
     <xsl:apply-templates/>
@@ -51,27 +51,31 @@
   <xsl:template name="appendChild">
     <xsl:variable name="parentName">
       <xsl:choose>
-        <xsl:when test="count(ancestor::*[1]/preceding::*)=0">
+        <xsl:when test="(count(ancestor::*) + count(../preceding::*)) = 1">
           <xsl:value-of select="name(..)"/>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="concat(name(..), count(ancestor::*[1]/preceding::*))"/>
+          <!--
+            Replicate the name of the parent, which equals (number of ancestors of current element - 1)
+            plus the (number of parent's preceding-siblings + 1) i.e. its position; -1 and +1 cancel.
+          -->
+          <xsl:value-of select="concat(name(..), count(ancestor::*) + count(../preceding::*))"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
 
-    <xsl:variable name="childName">
+    <xsl:variable name="currentName">
       <xsl:choose>
-        <xsl:when test="count(preceding::*[local-name()=name()])=0">
+        <xsl:when test="count(ancestor::*) + count(preceding::*) = 1">
           <xsl:value-of select="name()"/>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="concat(name(), count(preceding::*[local-name()=name()]))"/>
+          <xsl:value-of select="concat(name(), count(ancestor::*) + count(preceding::*) + 1)"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
 
-    <xsl:value-of select="$parentName"/>.appendChild(<xsl:value-of select="$childName"/>);
+    <xsl:value-of select="$parentName"/>.appendChild(<xsl:value-of select="$currentName"/>);
   </xsl:template>
 
 </xsl:transform>
