@@ -11,7 +11,8 @@
   <xsl:template match="/">
     const xmlns = 'http://www.w3.org/2000/svg';
     <xsl:apply-templates/>
-    return svg;
+    <xsl:text>
+    return svg;&#xa;&#xa;</xsl:text>
   </xsl:template>
 
   <xsl:template match="svg:svg">
