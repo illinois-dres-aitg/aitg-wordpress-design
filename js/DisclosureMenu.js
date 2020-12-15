@@ -68,7 +68,7 @@ function DisclosureMenu (domNode) {
 
   // Add hamburger button
   this.hamburgerButtonNode = document.createElement('button');
-  this.hamburgerButtonNode.setAttribute('type', 'image');
+  this.hamburgerButtonNode.setAttribute('type', 'button');
   this.hamburgerButtonNode.setAttribute('aria-label', 'Main Menu');
   this.hamburgerButtonNode.classList.add('banner-hamburger');
   this.hamburgerButtonNode.setAttribute('aria-expanded', 'false');
