@@ -416,7 +416,7 @@ DisclosureMenu.prototype.getMenuOpenSVGNode = function () {
   svg.setAttributeNS(null, 'version', '1.1');
 
   let title = document.createElementNS(xmlns, 'title');
-  let text = document.createTextNode('open menu icon');
+  let text = document.createTextNode('Open Menu');
   title.appendChild(text);
   svg.appendChild(title);
 
@@ -480,7 +480,7 @@ DisclosureMenu.prototype.getMenuCloseSVGNode = function () {
   svg.setAttributeNS(null, 'version', '1.1');
 
   let title = document.createElementNS(xmlns, 'title');
-  let text = document.createTextNode('close menu icon');
+  let text = document.createTextNode('Close Menu');
   title.appendChild(text);
   svg.appendChild(title);
 
