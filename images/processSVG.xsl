@@ -16,7 +16,9 @@
   </xsl:template>
 
   <xsl:template match="svg:svg">
-    <xsl:call-template name="default"/>
+    <xsl:call-template name="default">
+      <xsl:with-param name="name" select="'svg'"/>
+    </xsl:call-template>
     <xsl:if test="$addAriaHidden">
       <xsl:value-of select="name()"/>.setAttributeNS(null, 'aria-hidden', 'true');
     </xsl:if>
@@ -31,20 +33,45 @@
   </xsl:template>
 
   <xsl:template match="svg:*">
-    <xsl:call-template name="default"/>
+    <xsl:call-template name="default">
+      <xsl:with-param name="name" select="concat(name(), count(preceding::*[local-name()=name()]))"/>
+    </xsl:call-template>
     <xsl:call-template name="appendChild"/>
     <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template name="default">
-    let <xsl:value-of select="name()"/> = document.createElementNS(xmlns, '<xsl:value-of select="name()"/>');
+    <xsl:param name="name"/>
+    let <xsl:value-of select="$name"/> = document.createElementNS(xmlns, '<xsl:value-of select="name()"/>');
     <xsl:for-each select="@*">
-      <xsl:value-of select="name(parent::node())"/>.setAttributeNS(null, '<xsl:value-of select="name()"/>', '<xsl:value-of select="."/>');
+      <xsl:value-of select="$name"/>.setAttributeNS(null, '<xsl:value-of select="name()"/>', '<xsl:value-of select="."/>');
     </xsl:for-each>
   </xsl:template>
 
   <xsl:template name="appendChild">
-    <xsl:value-of select="name(..)"/>.appendChild(<xsl:value-of select="name()"/>);
+    <xsl:variable name="parentName">
+      <xsl:choose>
+        <xsl:when test="count(ancestor::*[1]/preceding::*)=0">
+          <xsl:value-of select="name(..)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat(name(..), count(ancestor::*[1]/preceding::*))"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:variable name="childName">
+      <xsl:choose>
+        <xsl:when test="count(preceding::*[local-name()=name()])=0">
+          <xsl:value-of select="name()"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat(name(), count(preceding::*[local-name()=name()]))"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:value-of select="$parentName"/>.appendChild(<xsl:value-of select="$childName"/>);
   </xsl:template>
 
 </xsl:transform>
