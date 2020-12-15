@@ -169,7 +169,7 @@ header {
 
 .banner-hamburger {
   position: absolute;
-  top: 10px;
+  top: 11px;
   right: 12px;
   display: block;
   border: none;
@@ -187,4 +187,14 @@ header {
 
 .banner-hamburger:hover {
   cursor: pointer;
+}
+
+.banner-hamburger[aria-expanded=true] {
+  > svg.menu-open  { display: none; }
+  > svg.menu-close { display: block; }
+}
+
+.banner-hamburger[aria-expanded=false] {
+  > svg.menu-open  { display: block; }
+  > svg.menu-close { display: none; }
 }
