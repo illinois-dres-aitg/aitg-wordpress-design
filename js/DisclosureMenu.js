@@ -411,6 +411,8 @@ DisclosureMenu.prototype.handleHamburgerClick = function (event) {
     this.hamburgerButtonNode.setAttribute('aria-expanded', 'true');
     this.menuNode.classList.remove('hide');
   }
+  // support moving focus to button on macOS
+  this.hamburgerButtonNode.focus();
   event.stopPropagation();
   event.preventDefault();
 };
