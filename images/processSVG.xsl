@@ -56,8 +56,10 @@
         </xsl:when>
         <xsl:otherwise>
           <!--
-            Replicate the name of the parent, which equals (number of ancestors of current element - 1)
-            plus the (number of parent's preceding-siblings + 1) i.e. its position; -1 and +1 cancel.
+            Replicate the unique name of the parent, this time from the context
+            of a child element: (number of ancestors of current element - 1)
+            plus (number of parent's preceding elements + 1); note that the -1
+            and the +1 cancel each other out.
           -->
           <xsl:value-of select="concat(name(..), count(ancestor::*) + count(../preceding::*))"/>
         </xsl:otherwise>
