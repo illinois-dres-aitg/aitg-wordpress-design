@@ -7,21 +7,15 @@
   <xsl:strip-space elements="*"/>
 
   <xsl:template match="/">
+    <xsl:variable name="docElementName">
+      <xsl:value-of select="concat(name(child::*), count(child::*))"/>
+    </xsl:variable>
     const xmlns = 'http://www.w3.org/2000/svg';
     <xsl:apply-templates/>
-    return <xsl:value-of select="name(/*)"/>;
+    return <xsl:value-of select="$docElementName"/>;
     <!-- add blank line at end of output -->
     <xsl:text>
 </xsl:text>
-  </xsl:template>
-
-  <!-- svg element -->
-  <xsl:template match="svg:svg">
-    <xsl:call-template name="default">
-      <xsl:with-param name="name" select="name()"/>
-    </xsl:call-template>
-
-    <xsl:apply-templates/>
   </xsl:template>
 
   <!-- text nodes -->
@@ -37,10 +31,10 @@
     </xsl:text>
   </xsl:template>
 
-  <!-- elements with text content only: svg:desc | svg:title | svg:script | svg:style -->
-  <!-- elements with mixed content: svg:text | svg:tspan | svg:textPath | svg:altGlyph | svg:a -->
+  <!-- SVG elements with text content only: desc, title, script, style, foreignObject, metadata -->
+  <!-- SVG elements with mixed content: text, tspan, textPath, altGlyph, a -->
 
-  <!-- elements that may contain text (either text-only or mixed content) -->
+  <!-- elements that may contain text -->
   <xsl:template match="svg:*[text()[normalize-space()]]">
     <xsl:variable name="currentName">
       <xsl:call-template name="getCurrentName"/>
@@ -74,10 +68,12 @@
       <xsl:with-param name="name" select="$currentName"/>
     </xsl:call-template>
 
-    <xsl:call-template name="appendChild">
-      <xsl:with-param name="currentName" select="$currentName"/>
-      <xsl:with-param name="parentName" select="$parentName"/>
-    </xsl:call-template>
+    <xsl:if test="parent::*">
+      <xsl:call-template name="appendChild">
+        <xsl:with-param name="currentName" select="$currentName"/>
+        <xsl:with-param name="parentName" select="$parentName"/>
+      </xsl:call-template>
+    </xsl:if>
 
     <xsl:apply-templates/>
   </xsl:template>
@@ -93,14 +89,7 @@
   <xsl:template name="getParentName">
     <xsl:variable name="pname" select="name(..)"/>
     <xsl:variable name="pid" select="count(../ancestor-or-self::*[$pname=name()]) + count(../preceding::*[$pname=name()])"/>
-    <xsl:choose>
-      <xsl:when test="$pname=name(/*)">
-        <xsl:value-of select="$pname"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="concat($pname, $pid)"/>
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:value-of select="concat($pname, $pid)"/>
   </xsl:template>
 
   <xsl:template name="default">
