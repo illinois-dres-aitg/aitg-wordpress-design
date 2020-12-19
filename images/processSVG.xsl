@@ -81,15 +81,15 @@
   <!-- NAMED TEMPLATES -->
 
   <xsl:template name="getCurrentName">
-    <xsl:variable name="cname" select="name()"/>
-    <xsl:variable name="cid" select="count(ancestor-or-self::*[$cname=name()]) + count(preceding::*[$cname=name()])"/>
-    <xsl:value-of select="concat($cname, $cid)"/>
+    <xsl:variable name="name" select="name()"/>
+    <xsl:variable name="id" select="count(ancestor-or-self::*[$name=name()]) + count(preceding::*[$name=name()])"/>
+    <xsl:value-of select="concat($name, $id)"/>
   </xsl:template>
 
   <xsl:template name="getParentName">
-    <xsl:variable name="pname" select="name(..)"/>
-    <xsl:variable name="pid" select="count(../ancestor-or-self::*[$pname=name()]) + count(../preceding::*[$pname=name()])"/>
-    <xsl:value-of select="concat($pname, $pid)"/>
+    <xsl:variable name="name" select="name(..)"/>
+    <xsl:variable name="id" select="count(../ancestor-or-self::*[$name=name()]) + count(../preceding::*[$name=name()])"/>
+    <xsl:value-of select="concat($name, $id)"/>
   </xsl:template>
 
   <xsl:template name="default">
@@ -103,7 +103,8 @@
   <xsl:template name="appendChild">
     <xsl:param name="currentName"/>
     <xsl:param name="parentName"/>
-    <xsl:value-of select="$parentName"/>.appendChild(<xsl:value-of select="$currentName"/>);
+    <xsl:value-of select="$parentName"/>.appendChild(<xsl:value-of select="$currentName"/>);<xsl:text>
+    </xsl:text>
   </xsl:template>
 
 </xsl:transform>
