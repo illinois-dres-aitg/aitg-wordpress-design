@@ -3,8 +3,6 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:svg="http://www.w3.org/2000/svg">
 
-  <xsl:param name="addAriaHidden" select="true()"/>
-
   <xsl:output method="text" encoding="UTF-8" omit-xml-declaration="yes"/>
   <xsl:strip-space elements="*"/>
 
@@ -17,31 +15,68 @@
 
   <xsl:template match="svg:svg">
     <xsl:call-template name="default">
-      <xsl:with-param name="name" select="'svg'"/>
+      <xsl:with-param name="name" select="name()"/>
     </xsl:call-template>
-    <xsl:if test="$addAriaHidden">
-      <xsl:value-of select="name()"/>.setAttributeNS(null, 'aria-hidden', 'true');
-    </xsl:if>
+
     <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template match="svg:title|svg:desc">
+    <!-- JavaScript output: -->
     let <xsl:value-of select="name()"/> = document.createElementNS(xmlns, '<xsl:value-of select="name()"/>');
     let text = document.createTextNode('<xsl:value-of select="."/>');
     <xsl:value-of select="name()"/>.appendChild(text);
-    <xsl:call-template name="appendChild"/>
+    <xsl:call-template name="appendChild">
+      <xsl:with-param name="currentName" select="name()"/>
+      <xsl:with-param name="parentName" select="name(..)"/>
+    </xsl:call-template>
   </xsl:template>
 
   <xsl:template match="svg:*">
+    <!-- current element name and id -->
+    <xsl:variable name="cname" select="name()"/>
+    <xsl:variable name="cid" select="count(ancestor::*[$cname=name()]) + count(preceding::*[$cname=name()])"/>
+    <xsl:variable name="currentName">
+      <xsl:choose>
+        <xsl:when test="$cid=0">
+          <xsl:value-of select="$cname"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat($cname, $cid)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <!-- parent element name and id -->
+    <xsl:variable name="pname" select="name(..)"/>
+    <xsl:variable name="pid" select="count(../ancestor::*[$pname=name()]) + count(../preceding::*[$pname=name()])"/>
+    <xsl:variable name="parentName">
+      <xsl:choose>
+        <xsl:when test="$pid=0">
+          <xsl:value-of select="$pname"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="concat($pname, $pid)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
     <xsl:call-template name="default">
-      <xsl:with-param name="name" select="concat(name(), count(ancestor::*) + count(preceding::*) + 1)"/>
+      <xsl:with-param name="name" select="$currentName"/>
     </xsl:call-template>
-    <xsl:call-template name="appendChild"/>
+
+    <xsl:call-template name="appendChild">
+      <xsl:with-param name="currentName" select="$currentName"/>
+      <xsl:with-param name="parentName" select="$parentName"/>
+    </xsl:call-template>
+
     <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template name="default">
     <xsl:param name="name"/>
+
+    <!-- JavaScript output: -->
     let <xsl:value-of select="$name"/> = document.createElementNS(xmlns, '<xsl:value-of select="name()"/>');
     <xsl:for-each select="@*">
       <xsl:value-of select="$name"/>.setAttributeNS(null, '<xsl:value-of select="name()"/>', '<xsl:value-of select="."/>');
@@ -49,34 +84,10 @@
   </xsl:template>
 
   <xsl:template name="appendChild">
-    <xsl:variable name="parentName">
-      <xsl:choose>
-        <xsl:when test="(count(ancestor::*) + count(../preceding::*)) = 1">
-          <xsl:value-of select="name(..)"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <!--
-            Replicate the unique name of the parent, this time from the context
-            of a child element: (number of ancestors of current element - 1)
-            plus (number of parent's preceding elements + 1); note that the -1
-            and the +1 cancel each other out.
-          -->
-          <xsl:value-of select="concat(name(..), count(ancestor::*) + count(../preceding::*))"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
+    <xsl:param name="currentName"/>
+    <xsl:param name="parentName"/>
 
-    <xsl:variable name="currentName">
-      <xsl:choose>
-        <xsl:when test="count(ancestor::*) + count(preceding::*) = 1">
-          <xsl:value-of select="name()"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="concat(name(), count(ancestor::*) + count(preceding::*) + 1)"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-
+    <!-- JavaScript output: -->
     <xsl:value-of select="$parentName"/>.appendChild(<xsl:value-of select="$currentName"/>);
   </xsl:template>
 
