@@ -6,25 +6,6 @@
   <xsl:output method="text" encoding="UTF-8" omit-xml-declaration="yes"/>
   <xsl:strip-space elements="*"/>
 
-  <xsl:template name="getCurrentName">
-    <xsl:variable name="cname" select="name()"/>
-    <xsl:variable name="cid" select="count(ancestor-or-self::*[$cname=name()]) + count(preceding::*[$cname=name()])"/>
-    <xsl:value-of select="concat($cname, $cid)"/>
-  </xsl:template>
-
-  <xsl:template name="getParentName">
-    <xsl:variable name="pname" select="name(..)"/>
-    <xsl:variable name="pid" select="count(../ancestor-or-self::*[$pname=name()]) + count(../preceding::*[$pname=name()])"/>
-    <xsl:choose>
-      <xsl:when test="$pname=name(/*)">
-        <xsl:value-of select="$pname"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="concat($pname, $pid)"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
   <xsl:template match="/">
     const xmlns = 'http://www.w3.org/2000/svg';
     <xsl:apply-templates/>
@@ -56,15 +37,10 @@
     </xsl:text>
   </xsl:template>
 
-  <!-- elements with text content only:
-    match="svg:desc|svg:title|svg:script|svg:style"
-  -->
+  <!-- elements with text content only: svg:desc | svg:title | svg:script | svg:style -->
+  <!-- elements with mixed content: svg:text | svg:tspan | svg:textPath | svg:altGlyph | svg:a -->
 
-  <!-- elements with mixed content
-    match="svg:text|svg:tspan|svg:textPath|svg:altGlyph|svg:a"
-  -->
-
-  <!-- elements that may contain text -->
+  <!-- elements that may contain text (either text-only or mixed content) -->
   <xsl:template match="svg:*[text()[normalize-space()]]">
     <xsl:variable name="currentName">
       <xsl:call-template name="getCurrentName"/>
@@ -104,6 +80,27 @@
     </xsl:call-template>
 
     <xsl:apply-templates/>
+  </xsl:template>
+
+  <!-- NAMED TEMPLATES -->
+
+  <xsl:template name="getCurrentName">
+    <xsl:variable name="cname" select="name()"/>
+    <xsl:variable name="cid" select="count(ancestor-or-self::*[$cname=name()]) + count(preceding::*[$cname=name()])"/>
+    <xsl:value-of select="concat($cname, $cid)"/>
+  </xsl:template>
+
+  <xsl:template name="getParentName">
+    <xsl:variable name="pname" select="name(..)"/>
+    <xsl:variable name="pid" select="count(../ancestor-or-self::*[$pname=name()]) + count(../preceding::*[$pname=name()])"/>
+    <xsl:choose>
+      <xsl:when test="$pname=name(/*)">
+        <xsl:value-of select="$pname"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="concat($pname, $pid)"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="default">
