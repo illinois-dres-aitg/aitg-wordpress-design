@@ -25,8 +25,8 @@
     </xsl:variable>
 
     <xsl:text>{</xsl:text>
-      let text = document.createTextNode('<xsl:value-of select="normalize-space(.)"/>');
-      <xsl:value-of select="$parentName"/>.appendChild(text);
+      let textNode = document.createTextNode('<xsl:value-of select="normalize-space(.)"/>');
+      <xsl:value-of select="$parentName"/>.appendChild(textNode);
     <xsl:text>}
     </xsl:text>
   </xsl:template>
