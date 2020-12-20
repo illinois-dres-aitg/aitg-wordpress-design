@@ -43,7 +43,7 @@
       <xsl:call-template name="getParentName"/>
     </xsl:variable>
 
-    <xsl:call-template name="default">
+    <xsl:call-template name="createElement">
       <xsl:with-param name="name" select="$currentName"/>
     </xsl:call-template>
 
@@ -64,7 +64,7 @@
       <xsl:call-template name="getParentName"/>
     </xsl:variable>
 
-    <xsl:call-template name="default">
+    <xsl:call-template name="createElement">
       <xsl:with-param name="name" select="$currentName"/>
     </xsl:call-template>
 
@@ -92,7 +92,7 @@
     <xsl:value-of select="concat($name, $id)"/>
   </xsl:template>
 
-  <xsl:template name="default">
+  <xsl:template name="createElement">
     <xsl:param name="name"/>
     let <xsl:value-of select="$name"/> = document.createElementNS(xmlns, '<xsl:value-of select="name()"/>');
     <xsl:for-each select="@*">
