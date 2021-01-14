@@ -83,9 +83,13 @@ header {
   background-color: $light-gray;
   border: none;
   @include outline-inset(transparent, 2);
-  font-family: inherit;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
   padding-left: 10px;
+}
+
+.search-widget input::placeholder {
+  color: $default-text-color;
 }
 
 .search-widget input:focus {

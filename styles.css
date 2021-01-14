@@ -108,9 +108,13 @@ header {
   border: none;
   outline-offset: -2px;
   outline: 2px solid transparent;
-  font-family: inherit;
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
   padding-left: 10px;
+}
+
+.search-widget input::placeholder {
+  color: #00132c;
 }
 
 .search-widget input:focus {
