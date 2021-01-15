@@ -109,11 +109,12 @@ header {
   outline-offset: -2px;
   outline: 2px solid transparent;
   font-family: Montserrat, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   padding-left: 10px;
 }
 
 .search-widget input::placeholder {
+  text-transform: uppercase;
   color: #444;
   opacity: 1;
 }
