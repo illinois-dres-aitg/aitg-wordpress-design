@@ -89,7 +89,8 @@ header {
 }
 
 .search-widget input::placeholder {
-  color: $default-text-color;
+  color: $dark-gray;
+  opacity: 1;
 }
 
 .search-widget input:focus {
