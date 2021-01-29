@@ -663,6 +663,10 @@ main h4 {
   margin: 0.75rem 0 0.75rem;
 }
 
+main h2, main h3, main h4, main h5, main h6 {
+  clear: both;
+}
+
 main p {
   margin: 1rem 0 0;
 }
@@ -690,6 +694,27 @@ main dl.events dt + dd:before {
 main dl.events dd + dd:before {
   content: "Date: ";
   font-style: italic;
+}
+
+main img.alignnone {
+  clear: both;
+  margin: 0.5rem 1rem;
+}
+
+main img.alignleft {
+  float: left;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+main img.alignright {
+  float: right;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+main img.aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .flex-row {
