@@ -4,6 +4,7 @@
 @forward "header";
 @forward "skip-to";
 @forward "banner-menu";
+@forward "sidebar";
 @forward "events";
 
 // main: flex layout
@@ -120,34 +121,34 @@ main img.aligncenter {
   flex-direction: row;
 }
 
-.left-column {
+div.left-column {
   display: flex;
   flex-direction: column;
   flex-basis: 4%;
 }
 
-.content {
+main.content {
   display: flex;
   flex-direction: column;
   flex-basis: 92%;
 }
 
-.right-column {
+div.right-column {
   display: flex;
   flex-direction: column;
   flex-basis: 4%;
 }
 
 @media screen and (min-width: $tablet-width) {
-  .left-column  { flex-basis: 14%; }
-  .content      { flex-basis: 72%; }
-  .right-column { flex-basis: 14%; }
+  div.left-column  { flex-basis: 0%; }
+  main.content     { flex-basis: 72%; }
+  div.right-column { flex-basis: 28%; }
 }
 
 @media screen and (min-width: $desktop-width) {
-  .left-column  { flex-basis: 18%; }
-  .content      { flex-basis: 64%; }
-  .right-column { flex-basis: 18%; }
+  div.left-column  { flex-basis: 20%; }
+  main.content     { flex-basis: 60%; }
+  div.right-column { flex-basis: 20%; }
 }
 
 // footer: flex layout
