@@ -199,15 +199,6 @@
         }
       }
     };
-
-    // Set display:none on sub-menu at the end point of 'fade-out' animation.
-    // Note: Before animation was added, setting display:none on sub-menu to
-    // close it was handled by the closeMenus fn. in DisclosureMenu.js.
-    document.addEventListener('animationend', function (e) {
-      if (e.animationName === 'fade-out') {
-        e.target.style.display = 'none';
-      }
-    });
   </script>
 </body>
 </html>

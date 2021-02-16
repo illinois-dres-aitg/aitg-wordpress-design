@@ -93,7 +93,7 @@ img.emoji {
         </div>
         <nav class="banner-menu"><ul id="banner-menu" class="menu"><li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1102"><a href="https://accessibleit.disability.illinois.edu/courses/">Courses</a>
 <ul class="sub-menu">
-	<li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"><a href="https://accessibleit.disability.illinois.edu/courses/badging-courses">Badging Courses</a>
+	<li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"><a href="badging-courses.html">Badging Courses</a>
 	<ul class="sub-menu">
 		<li id="menu-item-709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-709"><a href="https://accessibleit.disability.illinois.edu/courses/badging/accessibility-101/">Accessibility 101</a></li>
 		<li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"><a href="https://accessibleit.disability.illinois.edu/courses/badging/captioning-knowing-how/">Captioning: Knowing How</a></li>
@@ -108,7 +108,7 @@ img.emoji {
 	<ul class="sub-menu">
 		<li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-721"><a href="https://accessibleit.disability.illinois.edu/tools/fae">Functional Accessibility Evaluator (FAE)</a></li>
 		<li id="menu-item-717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-717"><a href="https://accessibleit.disability.illinois.edu/tools/ainspector-wcag/">AInspector WCAG</a></li>
-		<li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716"><a href="https://accessibleit.disability.illinois.edu/tools/a11yfirst/">A11yFirst for CKEditor</a></li>
+		<li id="menu-item-716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-716"><a href="a11yfirst.html">A11yFirst for CKEditor</a></li>
 		<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="https://accessibleit.disability.illinois.edu/tools/accessibility-bookmarklets/">Accessibility Bookmarklets</a></li>
 	</ul>
 </li>
@@ -517,7 +517,7 @@ var my_calendar = {"newWindow":"Opens in new tab"};
 
   <!-- END footer -->
 
-  <script src="https://accessibleit.disability.illinois.edu/wp-content/themes/aitg-wordpress-theme/js/DisclosureMenu.js"></script>
+  <script src="js/DisclosureMenu.js"></script>
   <script src="https://accessibleit.disability.illinois.edu/wp-content/themes/aitg-wordpress-theme/js/menuSVG.js"></script>
   <script src="https://cdn.disability.illinois.edu/skipto.min.js"></script>
   <script src="https://accessibleit.disability.illinois.edu/wp-content/themes/aitg-wordpress-theme/js/AdjustEventDates.js"></script>
@@ -532,14 +532,6 @@ var my_calendar = {"newWindow":"Opens in new tab"};
               }
           }
       };
-
-    // Set display:none on sub-menu at the end point of 'fade-out' animation.
-    // Note: This was previously handled by closeMenus fn. in DisclosureMenu.js
-    document.addEventListener('animationend', function (e) {
-      if (e.animationName === 'fade-out') {
-        e.target.style.display = 'none';
-      }
-    });
   </script>
 </body>
 </html>
