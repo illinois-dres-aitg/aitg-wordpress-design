@@ -1,0 +1,46 @@
+/* -------- sidebar.scss -------- */
+
+@use "base" as *;
+
+#sidebar {
+  padding-bottom: 1rem;
+}
+
+#sidebar nav h2 {
+  font-weight: 500;
+  font-size: 110%;
+  margin: 1rem 0.5rem;
+}
+
+#sidebar nav ul {
+  font-size: 90%;
+  margin: 0 0.5rem 0 1.375rem;
+}
+
+#sidebar nav ul > li {
+  margin: 0.125rem 0;
+}
+
+#sidebar nav > div.prev-post,
+#sidebar nav > div.next-post {
+  float: left;
+  font-size: 90%;
+  margin: 1rem 0.5rem;
+}
+
+#sidebar nav > div.next-post {
+  margin-left: 1rem;
+}
+
+#sidebar nav > div.prev-post::before {
+  content: '<< ';
+}
+
+#sidebar nav > div.next-post::after {
+  content: ' >>';
+}
+
+#sidebar nav > div.all-posts {
+  font-size: 100%;
+  margin: 1rem 0.5rem;
+}
