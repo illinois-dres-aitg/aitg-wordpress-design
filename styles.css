@@ -580,6 +580,25 @@ header .skip-to.aitg [role=menuitem] {
   padding-bottom: 1rem;
 }
 
+#sidebar a {
+  color: #1d4b90;
+  text-decoration: none;
+}
+
+#sidebar a:focus,
+#sidebar a:hover {
+  color: #00132c;
+  background-color: #cad9ef;
+  -webkit-transition: 0.3s background;
+  -moz-transition: 0.3s background;
+  transition: 0.3s background;
+  text-decoration: underline;
+}
+
+#sidebar a:focus {
+  outline: 2px solid #ff552e;
+}
+
 #sidebar nav h2 {
   font-weight: 500;
   font-size: 110%;

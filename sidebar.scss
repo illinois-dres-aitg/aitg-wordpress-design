@@ -6,6 +6,23 @@
   padding-bottom: 1rem;
 }
 
+#sidebar a {
+  color: $cobalt;
+  text-decoration: none;
+}
+
+#sidebar a:focus,
+#sidebar a:hover {
+  color: $default-text-color;
+  background-color: $industrial-blue-3;
+  @include background-transition;
+  text-decoration: underline;
+}
+
+#sidebar a:focus {
+  outline: 2px solid $illini-orange;
+}
+
 #sidebar nav h2 {
   font-weight: 500;
   font-size: 110%;
