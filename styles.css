@@ -672,6 +672,94 @@ ul.upcoming-events.presentations > li {
   grid-template-columns: 60% 20% 1fr;
 }
 
+/* -------- blog.scss -------- */
+main .post .code {
+  font-family: monospace;
+  font-size: 11pt;
+  background-color: #e8e9eb;
+  border: thin solid #d2d2d2;
+  padding: 0.25em;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+main .post .code .highlight {
+  background-color: #cad9ef;
+}
+
+main .post .categories,
+main .post .tags {
+  margin-top: 0.5em;
+}
+
+main nav.current-post-category {
+  margin: 0;
+  padding: 0;
+  margin-top: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+main nav.current-post-category span.separator:before {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  content: "|";
+}
+
+main [role=tablist] {
+  border-bottom: 2px solid #13294b;
+}
+
+main [role=tab] {
+  position: relative;
+  top: 2px;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  border: 2px solid #13294b;
+  background-color: #13294b;
+  color: white;
+  border-radius: 5px 5px 0 0;
+  display: inline-block;
+}
+
+main [role=tab][aria-selected=true] {
+  background-color: white;
+  border-bottom-color: white;
+  color: black;
+}
+
+main [role=tabpanel].show-tabpanel {
+  -webkit-animation: fade-in 0.5s ease;
+  -moz-animation: fade-in 0.5s ease;
+  animation: fade-in 0.5s ease;
+}
+
+main [role=tabpanel].hide-tabpanel {
+  -webkit-animation: fade-out 10ms ease;
+  -moz-animation: fade-out 10ms ease;
+  animation: fade-out 10ms ease;
+}
+
+main [role=tab]:focus,
+main [role=tab]:hover,
+main [role=tab][aria-selected=true]:focus,
+main [role=tab][aria-selected=true]:hover {
+  background-color: #cad9ef;
+  transition: 0.3s background;
+  text-decoration: underline;
+  color: #00132c;
+}
+
+main [role=tab]:focus,
+main [role=tab][aria-selected=true]:focus {
+  border-color: #ff552e;
+  outline: none;
+}
+
+main [role=tabpanel]:focus {
+  outline-offset: 4px;
+}
+
 /* -------- styles.scss -------- */
 main {
   color: #00132c;
