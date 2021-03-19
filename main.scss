@@ -1,4 +1,4 @@
-/* -------- styles.scss -------- */
+/* -------- main.scss -------- */
 
 @use "base" as *;
 @forward "header";
@@ -125,31 +125,34 @@ main img.aligncenter {
 div.left-column {
   display: flex;
   flex-direction: column;
-  flex-basis: 4%;
+  width: 4%;
+  flex: 0 0 auto;
 }
 
 main.content {
   display: flex;
   flex-direction: column;
-  flex-basis: 92%;
+  width: 92%;
+  flex: 0 0 auto;
 }
 
 div.right-column {
   display: flex;
   flex-direction: column;
-  flex-basis: 4%;
+  width: 4%;
+  flex: 0 0 auto;
 }
 
 @media screen and (min-width: $tablet-width) {
-  div.left-column  { flex-basis: 0%; }
-  main.content     { flex-basis: 72%; }
-  div.right-column { flex-basis: 28%; }
+  div.left-column  { width:  0%; flex: 0 0 auto; }
+  main.content     { width: 72%; flex: 0 1 auto; }
+  div.right-column { width: 28%; flex: 1 0 auto; }
 }
 
 @media screen and (min-width: $desktop-width) {
-  div.left-column  { flex-basis: 20%; }
-  main.content     { flex-basis: 60%; }
-  div.right-column { flex-basis: 20%; }
+  div.left-column  { width: 20%; flex: 0 0 auto; }
+  main.content     { width: 60%; flex: 0 1 auto; }
+  div.right-column { width: 20%; flex: 1 0 auto; }
 }
 
 // footer: flex layout
