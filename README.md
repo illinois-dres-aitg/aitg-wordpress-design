@@ -9,7 +9,7 @@ including the skip-to menu and the AITG menu bar.
 * The command for running Sass such that it does not produce a `source-map`
   file is:
 
-  `sass --no-source-map styles.scss styles.css`
+  `sass --no-source-map main.scss style.css`
 
 ## Disclosure Menu Features
 
