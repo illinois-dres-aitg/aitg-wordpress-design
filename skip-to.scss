@@ -13,8 +13,8 @@ header .skip-to.aitg {
 }
 
 header .skip-to.aitg button {
-  color: $dark-gray;
-  background-color: $light-gray;
+  color: $dark-gray-text;
+  background-color: $illini-gray-2;
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   text-decoration: none;
@@ -23,9 +23,9 @@ header .skip-to.aitg button {
   padding: 6px 8px 8px;
 
   border-top: none !important;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
+  border-right: 2px solid $white;
+  border-bottom: 2px solid $white;
+  border-left: 2px solid $white;
 
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;

@@ -1,5 +1,7 @@
 /* -------- events.scss -------- */
 
+@use "base" as *;
+
 ul.upcoming-events {
   list-style: none;
   font-family: Montserrat;
@@ -20,7 +22,7 @@ ul.upcoming-events > li {
 }
 
 ul.upcoming-events > li > div {
-  background-color: #eee;
+  background-color: $illini-gray-1;
   padding: 0.25rem 0.5rem;
 }
 

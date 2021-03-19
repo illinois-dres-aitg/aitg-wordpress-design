@@ -46,15 +46,15 @@ main [role=tab] {
   padding: 0.25em 0.5em;
   border: 2px solid $illini-blue;
   background-color: $illini-blue;
-  color: white;
+  color: $white;
   border-radius: 5px 5px 0 0;
   display: inline-block;
 }
 
 main [role=tab][aria-selected=true] {
-  background-color: white;
-  border-bottom-color: white;
-  color: black;
+  background-color: $white;
+  border-bottom-color: $white;
+  color: $default-text-color;
 }
 
 main [role=tabpanel].show-tabpanel {

@@ -38,7 +38,7 @@
 
 .banner-menu ul.menu li.menu-item a,
 .banner-menu ul.menu li-menu-item a:visited {
-  color: #fff;
+  color: $white;
 }
 
 .banner-menu ul.menu li.menu-item a:focus,
@@ -81,7 +81,7 @@
 
 .banner-menu ul.menu > li.menu-item:focus-within > a {
   padding: 12px 10px;
-  border: 2px solid $medium-gray;
+  border: 2px solid $medium-gray-border;
 
   @media screen and (min-width: $phone-width-landscape) {
     padding: 12px 10px;
@@ -96,7 +96,7 @@
 .banner-menu ul.menu > li.menu-item.current-menu-ancestor > a,
 .banner-menu ul.menu > li.menu-item.current-menu-item > a {
   padding: 12px 10px;
-  border: 2px solid white;
+  border: 2px solid $white;
 
   @media screen and (min-width: $phone-width-landscape) {
     padding: 12px 10px 14px;
@@ -162,9 +162,9 @@
   display: none;
   padding: 8px 12px 12px;
   @include outline-inset(transparent, 1);
-  border-right: 2px solid $medium-gray;
-  border-bottom: 2px solid $medium-gray;
-  border-left: 2px solid $medium-gray;
+  border-right: 2px solid $medium-gray-border;
+  border-bottom: 2px solid $medium-gray-border;
+  border-left: 2px solid $medium-gray-border;
   white-space: normal;
   min-width: auto;
 

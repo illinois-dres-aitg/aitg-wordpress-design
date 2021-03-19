@@ -383,7 +383,7 @@ header .skip-to.aitg [role=menuitem] {
 
 .banner-menu ul.menu li.menu-item a,
 .banner-menu ul.menu li-menu-item a:visited {
-  color: #fff;
+  color: white;
 }
 
 .banner-menu ul.menu li.menu-item a:focus,
@@ -660,7 +660,7 @@ ul.upcoming-events > li {
 }
 
 ul.upcoming-events > li > div {
-  background-color: #eee;
+  background-color: #e8e9eb;
   padding: 0.25rem 0.5rem;
 }
 
@@ -725,7 +725,7 @@ main [role=tab] {
 main [role=tab][aria-selected=true] {
   background-color: white;
   border-bottom-color: white;
-  color: black;
+  color: #00132c;
 }
 
 main [role=tabpanel].show-tabpanel {

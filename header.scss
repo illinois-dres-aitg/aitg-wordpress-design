@@ -24,7 +24,7 @@ header {
 
 .banner-row-1 {
   color: $default-text-color;
-  background-color: white;
+  background-color: $white;
   width: 100%;
 }
 
@@ -79,8 +79,8 @@ header {
 
 .search-widget input {
   grid-column: 1;
-  color: $dark-gray;
-  background-color: $light-gray;
+  color: $dark-gray-text;
+  background-color: $illini-gray-2;
   border: none;
   @include outline-inset(transparent, 2);
   font-family: Montserrat, sans-serif;
@@ -90,12 +90,12 @@ header {
 
 .search-widget input::placeholder {
   text-transform: uppercase;
-  color: $dark-gray;
+  color: $dark-gray-text;
   opacity: 1;
 }
 
 .search-widget input:focus {
-  background-color: white;
+  background-color: $white;
   @include background-transition;
   border: 2px solid $illini-blue;
   border-right: none;
@@ -104,7 +104,7 @@ header {
 
 .search-widget button {
   grid-column: 2;
-  color: white;
+  color: $white;
   background-color: $illini-blue;
   border: none;
   @include outline-inset(transparent, 2);
@@ -127,7 +127,7 @@ header {
 
 .banner-row-2 {
   position: relative;
-  color: white;
+  color: $white;
   background-color: $illini-blue;
   width: 100%;
 
@@ -149,7 +149,7 @@ header {
 
 .banner-name a {
   display: block;
-  color: white;
+  color: $white;
   text-decoration: none;
   text-transform: uppercase;
   padding: 12px 24px;
@@ -162,7 +162,7 @@ header {
 .banner-name a:focus,
 .banner-name a:hover {
   color: $cobalt;
-  background-color: white;
+  background-color: $white;
   @include background-transition;
   text-decoration: underline;
 }
