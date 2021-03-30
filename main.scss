@@ -148,6 +148,11 @@ main.content iframe.kmsembed {
   width: 100% !important;
 }
 
+main.content pre {
+  overflow: auto;
+  background-color: $illini-gray-1;
+}
+
 // footer: flex layout
 
 footer {
