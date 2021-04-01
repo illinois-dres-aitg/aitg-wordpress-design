@@ -16,6 +16,11 @@ main .post .code .highlight {
   background-color: $industrial-blue-3;
 }
 
+main .post .code .scrollable {
+  height: 10rem;
+  overflow-y: auto;
+}
+
 main .post details {
   margin: 1rem 0;
 }
