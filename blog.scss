@@ -12,13 +12,13 @@ main .post .code {
   white-space: pre-wrap;
 }
 
-main .post .code .highlight {
-  background-color: $industrial-blue-3;
-}
-
-main .post .code .scrollable {
+main .post .code.scrollable {
   height: 10rem;
   overflow-y: auto;
+}
+
+main .post .code .highlight {
+  background-color: $industrial-blue-3;
 }
 
 main .post details {
