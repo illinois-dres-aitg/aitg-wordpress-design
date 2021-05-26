@@ -33,6 +33,10 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+svg {
+  forced-color-adjust: auto;
+}
+
 .screen-reader-text {
   position: absolute;
   top: -30em;
