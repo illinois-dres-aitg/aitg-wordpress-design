@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<!-- @@@ primary language of page -->
+<!-- @ primary language of page -->
 <html lang="en">
 
 <head>
-  <!-- @@@ 'charset' important for proper text rendering -->
+  <!-- @ important for proper text rendering -->
   <meta charset="utf-8">
 
-  <!-- @@@ important for resizing: responsive menu design -->
+  <!-- @ important for resizing: responsive menu design -->
   <meta name="viewport" content="width=device-width">
 
-  <!-- @@@ uses pattern: page title, separator, website label -->
+  <!-- @ uses pattern: page title, separator, website label -->
   <title>What is Universal Design? - Accessible IT Group</title>
 
-  <!-- @@@ CSS stylesheet name required by WordPress templates -->
+  <!-- @ CSS stylesheet name required by WordPress templates -->
   <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- @@@ 'header' defines 'banner' landmark -->
+  <!-- @ 'header' defines 'banner' landmark -->
   <header>
     <div class="banner">
       <div class="banner-row-1">
         <div class="banner-logo">
-          <!-- @@@ logo image with 'alt' text equiv. to image text -->
+          <!-- @ UI logo with 'alt' text equiv. to image text -->
           <img src="..." alt="Illinois">
         </div>
         <div class="banner-search">
           <div class="search-widget">
-            <!-- @@@ 'search' landmark -->
+            <!-- @ 'search' landmark -->
             <form role="search">
-              <!-- @@@ accessible name from 'title' attribute -->
+              <!-- @ accessible name from 'title' attribute -->
               <input type="search" placeholder="SEARCH" title="Search Pages">
               <button type="submit" alt="Submit Query">
-                <!-- @@@ SVG image -->
+                <!-- @ SVG image -->
                 <svg>...</svg>
               </button>
             </form>
@@ -42,48 +42,48 @@
 
       <div class="banner-row-2">
         <div class="banner-name">
-          <!-- @@@ link to home page of site -->
+          <!-- @ link to home page of site -->
           <a href="...">Accessible IT Group</a>
         </div>
-        <!-- @@@ 'nav' defines 'navigation' landmark; 'aria-label'
+        <!-- @ 'nav' defines 'navigation' landmark; 'aria-label'
              used when there are multiple 'nav' elements -->
         <nav class="banner-menu" aria-label="Site Menu">
           <ul id="banner-menu" class="menu">
-            <!-- @@@ menu buttons as 'li > a' elements -->
+            <!-- @ menu buttons as 'li > a' elements -->
           </ul>
         </nav>
       </div>
     </div>
   </header>
 
-  <!-- @@@ layout container for middle section (row) of page -->
+  <!-- @ layout container for middle section (row) of page -->
   <div class="flex-row">
     <div class="left-column">
-      <!-- @@@ spacer column: narrow middle column for readability -->
+      <!-- @ spacer column: narrow middle column for readability -->
     </div>
 
     <div class="middle-column">
       <div class="breadcrumb">
-        <!-- @@@ breadcrumb trail of links indicating location of
+        <!-- @ breadcrumb trail of links indicating location of
              current page in menu structure -->
       </div>
 
-      <!-- @@@ 'main' defines 'main' landmark -->
+      <!-- @ 'main' defines 'main' landmark -->
       <main class="content">
-        <!-- @@@ 'h1' heading content is current page title -->
+        <!-- @ 'h1' heading content is current page title -->
         <h1>What is Universal Design?</h1>
-        <!-- @@@ headings 'h2–h6' used to label sections of content -->
+        <!-- @ headings 'h2–h6' used to label sections of content -->
       </main>
     </div>
 
     <div class="right-column">
-      <!-- @@@ sidebar used selectively: additional 'nav' elements -->
+      <!-- @ sidebar used selectively: additional 'nav' elements -->
     </div>
   </div>
 
-  <!-- @@@ 'footer' defines 'contentinfo' landmark -->
+  <!-- @ 'footer' defines 'contentinfo' landmark -->
   <footer>
-    <!-- @@@ three columns of footer menu links -->
+    <!-- @ three columns of footer menu links -->
     <div>
       <ul></ul>
     </div>
