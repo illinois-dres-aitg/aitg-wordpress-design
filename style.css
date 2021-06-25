@@ -793,13 +793,37 @@ main [role=tabpanel]:focus {
   outline-offset: 4px;
 }
 
+/* -------- breadcrumb.scss -------- */
+.breadcrumb-container {
+  padding: 0.75rem 0.5rem 0;
+  color: #00132c !important;
+}
+
+.breadcrumb-container li a {
+  color: #00132c !important;
+}
+
+.breadcrumb-container li a:focus,
+.breadcrumb-container li a:hover {
+  color: #00132c;
+  background-color: #cad9ef;
+  -webkit-transition: 0.3s background;
+  -moz-transition: 0.3s background;
+  transition: 0.3s background;
+  text-decoration: underline !important;
+}
+
+.breadcrumb-container li a:focus {
+  outline: 2px solid #ff552e;
+}
+
 /* -------- main.scss -------- */
 main {
   color: #00132c;
   font-family: "Source Serif Pro", serif;
   font-size: 1.125rem;
   line-height: 1.4;
-  padding: 1.25rem;
+  padding: 0.5rem 1.25rem 1.25rem;
 }
 
 main a {
@@ -918,7 +942,7 @@ div.left-column {
   display: none;
 }
 
-main.content {
+div.middle-column {
   grid-row: 1/2;
   padding-left: 1.75rem;
 }
@@ -932,7 +956,7 @@ div.right-column {
     grid-template-columns: 70% 30%;
   }
 
-  main.content {
+  div.middle-column {
     grid-row: 1/2;
     grid-column: 1/2;
   }
@@ -953,7 +977,7 @@ div.right-column {
     display: block;
   }
 
-  main.content {
+  div.middle-column {
     grid-row: 1/2;
     grid-column: 2/3;
     padding-left: 1.25rem;
